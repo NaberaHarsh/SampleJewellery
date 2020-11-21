@@ -14,7 +14,7 @@ class Collection extends Component {
     return (
       <Fragment>
         <br />
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           <br />
           <h3 style={{ textAlign: "center" }} className="heading">
             DISCOVER THE COLLECTION{" "}

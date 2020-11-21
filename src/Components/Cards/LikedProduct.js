@@ -13,7 +13,7 @@ class LikedProduct extends Component {
   render() {
     return (
       <Fragment>
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           <br />
           <h3 style={{ textAlign: "center" }} className="heading">
             YOU MAY ALSO LIKE{" "}

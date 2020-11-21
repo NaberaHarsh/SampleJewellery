@@ -7,8 +7,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import { Container, Grid, Paper } from "@material-ui/core";
-import Data from "./ProductTabData";
+
 import "./Product.css";
 
 function TabPanel(props) {
@@ -49,6 +48,32 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     width: 500,
   },
+  sectionDesktop: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      flexDirection: "inherit",
+    },
+  },
+  sectionMobile: {
+    display: "flex",
+    flexDirection: "column",
+
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+  },
+  indicator: {
+    "&:active": {
+      outline: "none",
+    },
+    "&:focus": {
+      outline: "none",
+    },
+    "&:hover": {
+      outline: "none",
+    },
+  },
 }));
 
 export default function FullWidthTabs() {
@@ -65,185 +90,299 @@ export default function FullWidthTabs() {
   };
 
   return (
-    <Container maxWidth="md">
-      <div>
-        <br />
-        <br />
-        <AppBar
-          position="static"
-          elevation={0}
-          color="none"
-          style={{ borderBlockEnd: "1px solid black" }}
-        >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            variant="fullWidth"
-            aria-label="full width tabs example"
+    <body>
+      <section class="detailInfo">
+        <div class="container">
+          <AppBar
+            position="static"
+            elevation={0}
+            color="none"
+            style={{ borderBlockEnd: "1px solid black" }}
           >
-            <Tab label="DETAILS" {...a11yProps(0)} />
-            <Tab label="SHIPPING INFO" {...a11yProps(1)} />
-            <Tab label="CARE INSTRUCTIONS" {...a11yProps(2)} />
-            <Tab label="RETURNS AND WARRANTY" {...a11yProps(3)} />
-          </Tabs>
-        </AppBar>
-        <SwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={value}
-          onChangeIndex={handleChangeIndex}
-        >
-          <TabPanel value={value} index={0} dir={theme.direction}>
-            <br />
-            <Grid container spacing={16}>
-              <Grid xl={5} lg={5} md={5} sm={12} xs={12}>
-                <div className="product" style={{ lineHeight: "24px" }}>
-                  {Data.details}{" "}
+            <div className={classes.sectionDesktop}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                indicatorColor="primary"
+                textColor="primary"
+                variant="fullWidth"
+                aria-label="full width tabs example"
+              >
+                <Tab
+                  label="DETAILS"
+                  {...a11yProps(0)}
+                  className={classes.indicator}
+                />
+                <Tab
+                  label="SHIPPING INFO"
+                  {...a11yProps(1)}
+                  className={classes.indicator}
+                />
+                <Tab
+                  label="CARE INSTRUCTIONS"
+                  {...a11yProps(2)}
+                  className={classes.indicator}
+                />
+                <Tab
+                  label="RETURNS AND WARRANTY"
+                  {...a11yProps(3)}
+                  className={classes.indicator}
+                />
+              </Tabs>
+            </div>
+            <div className={classes.sectionMobile}>
+              <Tabs
+                orientation="vertical"
+                value={value}
+                onChange={handleChange}
+                indicatorColor="none"
+                textColor="primary"
+                variant="fullWidth"
+                aria-label="full width tabs example"
+              >
+                <Tab
+                  label="DETAILS"
+                  {...a11yProps(0)}
+                  className={classes.indicator}
+                />
+                <Tab
+                  label="SHIPPING INFO"
+                  {...a11yProps(1)}
+                  className={classes.indicator}
+                />
+                <Tab
+                  label="CARE INSTRUCTIONS"
+                  {...a11yProps(2)}
+                  className={classes.indicator}
+                />
+                <Tab
+                  label="RETURNS AND WARRANTY"
+                  {...a11yProps(3)}
+                  className={classes.indicator}
+                />
+              </Tabs>
+            </div>
+          </AppBar>
+          <SwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={value}
+            onChangeIndex={handleChangeIndex}
+          >
+            <TabPanel value={value} index={0} dir={theme.direction}>
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-details"
+                  role="tabpanel"
+                  aria-labelledby="nav-details-tab"
+                >
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p>
+                        At Amrutam, discover unusual luxury pieces that we have
+                        scoured the world to find. We specialise in unique,
+                        designer fine jewellery, dreamt up by artists and
+                        brought to life by skilled craftspeople in
+                        under-the-radar ateliers and workshops scattered across
+                        the globe.
+                      </p>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td class="border-top-0">SKU</td>
+                              <td class="text-right border-top-0">
+                                AM00400159
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Colour</td>
+                              <td class="text-right">Sliver</td>
+                            </tr>
+                            <tr>
+                              <td>Base material</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Weight</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Measurements</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </Grid>
-              <Grid xl={3} lg={3} md={3} sm={12} xs={12}>
-                <br />
-              </Grid>
-              <Grid xl={4} lg={4} md={4} sm={12} xs={12}>
-                <div className="product">
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.sku}</div>
-                    <p>SKU</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.color}</div>
-                    <p>Colour</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.material}</div>
-                    <p>Base Material</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.weight}</div>
-                    <p>Weight</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.measurements}</div>
-                    <p>Measurements</p>
-                  </p>
+              </div>
+            </TabPanel>
+            <TabPanel value={value} index={1} dir={theme.direction}>
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-details"
+                  role="tabpanel"
+                  aria-labelledby="nav-details-tab"
+                >
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p>
+                        At Amrutam, discover unusual luxury pieces that we have
+                        scoured the world to find. We specialise in unique,
+                        designer fine jewellery, dreamt up by artists and
+                        brought to life by skilled craftspeople in
+                        under-the-radar ateliers and workshops scattered across
+                        the globe.
+                      </p>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td class="border-top-0">SKU</td>
+                              <td class="text-right border-top-0">
+                                AM00400159
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Colour</td>
+                              <td class="text-right">Sliver</td>
+                            </tr>
+                            <tr>
+                              <td>Base material</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Weight</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Measurements</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </Grid>
-            </Grid>
-          </TabPanel>
-          <TabPanel value={value} index={1} dir={theme.direction}>
-            <br />
-            <Grid container spacing={16}>
-              <Grid xl={5} lg={5} md={5} sm={12} xs={12}>
-                <div className="product" style={{ lineHeight: "24px" }}>
-                  {Data.details}{" "}
+              </div>
+            </TabPanel>
+            <TabPanel value={value} index={2} dir={theme.direction}>
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-details"
+                  role="tabpanel"
+                  aria-labelledby="nav-details-tab"
+                >
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p>
+                        At Amrutam, discover unusual luxury pieces that we have
+                        scoured the world to find. We specialise in unique,
+                        designer fine jewellery, dreamt up by artists and
+                        brought to life by skilled craftspeople in
+                        under-the-radar ateliers and workshops scattered across
+                        the globe.
+                      </p>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td class="border-top-0">SKU</td>
+                              <td class="text-right border-top-0">
+                                AM00400159
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Colour</td>
+                              <td class="text-right">Sliver</td>
+                            </tr>
+                            <tr>
+                              <td>Base material</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Weight</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Measurements</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </Grid>
-              <Grid xl={3} lg={3} md={3} sm={12} xs={12}>
-                <br />
-              </Grid>
-              <Grid xl={4} lg={4} md={4} sm={12} xs={12}>
-                <div className="product">
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.sku}</div>
-                    <p>SKU</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.color}</div>
-                    <p>Colour</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.material}</div>
-                    <p>Base Material</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.weight}</div>
-                    <p>Weight</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.measurements}</div>
-                    <p>Measurements</p>
-                  </p>
+              </div>
+            </TabPanel>
+            <TabPanel value={value} index={3} dir={theme.direction}>
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-details"
+                  role="tabpanel"
+                  aria-labelledby="nav-details-tab"
+                >
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p>
+                        At Amrutam, discover unusual luxury pieces that we have
+                        scoured the world to find. We specialise in unique,
+                        designer fine jewellery, dreamt up by artists and
+                        brought to life by skilled craftspeople in
+                        under-the-radar ateliers and workshops scattered across
+                        the globe.
+                      </p>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td class="border-top-0">SKU</td>
+                              <td class="text-right border-top-0">
+                                AM00400159
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Colour</td>
+                              <td class="text-right">Sliver</td>
+                            </tr>
+                            <tr>
+                              <td>Base material</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Weight</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                            <tr>
+                              <td>Measurements</td>
+                              <td class="text-right">Stainless steel(316L)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </Grid>
-            </Grid>{" "}
-          </TabPanel>
-          <TabPanel value={value} index={2} dir={theme.direction}>
-            <br />
-            <Grid container spacing={16}>
-              <Grid xl={5} lg={5} md={5} sm={12} xs={12}>
-                <div className="product" style={{ lineHeight: "24px" }}>
-                  {Data.details}{" "}
-                </div>
-              </Grid>
-              <Grid xl={3} lg={3} md={3} sm={12} xs={12}>
-                <br />
-              </Grid>
-              <Grid xl={4} lg={4} md={4} sm={12} xs={12}>
-                <div className="product">
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.sku}</div>
-                    <p>SKU</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.color}</div>
-                    <p>Colour</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.material}</div>
-                    <p>Base Material</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.weight}</div>
-                    <p>Weight</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.measurements}</div>
-                    <p>Measurements</p>
-                  </p>
-                </div>
-              </Grid>
-            </Grid>{" "}
-          </TabPanel>
-          <TabPanel value={value} index={3} dir={theme.direction}>
-            <br />
-            <Grid container spacing={16}>
-              <Grid xl={5} lg={5} md={5} sm={12} xs={12}>
-                <div className="product" style={{ lineHeight: "24px" }}>
-                  {Data.details}{" "}
-                </div>
-              </Grid>
-              <Grid xl={3} lg={3} md={3} sm={12} xs={12}>
-                <br />
-              </Grid>
-              <Grid xl={4} lg={4} md={4} sm={12} xs={12}>
-                <div className="product">
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.sku}</div>
-                    <p>SKU</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.color}</div>
-                    <p>Colour</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.material}</div>
-                    <p>Base Material</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.weight}</div>
-                    <p>Weight</p>
-                  </p>
-                  <p style={{ borderBlockEnd: "1px solid #444745" }}>
-                    <div style={{ float: "right" }}>{Data.measurements}</div>
-                    <p>Measurements</p>
-                  </p>
-                </div>
-              </Grid>
-            </Grid>{" "}
-          </TabPanel>
-        </SwipeableViews>
-      </div>
-    </Container>
+              </div>
+            </TabPanel>
+          </SwipeableViews>
+        </div>
+      </section>
+    </body>
   );
 }

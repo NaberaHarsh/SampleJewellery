@@ -5,7 +5,7 @@ import Info from "./Components/Cards/Info";
 import LikedProduct from "./Components/Cards/LikedProduct";
 import Pair from "./Components/Cards/Pair";
 import Shop from "./Components/Cards/Shop";
-import Product from "./Components/Product/Product";
+import ProductPage from "./Components/Product/ProductPage";
 import FullWidthTabs from "./Components/Product/ProductTab";
 
 class App extends Component {
@@ -18,13 +18,13 @@ class App extends Component {
     return (
       <Fragment>
         <Router>
-          <Route path="/" render={() => <Product />} />
-          <Route path="/" render={() => <FullWidthTabs />} />
+          <Route path="/" render={() => <ProductPage />} />
+          {/* <Route path="/" render={() => <FullWidthTabs />} />
           <Route path="/" render={() => <Pair />} />
           <Route path="/" render={() => <Info />} />
           <Route path="/" render={() => <LikedProduct />} />
           <Route path="/" render={() => <Collection />} />
-          <Route path="/" render={() => <Shop />} />
+          <Route path="/" render={() => <Shop />} /> */}
           <br />
           <br />
         </Router>

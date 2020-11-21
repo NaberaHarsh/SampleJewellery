@@ -13,7 +13,7 @@ class Pair extends Component {
   render() {
     return (
       <Fragment>
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           <h3 style={{ textAlign: "center" }} className="heading">
             PAIR IT WITH
           </h3>
