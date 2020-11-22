@@ -1,0 +1,1701 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Poppins:wght@200;300;500&display=swap");
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Book.otf") format("opentype");
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.titleHeading,
+.disOcc .titleHeading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.headerAmrutam .topHeader,
+.headerAmrutam .midHeader,
+.headerAmrutam .navbar .mobNavWrap,
+.headerAmrutam .navbar .navbar-collapse .menuClose,
+.shopSection .topBar,
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.headerAmrutam .topHeader .securePayment,
+.headerAmrutam .topHeader .freeShipping {
+  font-family: "Avenir";
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.03em;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.headerAmrutam .midHeader .genType span,
+.headerAmrutam .navbar .navbar-collapse .genType span {
+  display: inline-block;
+  margin-right: 50px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.13em;
+  color: rgba(132, 118, 111, 0.62);
+}
+
+.headerAmrutam .midHeader .genType span:last-child,
+.headerAmrutam .navbar .navbar-collapse .genType span:last-child {
+  margin-right: 0;
+}
+
+.headerAmrutam .midHeader .genType .active,
+.headerAmrutam .navbar .navbar-collapse .genType .active {
+  position: relative;
+  color: #605652;
+}
+
+.headerAmrutam .midHeader .genType .active::after,
+.headerAmrutam .navbar .navbar-collapse .genType .active::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #605652;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -30px;
+}
+
+.headerAmrutam {
+  position: relative;
+}
+
+.headerAmrutam .topHeader {
+  padding: 6px 40px;
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam .topHeader {
+    display: none;
+  }
+}
+
+.headerAmrutam .topHeader .securePayment svg {
+  margin-right: 10px;
+}
+
+.headerAmrutam .topHeader .brandLg {
+  display: block;
+  text-align: center;
+}
+
+.headerAmrutam .topHeader .freeShipping {
+  text-align: right;
+}
+
+.headerAmrutam .topHeader .freeShipping svg {
+  margin-right: 14px;
+}
+
+.headerAmrutam .topHeader .freeShipping strong {
+  color: #000000;
+}
+
+.headerAmrutam .midHeader {
+  padding: 0 40px;
+  padding-top: 6px;
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam .midHeader {
+    display: none;
+  }
+}
+
+.headerAmrutam .midHeader .genType {
+  padding-left: 20px;
+}
+
+@media (min-width: 1200px) {
+  .headerAmrutam .midHeader .genType {
+    padding-left: 40px;
+  }
+}
+
+.headerAmrutam .midHeader .searchBar .searchWrap {
+  position: relative;
+  background: rgba(241, 241, 241, 0.63);
+  border-radius: 24px;
+  min-width: 500px;
+  max-width: 100%;
+  height: 32px;
+  margin: auto;
+}
+
+@media (min-width: 1200px) {
+  .headerAmrutam .midHeader .searchBar .searchWrap {
+    min-width: 700px;
+  }
+}
+
+.headerAmrutam .midHeader .searchBar .searchWrap svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 22px;
+}
+
+.headerAmrutam .midHeader .searchBar .searchWrap input {
+  font-family: "Avenir";
+  font-size: 11px;
+  line-height: 15px;
+  color: #616161;
+  border: none;
+  background-color: rgba(241, 241, 241, 0.63);
+  border-radius: 24px;
+  height: 32px;
+  padding-left: 60px;
+}
+
+.headerAmrutam .midHeader .buttonWrap {
+  padding-right: 20px;
+}
+
+@media (min-width: 1200px) {
+  .headerAmrutam .midHeader .buttonWrap {
+    padding-right: 40px;
+  }
+}
+
+.headerAmrutam .midHeader .buttonWrap a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 4px 16px;
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam .navbar .mobNavWrap {
+    width: 100%;
+    padding: 6px 0;
+  }
+}
+
+.headerAmrutam .navbar .mobNavWrap .navbar-toggler {
+  outline: none;
+  border: none;
+  padding-left: 0;
+}
+
+.headerAmrutam .navbar .mobNavWrap .buttonWrap a {
+  display: inline-block;
+  padding: 4px 8px;
+  text-decoration: none;
+}
+
+.headerAmrutam .navbar .mobNavWrap .buttonWrap a:last-child {
+  padding-right: 0;
+}
+
+.headerAmrutam .navbar .navbar-collapse {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam .navbar .navbar-collapse {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 9;
+    padding: 15px;
+  }
+}
+
+.headerAmrutam .navbar .navbar-collapse .menuClose {
+  padding: 15px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.headerAmrutam .navbar .navbar-collapse .menuClose span {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+}
+
+.headerAmrutam .navbar .navbar-collapse .menuClose .closeBtn {
+  text-decoration: none;
+  outline: none;
+}
+
+.headerAmrutam .navbar .navbar-collapse .genType {
+  padding: 32px 8px 24px;
+}
+
+.headerAmrutam .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #84766f;
+  padding: 12px 32px 8px;
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    border-bottom: 1px solid #c4c4c4;
+    text-align: left;
+    padding: 24px 15px;
+    text-transform: capitalize;
+  }
+}
+
+.headerAmrutam
+  .navbar
+  .navbar-collapse
+  .navbar-nav
+  .nav-item:last-child
+  .nav-link {
+  border-bottom: none;
+}
+
+.headerAmrutam
+  .navbar
+  .navbar-collapse
+  .navbar-nav
+  .nav-item.dropdown
+  .nav-link {
+  position: relative;
+}
+
+.headerAmrutam
+  .navbar
+  .navbar-collapse
+  .navbar-nav
+  .nav-item.dropdown
+  .nav-link::after {
+  border-top: 0.4em solid transparent;
+  border-right: 0;
+  border-bottom: 0.4em solid transparent;
+  border-left: 0.4em solid #333232;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (min-width: 992px) {
+  .headerAmrutam
+    .navbar
+    .navbar-collapse
+    .navbar-nav
+    .nav-item.dropdown
+    .nav-link::after {
+    display: none;
+  }
+}
+
+.headerAmrutam .navbar .navbar-collapse .navbar-nav .dropdown .megaMenu {
+  position: fixed;
+  width: 100%;
+  top: 127px;
+  left: 0;
+  right: 0;
+  border: none;
+  padding: 20px 0;
+  -webkit-box-shadow: 0px 13px 28px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 13px 28px rgba(0, 0, 0, 0.27);
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam .navbar .navbar-collapse .navbar-nav .dropdown .megaMenu {
+    top: 0px;
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.headerAmrutam .navbar .navbar-collapse .navbar-nav .dropdown .megaMenu h4 {
+  font-family: "Avenir";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 0.13em;
+  color: #333232;
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam .navbar .navbar-collapse .navbar-nav .dropdown .megaMenu h4 {
+    padding: 20px 15px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+}
+
+.headerAmrutam
+  .navbar
+  .navbar-collapse
+  .navbar-nav
+  .dropdown
+  .megaMenu
+  ul
+  li
+  a {
+  display: inline-block;
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 28px;
+  text-transform: lowercase;
+  color: #616161;
+}
+
+@media (max-width: 991px) {
+  .headerAmrutam
+    .navbar
+    .navbar-collapse
+    .navbar-nav
+    .dropdown
+    .megaMenu
+    ul
+    li
+    a {
+    padding-left: 35px;
+  }
+}
+
+.headerAmrutam
+  .navbar
+  .navbar-collapse
+  .navbar-nav
+  .dropdown
+  .megaMenu
+  ul
+  li:last-child {
+  margin-top: 30px;
+}
+
+.headerAmrutam
+  .navbar
+  .navbar-collapse
+  .navbar-nav
+  .dropdown
+  .megaMenu
+  ul
+  li:last-child
+  a {
+  font-weight: 600;
+}
+
+.headerAmrutam
+  .navbar
+  .navbar-collapse
+  .navbar-nav
+  .dropdown
+  .megaMenu
+  .subMenu {
+  font-family: "Avenir";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.13em;
+  color: #333232;
+  padding: 30px 15px;
+}
+
+.headerAmrutam .freeShippingMob {
+  font-family: "Avenir";
+  font-size: 8px;
+  line-height: 11px;
+  letter-spacing: 0.11em;
+  color: rgba(97, 97, 97, 0.9);
+  background: #f4f2f0;
+  padding: 6px;
+  text-align: center;
+}
+
+.headerAmrutam .freeShippingMob svg {
+  margin-right: 14px;
+}
+
+@media (min-width: 992px) {
+  .headerAmrutam .freeShippingMob {
+    display: none;
+  }
+}
+
+.amrutamFooter {
+  background: #f4f2f0;
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.amrutamFooter h5 {
+  font-family: "Avenir";
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: #787878;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .amrutamFooter h5 {
+    margin-bottom: 30px;
+  }
+}
+
+.amrutamFooter ul li a {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #787878;
+  display: inline-block;
+}
+
+.amrutamFooter p {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #787878;
+}
+
+.amrutamFooter .inputWrap {
+  margin-bottom: 15px;
+}
+
+.amrutamFooter .inputWrap input {
+  font-family: "Avenir";
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.03em;
+  background: rgba(196, 196, 196, 0.28);
+  color: rgba(13, 13, 13, 0.96);
+  border: none;
+  border-radius: 14px;
+}
+
+.amrutamFooter .btn {
+  font-family: "Avenir";
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #84766f;
+  border-color: #84766f;
+  border-radius: 8px;
+  padding: 6px 24px;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.amrutamFooter .btn:hover {
+  background-color: #84766f;
+  color: #f4f2f0;
+}
+
+.amrutamFooter .subFooter a {
+  display: inline-block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .amrutamFooter {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+.sliderWrap {
+  padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .sliderWrap {
+    padding-bottom: 70px;
+  }
+}
+
+.sliderWrap h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.sliderWrap .homeSlider {
+  outline: none;
+}
+
+.sliderWrap .homeSlider .slick-track {
+  outline: none;
+}
+
+.sliderWrap .homeSlider .slick-track .slick-slide {
+  outline: none;
+}
+
+.sliderWrap .homeSlider .slick-track .slick-slide .imgWrap {
+  outline: none;
+}
+
+.sliderWrap .homeSlider .slick-track .slick-slide .imgWrap img {
+  margin: 0 auto 10px;
+}
+
+.sliderWrap .homeSlider .slick-track .slick-slide .priceCaption {
+  text-align: center;
+  outline: none;
+}
+
+.sliderWrap .homeSlider .slick-track .slick-slide .priceCaption p {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #616161;
+  letter-spacing: 0.13em;
+  margin-bottom: 6px;
+}
+
+.sliderWrap .homeSlider .slick-track .slick-slide .priceCaption p.fw-500 {
+  font-weight: 500;
+}
+
+.sliderWrap .homeSlider .slick-dir {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-48px);
+  -ms-transform: translateY(-48px);
+  -o-transform: translateY(-48px);
+  transform: translateY(-48px);
+}
+
+.sliderWrap .homeSlider .slick-prev {
+  left: 10px;
+}
+
+@media (min-width: 576px) {
+  .sliderWrap .homeSlider .slick-prev {
+    left: -10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sliderWrap .homeSlider .slick-prev {
+    left: -20px;
+  }
+}
+
+.sliderWrap .homeSlider .slick-next {
+  right: 10px;
+}
+
+@media (min-width: 576px) {
+  .sliderWrap .homeSlider .slick-next {
+    right: -10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sliderWrap .homeSlider .slick-next {
+    right: -20px;
+  }
+}
+
+.wideSection {
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .wideSection {
+    padding-bottom: 40px;
+  }
+}
+
+.wideSection .wrapper .contentWrap {
+  background-color: #f4f2f0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 45px 25px;
+}
+
+@media (min-width: 576px) {
+  .wideSection .wrapper .contentWrap {
+    padding: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wideSection .wrapper .contentWrap {
+    padding: 0 45px;
+  }
+}
+
+.wideSection .wrapper .contentWrap h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.wideSection .wrapper .contentWrap h4 {
+  font-family: "EB Garamond", serif;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #616161;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+.wideSection .wrapper .contentWrap p {
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.wideSection .wrapper .contentWrap a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  text-decoration: none;
+}
+
+.wideSection .wrapper .contentWrap a span {
+  margin-right: 15px;
+}
+
+.wideSection .wrapper .bgWrap {
+  background: url("https://dummyimage.com/874x425/d3d3d3/fff.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 425px;
+}
+
+.bannerSection {
+  padding: 40px 0;
+  padding-top: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .bannerSection {
+    padding: 40px 0 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bannerSection {
+    padding-top: 6px !important;
+  }
+}
+
+.homeBanner .bannerContent {
+  background-image: url("https://dummyimage.com/1290x470/d3d3d3/fff.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 470px;
+}
+
+.cateSlider .homeSlider .imgWrap img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.cateSlider .homeSlider .priceCaption {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.13em;
+}
+
+.disOcc {
+  padding-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .disOcc {
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .disOcc .titleHeading span {
+    display: block;
+  }
+}
+
+.disOcc .disHeading {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .disOcc .disHeading {
+    position: absolute;
+    top: 38%;
+  }
+}
+
+.disOcc .disItem .imgWrap {
+  width: 310px;
+  max-width: 100%;
+  margin: auto;
+  background: #f4f2f0;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.disOcc .disItem .disCaption {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.13em;
+  color: #424040;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .disOcc .secItem {
+    margin-top: -104px;
+  }
+}
+
+@media (min-width: 992px) {
+  .disOcc .fifItem {
+    margin-top: 90px;
+  }
+}
+
+.designersMeet {
+  padding: 20px 0 60px;
+}
+
+@media (min-width: 992px) {
+  .designersMeet {
+    padding: 20px 0 80px;
+  }
+}
+
+.designersMeet .titleHeading {
+  margin-bottom: 40px;
+}
+
+.designersMeet .designersCard {
+  width: 170px;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  -webkit-box-shadow: 14px 14px #f4f2f0;
+  box-shadow: 14px 14px #f4f2f0;
+}
+
+.designersMeet .designersCard .imgWrap {
+  -webkit-filter: drop-shadow(4px 4px 21px rgba(0, 0, 0, 0.11));
+  filter: drop-shadow(4px 4px 21px rgba(0, 0, 0, 0.11));
+}
+
+.designersMeet .designBy .imgWrap {
+  width: 150px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.designersMeet .designBy .designerTitle {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.designersMeet .designBy .designerTitle em {
+  display: block;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #424040;
+}
+
+.designersMeet .designBy .designerTitle h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  color: #424040;
+}
+
+.shopLook {
+  padding: 0px 0 60px;
+}
+
+.shopLook .imgWrapLg {
+  width: 450px;
+  max-width: 100%;
+  margin: 50px auto 40px;
+}
+
+@media (min-width: 768px) {
+  .shopLook .imgWrapLg {
+    background: url("https://dummyimage.com/450x650/d3d3d3/fff.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100% - 150px);
+  }
+}
+
+.shopLook .titleCaption {
+  display: block;
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #616161;
+  margin-bottom: 25px;
+}
+
+.shopLook .sliderContent {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .shopLook .sliderContent {
+    padding-left: 60px;
+  }
+}
+
+.shopLook .sliderContent .viewAll {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.shopLook .sliderContent .viewAll span {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .shopLook .sliderContent .viewAll {
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.shopLook .sliderContent .jewellerySlider {
+  outline: none;
+}
+
+.shopLook .sliderContent .jewellerySlider .slick-list {
+  width: 690px;
+  max-width: 100%;
+  margin-left: auto;
+  padding: 0 30px !important;
+}
+
+.shopLook .sliderContent .jewellerySlider .slick-list .slick-track {
+  outline: none;
+}
+
+.shopLook
+  .sliderContent
+  .jewellerySlider
+  .slick-list
+  .slick-track
+  .slick-slide {
+  outline: none;
+  padding: 0 8px;
+}
+
+.shopLook
+  .sliderContent
+  .jewellerySlider
+  .slick-list
+  .slick-track
+  .slick-slide
+  .imgWrap {
+  outline: none;
+  width: 200px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.blogPost {
+  padding: 40px 0;
+}
+
+.blogPost .blogCard {
+  width: 300px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.blogPost .blogCard .imgWrap {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.blogPost .blogCard .imgWrap img {
+  border-radius: 15px;
+}
+
+.blogPost .blogCard em {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 26px;
+  letter-spacing: 0.07em;
+  color: #424040;
+}
+
+.blogPost .blogCard h5 {
+  font-family: "EB Garamond", serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.07em;
+  color: #424040;
+}
+
+.findGift {
+  padding-bottom: 40px !important;
+}
+
+@media (min-width: 992px) {
+  .findGift .wrapper .designerWrap {
+    padding: 0 20px !important;
+  }
+}
+
+.findGift .wrapper .designerWrap h3 {
+  font-family: "EB Garamond", serif !important;
+  color: #777777 !important;
+  margin-bottom: 15px !important;
+  font-weight: 400 !important;
+}
+
+.findGift .wrapper .designerWrap h5 {
+  font-family: "Avenir";
+  font-size: 16px;
+  line-height: 25px;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.findGift .wrapper .designerWrap hr {
+  border: 1px solid #70645e66;
+  width: 100%;
+}
+
+.findGift .wrapper .designerWrap .tagsWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.findGift .wrapper .designerWrap .tagsWrap span {
+  display: inline-block;
+  background: #d1ccc9;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.11);
+  border-radius: 16px;
+  font-family: "Avenir";
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #616161;
+  padding: 6px 12px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 15px;
+}
+
+.ProductSummary {
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .ProductSummary {
+    padding: 40px 0 60px;
+  }
+}
+
+.ProductSummary .productDetails .headingWrap h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: #404040;
+}
+
+.ProductSummary .productDetails .headingWrap span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.ProductSummary .productDetails p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding-right: 80px;
+  margin-bottom: 36px;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag {
+  padding: 4px 0px;
+  border-radius: 6px;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag span {
+  font-weight: 500;
+  font-size: 15px;
+  color: #616161;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .addToBag {
+  background-color: #f4f2f0;
+  border: 1px solid #f4f2f0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #616161;
+  margin-right: 10px;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .addToBag:hover {
+  background-color: #84766f;
+  color: #f4f2f0;
+  border-color: #84766f;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ProductSummary .productDetails .detailWrap .addBag .addToBag {
+    padding: 6px 12px;
+    margin-right: 4px;
+  }
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .buyNow {
+  border: 1px solid #84766f;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #616161;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .buyNow:hover {
+  background-color: #84766f;
+  color: #f4f2f0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ProductSummary .productDetails .detailWrap .addBag .buyNow {
+    padding: 6px 12px;
+  }
+}
+
+.ProductSummary .productDetails .detailWrap .fw-300 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #616161;
+  line-height: 18px;
+}
+
+.ProductSummary .productDetails .detailWrap span {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #616161;
+  line-height: 23px;
+}
+
+.ProductSummary .productDetails .detailWrap .fs-12 {
+  font-size: 12px;
+}
+
+.detailInfo .detailNav .nav-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-bottom: 1px solid #adadad;
+}
+
+@media (min-width: 768px) {
+  .detailInfo .detailNav .nav-tabs {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+.detailInfo .detailNav .nav-tabs .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616161;
+  letter-spacing: 0.13em;
+  padding: 18px 24px;
+  width: 240px;
+  text-align: center;
+}
+
+.detailInfo .detailNav .nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+
+.detailInfo .detailNav .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 3px solid #70645e;
+}
+
+.detailInfo .tab-content {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .detailInfo .tab-content {
+    padding: 50px;
+  }
+}
+
+.detailInfo .tab-content .tab-pane p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #616161;
+  letter-spacing: 0.07em;
+  line-height: 24px;
+}
+
+@media (min-width: 992px) {
+  .detailInfo .tab-content .tab-pane p {
+    padding-right: 70px;
+  }
+}
+
+.detailInfo .tab-content .tab-pane .table tr td {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #616161;
+  letter-spacing: 0.06em;
+  border-color: #aeaeae;
+}
+
+.detailInfo .tab-content .tab-pane .table tr td.text-right {
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: normal;
+}
+
+.meetDesigner {
+  padding-bottom: 70px;
+}
+
+.meetDesigner .wrapper .designerWrap {
+  background-color: #f4f2f0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 45px 25px;
+}
+
+@media (min-width: 576px) {
+  .meetDesigner .wrapper .designerWrap {
+    padding: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  .meetDesigner .wrapper .designerWrap {
+    padding: 0 45px;
+  }
+}
+
+.meetDesigner .wrapper .designerWrap h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.meetDesigner .wrapper .designerWrap p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.meetDesigner .wrapper .designerWrap a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  text-decoration: none;
+}
+
+.meetDesigner .wrapper .designerWrap a span {
+  margin-right: 15px;
+}
+
+.meetDesigner .wrapper .bgWrap {
+  background: url("https://dummyimage.com/465x410/d3d3d3/fff.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 410px;
+}
+
+.shopBanner {
+  background: url("https://dummyimage.com/465x410/d3d3d3/d3d3d3.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 340px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 15px !important;
+}
+
+.shopBanner .bannerContent {
+  width: 560px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.shopBanner .bannerContent h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.shopBanner .bannerContent p {
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.shopSection {
+  padding: 50px 0;
+}
+
+.shopSection .topBar {
+  margin-bottom: 50px;
+}
+
+.shopSection .topBar .breadcrumb {
+  background-color: #fff;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .shopSection .topBar .breadcrumb {
+    padding: 0;
+  }
+}
+
+.shopSection .topBar .breadcrumb li {
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(97, 97, 97, 0.81);
+}
+
+.shopSection .topBar .breadcrumb li a {
+  color: rgba(97, 97, 97, 0.81);
+}
+
+.shopSection .topBar .sortBy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.shopSection .topBar .sortBy label {
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(97, 97, 97, 0.81);
+  width: 72px;
+  margin-bottom: 0;
+}
+
+.shopSection .topBar .sortBy select {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 14px;
+  color: #616161;
+  border: none;
+}
+
+@media (max-width: 575px) {
+  .shopSection .topBar .sortBy select {
+    padding-left: 0;
+  }
+}
+
+.shopSection .shopGrid .shopItem {
+  margin-bottom: 40px;
+}
+
+.shopSection .shopGrid .shopItem .imgWrap {
+  width: 200px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails {
+  width: 200px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle {
+  margin: 8px 0 4px;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle h5 {
+  font-family: "EB Garamond", serif;
+  font-size: 11px;
+  color: #616161;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .shopSection .shopGrid .shopItem .itemDetails .itemTitle h5 {
+    font-size: 14px;
+    letter-spacing: 0.13em;
+  }
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle a .heartLine {
+  display: block;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle a .heartFill {
+  display: none;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle a:focus .heartLine {
+  display: none;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle a:focus .heartFill {
+  display: block;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .itemBy {
+  display: block;
+  font-family: "Avenir";
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 10px;
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .priceBar .offerPrice {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.13em;
+  color: #292929;
+}
+
+@media (min-width: 576px) {
+  .shopSection .shopGrid .shopItem .itemDetails .priceBar .offerPrice {
+    font-size: 15px;
+  }
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .priceBar .prePrice {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.13em;
+  color: #777777;
+  text-decoration: line-through;
+}
+
+@media (min-width: 576px) {
+  .shopSection .shopGrid .shopItem .itemDetails .priceBar .prePrice {
+    font-size: 13px;
+    margin: 0 12px;
+  }
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .priceBar .discount {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.13em;
+  color: #3cac5b;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .shopSection .shopGrid .shopItem .itemDetails .priceBar .discount {
+    font-size: 13px;
+  }
+}
+
+.shopSection .shopGrid .sideBanner {
+  position: relative;
+}
+
+.shopSection .shopGrid .sideBanner .bgWrap {
+  background: url("https://dummyimage.com/475x600/d3d3d3/d3d3d3.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+@media (min-width: 992px) {
+  .shopSection .shopGrid .sideBanner .bgWrap {
+    min-height: 550px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shopSection .shopGrid .sideBanner .bgWrap {
+    min-height: 600px;
+  }
+}
+
+.shopSection .shopGrid .sideBanner .bgWrap .lookShop {
+  background: #42404059;
+  border-radius: 20px;
+  padding: 4px 24px;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.shopSection .shopGrid .sideBanner .bgWrap .lookShop span {
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 19px;
+  color: #424040;
+  margin-left: 20px;
+}
