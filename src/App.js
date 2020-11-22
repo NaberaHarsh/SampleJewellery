@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <Fragment>
         <Router>
-          <Route path="/" render={() => <ProductPage />} />
+          <Route path="/product" render={() => <ProductPage />} />
           {/* <Route path="/" render={() => <FullWidthTabs />} />
           <Route path="/" render={() => <Pair />} />
           <Route path="/" render={() => <Info />} />
