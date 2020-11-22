@@ -77,7 +77,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FullWidthTabs() {
-  const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -91,296 +90,251 @@ export default function FullWidthTabs() {
 
   return (
     <body>
-      <section class="detailInfo">
-        <div class="container">
-          <AppBar
-            position="static"
-            elevation={0}
-            color="none"
-            style={{ borderBlockEnd: "1px solid black" }}
-          >
-            <div className={classes.sectionDesktop}>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                indicatorColor="primary"
-                textColor="primary"
-                variant="fullWidth"
-                aria-label="full width tabs example"
+      <section className="detailInfo">
+        <div className="container">
+          <nav className="detailNav">
+            <div className="nav nav-tabs" id="nav-tab" role="tablist">
+              <a
+                className="nav-link active"
+                id="nav-details-tab"
+                data-toggle="tab"
+                href="#nav-details"
+                role="tab"
+                aria-controls="nav-details"
+                aria-selected="true"
               >
-                <Tab
-                  label="DETAILS"
-                  {...a11yProps(0)}
-                  className={classes.indicator}
-                />
-                <Tab
-                  label="SHIPPING INFO"
-                  {...a11yProps(1)}
-                  className={classes.indicator}
-                />
-                <Tab
-                  label="CARE INSTRUCTIONS"
-                  {...a11yProps(2)}
-                  className={classes.indicator}
-                />
-                <Tab
-                  label="RETURNS AND WARRANTY"
-                  {...a11yProps(3)}
-                  className={classes.indicator}
-                />
-              </Tabs>
-            </div>
-            <div className={classes.sectionMobile}>
-              <Tabs
-                orientation="vertical"
-                value={value}
-                onChange={handleChange}
-                indicatorColor="none"
-                textColor="primary"
-                variant="fullWidth"
-                aria-label="full width tabs example"
+                DETAILS
+              </a>
+              <a
+                className="nav-link"
+                id="nav-shipping-tab"
+                data-toggle="tab"
+                href="#nav-shipping"
+                role="tab"
+                aria-controls="nav-shipping"
+                aria-selected="false"
               >
-                <Tab
-                  label="DETAILS"
-                  {...a11yProps(0)}
-                  className={classes.indicator}
-                />
-                <Tab
-                  label="SHIPPING INFO"
-                  {...a11yProps(1)}
-                  className={classes.indicator}
-                />
-                <Tab
-                  label="CARE INSTRUCTIONS"
-                  {...a11yProps(2)}
-                  className={classes.indicator}
-                />
-                <Tab
-                  label="RETURNS AND WARRANTY"
-                  {...a11yProps(3)}
-                  className={classes.indicator}
-                />
-              </Tabs>
+                SHIPPING INFO
+              </a>
+              <a
+                className="nav-link"
+                id="nav-instruction-tab"
+                data-toggle="tab"
+                href="#nav-instruction"
+                role="tab"
+                aria-controls="nav-instruction"
+                aria-selected="false"
+              >
+                CARE INSTRUCTIONS
+              </a>
+              <a
+                className="nav-link"
+                id="nav-warrenty-tab"
+                data-toggle="tab"
+                href="#nav-warrenty"
+                role="tab"
+                aria-controls="nav-warrenty"
+                aria-selected="false"
+              >
+                RETURNS AND WARRANTY
+              </a>
             </div>
-          </AppBar>
-          <SwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-            index={value}
-            onChangeIndex={handleChangeIndex}
-          >
-            <TabPanel value={value} index={0} dir={theme.direction}>
-              <div class="tab-content" id="nav-tabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="nav-details"
-                  role="tabpanel"
-                  aria-labelledby="nav-details-tab"
-                >
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <p>
-                        At Amrutam, discover unusual luxury pieces that we have
-                        scoured the world to find. We specialise in unique,
-                        designer fine jewellery, dreamt up by artists and
-                        brought to life by skilled craftspeople in
-                        under-the-radar ateliers and workshops scattered across
-                        the globe.
-                      </p>
-                    </div>
-                    <div class="col-lg-5 offset-lg-1">
-                      <div class="table-responsive">
-                        <table class="table">
-                          <tbody>
-                            <tr>
-                              <td class="border-top-0">SKU</td>
-                              <td class="text-right border-top-0">
-                                AM00400159
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Colour</td>
-                              <td class="text-right">Sliver</td>
-                            </tr>
-                            <tr>
-                              <td>Base material</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Weight</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Measurements</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+          </nav>
+          <div className="tab-content" id="nav-tabContent">
+            <div
+              className="tab-pane fade show active"
+              id="nav-details"
+              role="tabpanel"
+              aria-labelledby="nav-details-tab"
+            >
+              <div className="row">
+                <div className="col-lg-6">
+                  <p>
+                    At Amrutam, discover unusual luxury pieces that we have
+                    scoured the world to find. We specialise in unique, designer
+                    fine jewellery, dreamt up by artists and brought to life by
+                    skilled craftspeople in under-the-radar ateliers and
+                    workshops scattered across the globe.
+                  </p>
+                </div>
+                <div className="col-lg-5 offset-lg-1">
+                  <div className="table-responsive">
+                    <table className="table">
+                      <tbody>
+                        <tr>
+                          <td className="border-top-0">SKU</td>
+                          <td className="text-right border-top-0">
+                            AM00400159
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Colour</td>
+                          <td className="text-right">Sliver</td>
+                        </tr>
+                        <tr>
+                          <td>Base material</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Weight</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Measurements</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
-            </TabPanel>
-            <TabPanel value={value} index={1} dir={theme.direction}>
-              <div class="tab-content" id="nav-tabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="nav-details"
-                  role="tabpanel"
-                  aria-labelledby="nav-details-tab"
-                >
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <p>
-                        At Amrutam, discover unusual luxury pieces that we have
-                        scoured the world to find. We specialise in unique,
-                        designer fine jewellery, dreamt up by artists and
-                        brought to life by skilled craftspeople in
-                        under-the-radar ateliers and workshops scattered across
-                        the globe.
-                      </p>
-                    </div>
-                    <div class="col-lg-5 offset-lg-1">
-                      <div class="table-responsive">
-                        <table class="table">
-                          <tbody>
-                            <tr>
-                              <td class="border-top-0">SKU</td>
-                              <td class="text-right border-top-0">
-                                AM00400159
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Colour</td>
-                              <td class="text-right">Sliver</td>
-                            </tr>
-                            <tr>
-                              <td>Base material</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Weight</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Measurements</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+            </div>
+            <div
+              className="tab-pane fade"
+              id="nav-shipping"
+              role="tabpanel"
+              aria-labelledby="nav-shipping-tab"
+            >
+              <div className="row">
+                <div className="col-lg-6">
+                  <p>
+                    At Amrutam, discover unusual luxury pieces that we have
+                    scoured the world to find. We specialise in unique, designer
+                    fine jewellery, dreamt up by artists and brought to life by
+                    skilled craftspeople in under-the-radar ateliers and
+                    workshops scattered across the globe.
+                  </p>
+                </div>
+                <div className="col-lg-5 offset-lg-1">
+                  <div className="table-responsive">
+                    <table className="table">
+                      <tbody>
+                        <tr>
+                          <td className="border-top-0">SKU</td>
+                          <td className="text-right border-top-0">
+                            AM00400159
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Colour</td>
+                          <td className="text-right">Sliver</td>
+                        </tr>
+                        <tr>
+                          <td>Base material</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Weight</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Measurements</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
-            </TabPanel>
-            <TabPanel value={value} index={2} dir={theme.direction}>
-              <div class="tab-content" id="nav-tabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="nav-details"
-                  role="tabpanel"
-                  aria-labelledby="nav-details-tab"
-                >
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <p>
-                        At Amrutam, discover unusual luxury pieces that we have
-                        scoured the world to find. We specialise in unique,
-                        designer fine jewellery, dreamt up by artists and
-                        brought to life by skilled craftspeople in
-                        under-the-radar ateliers and workshops scattered across
-                        the globe.
-                      </p>
-                    </div>
-                    <div class="col-lg-5 offset-lg-1">
-                      <div class="table-responsive">
-                        <table class="table">
-                          <tbody>
-                            <tr>
-                              <td class="border-top-0">SKU</td>
-                              <td class="text-right border-top-0">
-                                AM00400159
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Colour</td>
-                              <td class="text-right">Sliver</td>
-                            </tr>
-                            <tr>
-                              <td>Base material</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Weight</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Measurements</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+            </div>
+
+            <div
+              className="tab-pane fade"
+              id="nav-instruction"
+              role="tabpanel"
+              aria-labelledby="nav-instruction-tab"
+            >
+              <div className="row">
+                <div className="col-lg-6">
+                  <p>
+                    At Amrutam, discover unusual luxury pieces that we have
+                    scoured the world to find. We specialise in unique, designer
+                    fine jewellery, dreamt up by artists and brought to life by
+                    skilled craftspeople in under-the-radar ateliers and
+                    workshops scattered across the globe.
+                  </p>
+                </div>
+                <div className="col-lg-5 offset-lg-1">
+                  <div className="table-responsive">
+                    <table className="table">
+                      <tbody>
+                        <tr>
+                          <td className="border-top-0">SKU</td>
+                          <td className="text-right border-top-0">
+                            AM00400159
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Colour</td>
+                          <td className="text-right">Sliver</td>
+                        </tr>
+                        <tr>
+                          <td>Base material</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Weight</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Measurements</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
-            </TabPanel>
-            <TabPanel value={value} index={3} dir={theme.direction}>
-              <div class="tab-content" id="nav-tabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="nav-details"
-                  role="tabpanel"
-                  aria-labelledby="nav-details-tab"
-                >
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <p>
-                        At Amrutam, discover unusual luxury pieces that we have
-                        scoured the world to find. We specialise in unique,
-                        designer fine jewellery, dreamt up by artists and
-                        brought to life by skilled craftspeople in
-                        under-the-radar ateliers and workshops scattered across
-                        the globe.
-                      </p>
-                    </div>
-                    <div class="col-lg-5 offset-lg-1">
-                      <div class="table-responsive">
-                        <table class="table">
-                          <tbody>
-                            <tr>
-                              <td class="border-top-0">SKU</td>
-                              <td class="text-right border-top-0">
-                                AM00400159
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Colour</td>
-                              <td class="text-right">Sliver</td>
-                            </tr>
-                            <tr>
-                              <td>Base material</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Weight</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                            <tr>
-                              <td>Measurements</td>
-                              <td class="text-right">Stainless steel(316L)</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+            </div>
+            <div
+              className="tab-pane fade"
+              id="nav-warrenty"
+              role="tabpanel"
+              aria-labelledby="nav-warrenty-tab"
+            >
+              <div className="row">
+                <div className="col-lg-6">
+                  <p>
+                    At Amrutam, discover unusual luxury pieces that we have
+                    scoured the world to find. We specialise in unique, designer
+                    fine jewellery, dreamt up by artists and brought to life by
+                    skilled craftspeople in under-the-radar ateliers and
+                    workshops scattered across the globe.
+                  </p>
+                </div>
+                <div className="col-lg-5 offset-lg-1">
+                  <div className="table-responsive">
+                    <table className="table">
+                      <tbody>
+                        <tr>
+                          <td className="border-top-0">SKU</td>
+                          <td className="text-right border-top-0">
+                            AM00400159
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Colour</td>
+                          <td className="text-right">Sliver</td>
+                        </tr>
+                        <tr>
+                          <td>Base material</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Weight</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                        <tr>
+                          <td>Measurements</td>
+                          <td className="text-right">Stainless steel(316L)</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
-            </TabPanel>
-          </SwipeableViews>
+            </div>
+          </div>
         </div>
       </section>
     </body>

@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Poppins:wght@200;300;500&display=swap");
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.ProductSummary {
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .ProductSummary {
+    padding: 40 0 70px;
+  }
+}
+
+.ProductSummary .productDetails .headingWrap h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: #404040;
+}
+
+.ProductSummary .productDetails .headingWrap span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.ProductSummary .productDetails p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding-right: 80px;
+  margin-bottom: 36px;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag {
+  padding: 4px 0px;
+  border-radius: 6px;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag span {
+  font-weight: 500;
+  font-size: 15px;
+  color: #616161;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .addToBag {
+  background-color: #f4f2f0;
+  border: 1px solid #f4f2f0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #616161;
+  margin-right: 10px;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .addToBag:hover {
+  background-color: #84766f;
+  color: #f4f2f0;
+  border-color: #84766f;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ProductSummary .productDetails .detailWrap .addBag .addToBag {
+    padding: 6px 12px;
+    margin-right: 4px;
+  }
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .buyNow {
+  border: 1px solid #84766f;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #616161;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.ProductSummary .productDetails .detailWrap .addBag .buyNow:hover {
+  background-color: #84766f;
+  color: #f4f2f0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ProductSummary .productDetails .detailWrap .addBag .buyNow {
+    padding: 6px 12px;
+  }
+}
+
+.ProductSummary .productDetails .detailWrap .fw-300 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #616161;
+  line-height: 18px;
+}
+
+.ProductSummary .productDetails .detailWrap span {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #616161;
+  line-height: 23px;
+}
+
+.ProductSummary .productDetails .detailWrap .fs-12 {
+  font-size: 12px;
+}
+
+.detailInfo .detailNav .nav-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #adadad;
+}
+
+@media (min-width: 768px) {
+  .detailInfo .detailNav .nav-tabs {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.detailInfo .detailNav .nav-tabs .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #616161;
+  letter-spacing: 0.13em;
+  padding: 18px 24px;
+  width: 240px;
+  text-align: center;
+}
+
+.detailInfo .detailNav .nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+
+.detailInfo .detailNav .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 3px solid #70645e;
+}
+
+.detailInfo .tab-content {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .detailInfo .tab-content {
+    padding: 50px;
+  }
+}
+
+.detailInfo .tab-content .tab-pane p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #616161;
+  letter-spacing: 0.07em;
+  line-height: 24px;
+}
+
+@media (min-width: 992px) {
+  .detailInfo .tab-content .tab-pane p {
+    padding-right: 70px;
+  }
+}
+
+.detailInfo .tab-content .tab-pane .table tr td {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #616161;
+  letter-spacing: 0.06em;
+  border-color: #aeaeae;
+}
+
+.detailInfo .tab-content .tab-pane .table tr td.text-right {
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: normal;
+}
+
+.sliderWrap {
+  padding-bottom: 70px;
+}
+
+.sliderWrap h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 40px;
+}
+
+.sliderWrap .slickSlider {
+  outline: none;
+}
+
+.sliderWrap .slickSlider .slick-track {
+  outline: none;
+}
+
+.sliderWrap .slickSlider .slick-track .slick-slide {
+  outline: none;
+}
+
+.sliderWrap .slickSlider .slick-track .slick-slide .imgWrap {
+  outline: none;
+}
+
+.sliderWrap .slickSlider .slick-track .slick-slide .imgWrap img {
+  margin: 0 auto 10px;
+}
+
+.sliderWrap .slickSlider .slick-track .slick-slide .priceCaption {
+  text-align: center;
+  outline: none;
+}
+
+.sliderWrap .slickSlider .slick-track .slick-slide .priceCaption p {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #616161;
+  letter-spacing: 0.13em;
+  margin-bottom: 6px;
+}
+
+.sliderWrap .slickSlider .slick-track .slick-slide .priceCaption p.fw-500 {
+  font-weight: 500;
+}
+
+.sliderWrap .slickSlider .slick-dir {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-48px);
+      -ms-transform: translateY(-48px);
+       -o-transform: translateY(-48px);
+          transform: translateY(-48px);
+}
+
+.sliderWrap .slickSlider .slick-prev {
+  left: 10px;
+}
+
+@media (min-width: 576px) {
+  .sliderWrap .slickSlider .slick-prev {
+    left: -10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sliderWrap .slickSlider .slick-prev {
+    left: -20px;
+  }
+}
+
+.sliderWrap .slickSlider .slick-next {
+  right: 10px;
+}
+
+@media (min-width: 576px) {
+  .sliderWrap .slickSlider .slick-next {
+    right: -10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sliderWrap .slickSlider .slick-next {
+    right: -20px;
+  }
+}
+
+.meetDesigner {
+  padding-bottom: 70px;
+}
+
+.meetDesigner .wrapper .designerWrap {
+  background-color: #f4f2f0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 45px 25px;
+}
+
+@media (min-width: 576px) {
+  .meetDesigner .wrapper .designerWrap {
+    padding: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  .meetDesigner .wrapper .designerWrap {
+    padding: 0 45px;
+  }
+}
+
+.meetDesigner .wrapper .designerWrap h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.meetDesigner .wrapper .designerWrap p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.meetDesigner .wrapper .designerWrap a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  text-decoration: none;
+}
+
+.meetDesigner .wrapper .designerWrap a span {
+  margin-right: 15px;
+}
+
+.meetDesigner .wrapper .bgWrap {
+  background: url("https://dummyimage.com/465x410/d3d3d3/fff.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  min-height: 410px;
+}
+
+.ShopCollection {
+  padding-bottom: 40px;
+}
+
+.ShopCollection .wrapper .contentWrap {
+  background-color: #f4f2f0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  padding: 45px 25px;
+}
+
+@media (min-width: 576px) {
+  .ShopCollection .wrapper .contentWrap {
+    padding: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ShopCollection .wrapper .contentWrap {
+    padding: 0 45px;
+  }
+}
+
+.ShopCollection .wrapper .contentWrap h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.ShopCollection .wrapper .contentWrap p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.07em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.ShopCollection .wrapper .contentWrap a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  text-decoration: none;
+}
+
+.ShopCollection .wrapper .contentWrap a span {
+  margin-right: 15px;
+}
+
+.ShopCollection .wrapper .bgWrap {
+  background: url("https://dummyimage.com/874x425/d3d3d3/fff.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  min-height: 425px;
+}

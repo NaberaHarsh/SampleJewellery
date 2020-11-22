@@ -8,53 +8,53 @@ class ProductPage extends Component {
     return (
       <Fragment>
         <body>
-          <header class="py-3"></header>
+          <header className="py-3"></header>
           <main>
-            <section class="ProductSummary">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-2">
-                    <div class="d-flex justify-content-between align-items-center align-items-md-end flex-md-column">
-                      <div class="imgWrap text-right">
+            <section className="ProductSummary">
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-2">
+                    <div className="d-flex justify-content-between align-items-center align-items-md-end flex-md-column">
+                      <div className="imgWrap text-right">
                         <img
-                          class="img-fluid"
+                          className="img-fluid"
                           src="https://dummyimage.com/80x80/d3d3d3/fff.jpg"
                           alt=""
                         />
                       </div>
-                      <div class="imgWrap text-right my-4">
+                      <div className="imgWrap text-right my-4">
                         <img
-                          class="img-fluid"
+                          className="img-fluid"
                           src="https://dummyimage.com/80x80/d3d3d3/fff.jpg"
                           alt=""
                         />
                       </div>
-                      <div class="imgWrap text-right">
+                      <div className="imgWrap text-right">
                         <img
-                          class="img-fluid"
+                          className="img-fluid"
                           src="https://dummyimage.com/80x80/d3d3d3/fff.jpg"
                           alt=""
                         />
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5 mb-4 mb-md-0">
-                    <div class="largeImg text-center text-md-left">
+                  <div className="col-md-5 mb-4 mb-md-0">
+                    <div className="largeImg text-center text-md-left">
                       <img
-                        class="img-fluid"
+                        className="img-fluid"
                         src="https://dummyimage.com/440x440/d3d3d3/fff.jpg"
                         alt=""
                       />
                     </div>
                   </div>
-                  <div class="col-md-5">
-                    <div class="productDetails">
-                      <div class="d-flex justify-content-between mb-3">
-                        <div class="headingWrap">
+                  <div className="col-md-5">
+                    <div className="productDetails">
+                      <div className="d-flex justify-content-between mb-3">
+                        <div className="headingWrap">
                           <h3>White daimond chain necklace</h3>
                           <span>by Dhwani Bansal</span>
                         </div>
-                        <a href="#" class="iconHeart">
+                        <a href="#" className="iconHeart">
                           <svg
                             width="20"
                             height="19"
@@ -74,33 +74,33 @@ class ProductPage extends Component {
                         pendant set with a diamond
                       </p>
 
-                      <div class="detailWrap">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                          <span class="fw-300">Quantity</span>
+                      <div className="detailWrap">
+                        <div className="d-flex justify-content-between align-items-center mb-4">
+                          <span className="fw-300">Quantity</span>
                           <span>1 +</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                          <span class="fw-300">Size</span>
+                        <div className="d-flex justify-content-between align-items-center mb-4">
+                          <span className="fw-300">Size</span>
                           <span>7.5</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center mb-4 addBag">
+                        <div className="d-flex justify-content-between align-items-center mb-4 addBag">
                           <span>Rs 2,200</span>
                           <div>
-                            <a href="#" class="btn addToBag">
+                            <a href="#" className="btn addToBag">
                               Add to Bag
                             </a>
-                            <a href="#" class="btn buyNow">
+                            <a href="#" className="btn buyNow">
                               Buy Now
                             </a>
                           </div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                          <span class="fw-300">Availability</span>
-                          <span class="fs-12">Mode to order</span>
+                        <div className="d-flex justify-content-between align-items-center mb-4">
+                          <span className="fw-300">Availability</span>
+                          <span className="fs-12">Mode to order</span>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                          <span class="fw-300">Shipping Time</span>
-                          <span class="fs-12">5-7 Days</span>
+                        <div className="d-flex justify-content-between align-items-center mb-4">
+                          <span className="fw-300">Shipping Time</span>
+                          <span className="fs-12">5-7 Days</span>
                         </div>
                       </div>
                     </div>
@@ -111,31 +111,22 @@ class ProductPage extends Component {
 
             <ProductTab />
 
-            <section class="pairWith sliderWrap">
-              <div class="container">
-                <div class="row">
-                  <div class="col text-center">
-                    <h3>PAIR IT WITH</h3>
-                  </div>
-                </div>
-                <CarouselItem />
-              </div>
-            </section>
+            <CarouselItem data={"PAIR IT WITH"} />
 
-            <section class="meetDesigner">
-              <div class="wrapper">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="bgWrap">
+            <section className="meetDesigner">
+              <div className="wrapper">
+                <div className="row">
+                  <div className="col-lg-4">
+                    <div className="bgWrap">
                       <img
-                        class="img-fluid"
+                        className="img-fluid"
                         src="https://dummyimage.com/465x410/d3d3d3/fff.jpg"
                         alt=""
                       />
                     </div>
                   </div>
-                  <div class="col-lg-4">
-                    <div class="designerWrap">
+                  <div className="col-lg-4">
+                    <div className="designerWrap">
                       <h3>MEET THE DESIGNER</h3>
                       <p>
                         At Amrutam, discover unusual luxury pieces that we have
@@ -146,7 +137,7 @@ class ProductPage extends Component {
                         the globe.{" "}
                       </p>
 
-                      <a href="#" class="discoverMore">
+                      <a href="#" className="discoverMore">
                         <span>DISCOVER MORE</span>{" "}
                         <svg
                           width="7"
@@ -163,10 +154,10 @@ class ProductPage extends Component {
                       </a>
                     </div>
                   </div>
-                  <div class="col-lg-4">
-                    <div class="bgWrap">
+                  <div className="col-lg-4">
+                    <div className="bgWrap">
                       <img
-                        class="img-fluid"
+                        className="img-fluid"
                         src="https://dummyimage.com/465x410/d3d3d3/fff.jpg"
                         alt=""
                       />
@@ -176,41 +167,29 @@ class ProductPage extends Component {
               </div>
             </section>
 
-            <section class="youLike sliderWrap">
-              <div class="container">
-                <div class="row">
-                  <div class="col text-center">
-                    <h3>YOU MAY ALSO LIKE</h3>
-                  </div>
-                </div>
-
-                <CarouselItem />
+            <section className="youLike sliderWrap">
+              <div className="container">
+                <CarouselItem data={"YOU MAY ALSO LIKE"} />
               </div>
             </section>
 
-            <section class="discoverCollection sliderWrap">
-              <div class="container">
-                <div class="row">
-                  <div class="col text-center">
-                    <h3>DISCOVER THE COLLECTION</h3>
-                  </div>
-                </div>
-
-                <CarouselItem />
+            <section className="discoverCollection sliderWrap">
+              <div className="container">
+                <CarouselItem data={"DISCOVER THE COLLECTION"} />
               </div>
             </section>
 
-            <section class="ShopCollection">
-              <div class="wrapper">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="contentWrap">
+            <section className="ShopCollection">
+              <div className="wrapper">
+                <div className="row">
+                  <div className="col-lg-4">
+                    <div className="contentWrap">
                       <h3>SHOP THE COLLECTION</h3>
                       <p>
                         At Amrutam, discover unusual luxury pieces that we have
                         scoured the world to find.{" "}
                       </p>
-                      <a href="#" class="shopNow">
+                      <a href="#" className="shopNow">
                         <span>SHOP NOW</span>
                         <svg
                           width="7"
@@ -227,10 +206,10 @@ class ProductPage extends Component {
                       </a>
                     </div>
                   </div>
-                  <div class="col-lg-8">
-                    <div class="bgWrap">
+                  <div className="col-lg-8">
+                    <div className="bgWrap">
                       <img
-                        class="img-fluid"
+                        className="img-fluid"
                         src="https://dummyimage.com/874x425/d3d3d3/fff.jpg"
                         alt=""
                       />
@@ -240,7 +219,7 @@ class ProductPage extends Component {
               </div>
             </section>
           </main>
-          <footer class="py-3"></footer>
+          <footer className="py-3"></footer>
         </body>
       </Fragment>
     );
