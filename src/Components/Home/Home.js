@@ -318,11 +318,364 @@ class Home extends Component {
                       Shop
                     </a>
                     <div
+                      class="dropdown-menu megaMenu"
+                      aria-labelledby="navbarDropdownMenuLink"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-12 d-lg-none">
+                            <div class="menuClose">
+                              <span>Back</span>
+                              <a
+                                href="#"
+                                class="closeBtn"
+                                id="btnClose"
+                                onclick="closeBtn()"
+                              >
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 18 18"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
+                                    fill="#616161"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                            <div class="subMenu">SHOP</div>
+                          </div>
+                          <div class="col-lg-5">
+                            <div class="row">
+                              <div class="col-12">
+                                <h4>FEATURED</h4>
+                              </div>
+                              <div class="col-sm-12">
+                                <div class="row">
+                                  <div class="col-6">
+                                    <ul class="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li class="d-none d-sm-block">
+                                        <a href="#">show all</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="col-6">
+                                    <ul class="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">show all</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6 mt-4 mt-sm-0 d-sm-none">
+                                <h4>CATEGORIES</h4>
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a href="#">rings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">bracelets</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">earrings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">single earrings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">necklaces</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">brooches</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">show all</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-7 d-none d-sm-block mt-4 mt-lg-0">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <div class="imgWrap">
+                                  <img
+                                    class="img-fluid"
+                                    src="https://dummyimage.com/348x250/d3d3d3/fff.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="imgWrap">
+                                  <img
+                                    class="img-fluid"
+                                    src="https://dummyimage.com/348x250/d3d3d3/fff.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Designers
+                    </a>
+                    <div
                       className="dropdown-menu megaMenu"
                       aria-labelledby="navbarDropdownMenuLink"
                     >
                       <div className="container">
-                        <div className="row">
+                        <div className="row w-100">
+                          <div className="col-12 d-lg-none">
+                            <div className="menuClose">
+                              <span>Back</span>
+                              <a
+                                href="#"
+                                className="closeBtn"
+                                id="btnClose"
+                                onclick="closeBtn()"
+                              >
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 18 18"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
+                                    fill="#616161"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                            <div className="subMenu">SHOP</div>
+                          </div>
+                          <div className="col-lg-9">
+                            <div className="row">
+                              <div className="col-12">
+                                <h4>DESIGNER</h4>
+                              </div>
+                              <div className="col-sm-12">
+                                <div className="row">
+                                  <div className="col-6 col-lg-3">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li className="d-none">
+                                        <a href="#">show all</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div className="col-6 col-lg-3">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" className="d-none">
+                                          show all
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div className="col-6 col-lg-3">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" className="d-none">
+                                          show all
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div className="col-6 col-lg-3">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">show all</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-sm-6 mt-4 mt-sm-0 d-none">
+                                <h4>CATEGORIES</h4>
+                                <ul className="list-unstyled">
+                                  <li>
+                                    <a href="#">rings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">bracelets</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">earrings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">single earrings</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">necklaces</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">brooches</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">show all</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-lg-3 d-none d-sm-block mt-4 mt-lg-0 mt-lg-3">
+                            <div className="imgWrap">
+                              <img
+                                className="img-fluid"
+                                src="https://dummyimage.com/348x250/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Occasion
+                    </a>
+                    <div
+                      className="dropdown-menu megaMenu"
+                      aria-labelledby="navbarDropdownMenuLink"
+                    >
+                      <div className="container">
+                        <div className="row w-100">
                           <div className="col-12 d-lg-none">
                             <div className="menuClose">
                               <span>Back</span>
@@ -350,33 +703,64 @@ class Home extends Component {
                           </div>
                           <div className="col-lg-5">
                             <div className="row">
-                              <div className="col-sm-6">
-                                <h4>FEATURED</h4>
-                                <ul className="list-unstyled">
-                                  <li>
-                                    <a href="#">spring summer trends</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">what's new</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">tiny treasures</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">auverture exclusive</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">engagement</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">fine jewellery gifts</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">show all</a>
-                                  </li>
-                                </ul>
+                              <div className="col-12">
+                                <h4>OCCASION</h4>
                               </div>
-                              <div className="col-sm-6 mt-4 mt-sm-0">
+                              <div className="col-sm-12">
+                                <div className="row">
+                                  <div className="col-6">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li className="d-none d-sm-block">
+                                        <a href="#">show all</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div className="col-6">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <a href="#">spring summer trends</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">what's new</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">tiny treasures</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">auverture exclusive</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">engagement</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">fine jewellery gifts</a>
+                                      </li>
+                                      <li>
+                                        <a href="#">show all</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-sm-6 mt-4 mt-sm-0 d-sm-none">
                                 <h4>CATEGORIES</h4>
                                 <ul className="list-unstyled">
                                   <li>
@@ -428,60 +812,6 @@ class Home extends Component {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      id="navbarDropdownMenuLink"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Designers
-                    </a>
-                    <div
-                      className="dropdown-menu"
-                      aria-labelledby="navbarDropdownMenuLink"
-                    >
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Another action
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      id="navbarDropdownMenuLink"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Occasion
-                    </a>
-                    <div
-                      className="dropdown-menu"
-                      aria-labelledby="navbarDropdownMenuLink"
-                    >
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Another action
-                      </a>
-                      <a className="dropdown-item" href="#">
-                        Something else here
-                      </a>
                     </div>
                   </li>
 
@@ -536,8 +866,109 @@ class Home extends Component {
 
         <main>
           <section className="bannerSection homeBanner">
-            <div className="container">
-              <div className="bannerContent"></div>
+            <div className="container customContainer">
+              <div className="bannerContent">
+                <div
+                  id="carouselExampleIndicators"
+                  className="carousel slide"
+                  data-ride="carousel"
+                >
+                  <ol className="carousel-indicators">
+                    <li
+                      data-target="#carouselExampleIndicators"
+                      data-slide-to="0"
+                      className="active"
+                    ></li>
+                    <li
+                      data-target="#carouselExampleIndicators"
+                      data-slide-to="1"
+                    ></li>
+                    <li
+                      data-target="#carouselExampleIndicators"
+                      data-slide-to="2"
+                    ></li>
+                  </ol>
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <img
+                        src="https://dummyimage.com/1290x470/d3d3d3/fff.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div className="carousel-item">
+                      <img
+                        src="https://dummyimage.com/1290x470/d3d3d3/fff.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div className="carousel-item">
+                      <img
+                        src="https://dummyimage.com/1290x470/d3d3d3/fff.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <a
+                    className="carousel-control-prev"
+                    href="#carouselExampleIndicators"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    {/* <span
+                      className="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span> */}
+                    <svg
+                      width="17"
+                      height="33"
+                      viewBox="0 0 17 33"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 31.084L1 16.084L16 1.08398"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <span className="sr-only">Previous</span>
+                  </a>
+                  <a
+                    className="carousel-control-next"
+                    href="#carouselExampleIndicators"
+                    role="button"
+                    data-slide="next"
+                  >
+                    {/* <span
+                      className="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span> */}
+                    <svg
+                      width="17"
+                      height="33"
+                      viewBox="0 0 17 33"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 31.084L16 16.084L1 1.08398"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <span className="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -549,7 +980,7 @@ class Home extends Component {
                 </div>
               </div>
               <div className="row homeSlider">
-                <div className="col-lg-2 col-md-2 mx-auto">
+                <div className="col-lg-2 mx-auto">
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
@@ -561,7 +992,7 @@ class Home extends Component {
                     <p>EARRING</p>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2 mx-auto">
+                <div className="col-lg-2 mx-auto">
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
@@ -573,7 +1004,7 @@ class Home extends Component {
                     <p>NECKPIECE</p>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2mx-auto">
+                <div className="col-lg-2 mx-auto">
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
@@ -585,7 +1016,7 @@ class Home extends Component {
                     <p>RING</p>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2 mx-auto">
+                <div className="col-lg-2 mx-auto">
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
@@ -599,7 +1030,7 @@ class Home extends Component {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2 mx-auto">
+                <div className="col-lg-2 mx-auto">
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
@@ -613,7 +1044,7 @@ class Home extends Component {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2 mx-auto">
+                <div className="col-lg-2 mx-auto">
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
@@ -625,7 +1056,7 @@ class Home extends Component {
                     <p>COSMIC OPEN RING</p>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-2 mx-auto">
+                <div className="col-lg-2 mx-auto">
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
@@ -641,78 +1072,78 @@ class Home extends Component {
             </div>
           </section>
 
-          <section className="disOcc">
-            <div className="container">
-              <div className="row position-relative">
-                <div className="disHeading mb-5 mb-lg-0 text-center">
-                  <h3 className="titleHeading">
+          <section class="disOcc">
+            <div class="container">
+              <div class="row position-relative">
+                <div class="disHeading mb-5 mb-lg-0 text-center">
+                  <h3 class="titleHeading">
                     DISCOVER BY <span>OCCASION</span>
                   </h3>
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-4">
-                  <div className="disItem">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-4 mb-4">
+                  <div class="disItem">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
                       />
                     </div>
-                    <h5 className="disCaption">HOLIDAY</h5>
+                    <h5 class="disCaption">HOLIDAY</h5>
                   </div>
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-4">
-                  <div className="disItem secItem">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-4 mb-4">
+                  <div class="disItem secItem">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
                       />
                     </div>
-                    <h5 className="disCaption">FESTIVE</h5>
+                    <h5 class="disCaption">FESTIVE</h5>
                   </div>
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-4">
-                  <div className="disItem">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-4 mb-4">
+                  <div class="disItem">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
                       />
                     </div>
-                    <h5 className="disCaption">COCKTAIL</h5>
+                    <h5 class="disCaption">COCKTAIL</h5>
                   </div>
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-4">
-                  <div className="disItem">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-4 mb-4">
+                  <div class="disItem">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
                       />
                     </div>
-                    <h5 className="disCaption">CASUAL</h5>
+                    <h5 class="disCaption">CASUAL</h5>
                   </div>
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-4">
-                  <div className="disItem fifItem">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-4 mb-4">
+                  <div class="disItem fifItem">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
                       />
                     </div>
-                    <h5 className="disCaption">WEDDING</h5>
+                    <h5 class="disCaption">WEDDING</h5>
                   </div>
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-4">
-                  <div className="disItem">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-4 mb-4">
+                  <div class="disItem">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
                       />
                     </div>
-                    <h5 className="disCaption">WORK-WEAR</h5>
+                    <h5 class="disCaption">WORK-WEAR</h5>
                   </div>
                 </div>
               </div>
@@ -759,13 +1190,15 @@ class Home extends Component {
             </div>
           </section>
 
-          <section className="designersMeet">
+          <section className="designersMeet sliderWrap">
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
                   <h3 className="titleHeading">MEET THE DESIGNER</h3>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-5 mb-lg-4">
+              </div>
+              <div className="row designerSlider">
+                <div className="col-md-6 col-lg-4">
                   <div className="row">
                     <div className="col-6">
                       <div className="designersCard">
@@ -796,7 +1229,7 @@ class Home extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-5 mb-lg-4">
+                <div className="col-md-6 col-lg-4">
                   <div className="row">
                     <div className="col-6">
                       <div className="designersCard">
@@ -827,7 +1260,100 @@ class Home extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-4 mx-auto">
+                <div className="col-md-6 col-lg-4">
+                  <div className="row">
+                    <div className="col-6">
+                      <div className="designersCard">
+                        <div className="imgWrap">
+                          <img
+                            className="img-fluid"
+                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="designBy">
+                        <div className="imgWrap">
+                          <img
+                            className="img-fluid"
+                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div className="designerTitle">
+                          <em>Cosmic Open Ring</em>
+                          <em>By</em>
+                          <h5>MITALI JAIN</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-4">
+                  <div className="row">
+                    <div className="col-6">
+                      <div className="designersCard">
+                        <div className="imgWrap">
+                          <img
+                            className="img-fluid"
+                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="designBy">
+                        <div className="imgWrap">
+                          <img
+                            className="img-fluid"
+                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div className="designerTitle">
+                          <em>Cosmic Open Ring</em>
+                          <em>By</em>
+                          <h5>MITALI JAIN</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-4">
+                  <div className="row">
+                    <div className="col-6">
+                      <div className="designersCard">
+                        <div className="imgWrap">
+                          <img
+                            className="img-fluid"
+                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="designBy">
+                        <div className="imgWrap">
+                          <img
+                            className="img-fluid"
+                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div className="designerTitle">
+                          <em>Cosmic Open Ring</em>
+                          <em>By</em>
+                          <h5>MITALI JAIN</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-4">
                   <div className="row">
                     <div className="col-6">
                       <div className="designersCard">
@@ -1073,19 +1599,18 @@ class Home extends Component {
               </div>
             </div>
           </section>
-
-          <section className="blogPost">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12 mb-5">
-                  <h3 className="titleHeading">ALL BLOG POSTS</h3>
+          <section class="blogPost">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 mb-5">
+                  <h3 class="titleHeading">ALL BLOG POSTS</h3>
                 </div>
 
-                <div className="col-md-6 col-lg-4 mb-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-3 mb-4">
+                  <div class="blogCard">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
                         alt=""
                       />
@@ -1096,11 +1621,11 @@ class Home extends Component {
                     </h5>
                   </div>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-3 mb-4">
+                  <div class="blogCard">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
                         src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
                         alt=""
                       />
@@ -1111,11 +1636,26 @@ class Home extends Component {
                     </h5>
                   </div>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
+                <div class="col-6 col-lg-3 mb-4">
+                  <div class="blogCard">
+                    <div class="imgWrap">
                       <img
-                        className="img-fluid"
+                        class="img-fluid"
+                        src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <em>Publications</em>
+                    <h5>
+                      OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-4">
+                  <div class="blogCard">
+                    <div class="imgWrap">
+                      <img
+                        class="img-fluid"
                         src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
                         alt=""
                       />

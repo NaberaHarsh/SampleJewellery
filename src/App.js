@@ -1,10 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Collection from "./Components/Cards/Collection";
-import Info from "./Components/Cards/Info";
-import LikedProduct from "./Components/Cards/LikedProduct";
-import Pair from "./Components/Cards/Pair";
-import Shop from "./Components/Cards/Shop";
+
 import Home from "./Components/Home/Home";
 import ProductPage from "./Components/Product/ProductPage";
 import FullWidthTabs from "./Components/Product/ProductTab";
@@ -22,9 +18,6 @@ class App extends Component {
           <Route path="/home" render={() => <Home />} />
 
           <Route path="/product" render={() => <ProductPage />} />
-
-          <br />
-          <br />
         </Router>
       </Fragment>
     );
