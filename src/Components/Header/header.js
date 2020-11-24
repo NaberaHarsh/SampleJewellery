@@ -4,8 +4,14 @@ import "../Home/home.css";
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      showFilter: false,
+    };
   }
+
+  handleFilter = () => {
+    this.setState({ showFilter: !this.state.showFilter });
+  };
 
   render() {
     return (
@@ -167,7 +173,7 @@ class Header extends Component {
             <div className="container-fluid">
               <div className="mobNavWrap">
                 <button
-                  className="navbar-toggler"
+                  className="navbar-toggler show"
                   type="button"
                   data-toggle="collapse"
                   data-target="#navbarNavDropdown"
@@ -181,6 +187,7 @@ class Header extends Component {
                     viewBox="0 0 30 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    onClick={() => this.handleFilter()}
                   >
                     <path
                       d="M1 17H18"
@@ -270,7 +277,14 @@ class Header extends Component {
                 </div>
               </div>
 
-              <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <div
+                className={
+                  this.state.showFilter
+                    ? "collapse navbar-collapse  d-md-block"
+                    : "scollapse navbar-collapse d-none d-md-block"
+                }
+                id="navbarNavDropdown"
+              >
                 <div className="d-lg-none">
                   <div className="menuClose">
                     <span>Menu</span>
@@ -278,7 +292,7 @@ class Header extends Component {
                       href="#"
                       className="closeBtn"
                       id="btnClose"
-                      onclick="closeBtn()"
+                      onClick={() => this.handleFilter()}
                     >
                       <svg
                         width="18"
@@ -330,7 +344,7 @@ class Header extends Component {
                                 href="#"
                                 class="closeBtn"
                                 id="btnClose"
-                                onclick="closeBtn()"
+                                onClick={() => this.handleFilter()}
                               >
                                 <svg
                                   width="18"
@@ -486,7 +500,7 @@ class Header extends Component {
                                 href="#"
                                 className="closeBtn"
                                 id="btnClose"
-                                onclick="closeBtn()"
+                                onClick={() => this.handleFilter()}
                               >
                                 <svg
                                   width="18"
@@ -683,7 +697,7 @@ class Header extends Component {
                                 href="#"
                                 className="closeBtn"
                                 id="btnClose"
-                                onclick="closeBtn()"
+                                onClick={() => this.handleFilter()}
                               >
                                 <svg
                                   width="18"

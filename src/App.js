@@ -6,6 +6,7 @@ import Header from "./Components/Header/header";
 import Home from "./Components/Home/Home";
 import ProductPage from "./Components/Product/ProductPage";
 import FullWidthTabs from "./Components/Product/ProductTab";
+import Shop from "./Components/Shop/shop";
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/" component={Header} />
           <Route path="/home" render={() => <Home />} />
           <Route path="/product" render={() => <ProductPage />} />
+          <Route path="/shop" render={() => <Shop />} />
           <Route path="/" component={Footer} />
         </Router>
       </Fragment>
