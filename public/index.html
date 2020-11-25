@@ -55,73 +55,10 @@
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<!-- Option 2: jQuery, Popper.js, and Bootstrap JS
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
--->
-
-<script>
-  $('.slickSlider').slick({
-      // dots: true,
-      prevArrow:
-          '<div class="slick-dir slick-prev"><svg width="17" height="33" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 31.084L1 16.084L16 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
-      nextArrow:
-          '<div class="slick-dir slick-next"><svg width="17" height="33" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 31.084L16 16.084L1 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      responsive: [
-          {
-              breakpoint: 992,
-              settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  // dots: true
-              }
-          },
-          {
-              breakpoint: 768,
-              settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1
-              }
-          },
-          {
-              breakpoint: 576,
-              settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-              }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-      ]
-  });
-</script>
- 
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-crossorigin="anonymous"></script> -->
-
-<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>  -->
-
-<!-- Option 2: jQuery, Popper.js, and Bootstrap JS
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
--->
 
 <!-- Slider Script -->
 <script>
-$('.homeSlider').slick({
-            // dots: true,
+ $('.sliderCat').slick({
             prevArrow:
                 '<div class="slick-dir slick-prev"><svg width="12" height="24" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 31.084L1 16.084L16 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
             nextArrow:
@@ -143,6 +80,48 @@ $('.homeSlider').slick({
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '10px',
+
+                    }
+                }
+            ]
+        });
+
+
+        $('.blogSlider').slick({
+            prevArrow:
+                '<div class="slick-dir slick-prev"><svg width="12" height="24" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 31.084L1 16.084L16 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+            nextArrow:
+                '<div class="slick-dir slick-next"><svg width="12" height="24" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 31.084L16 16.084L1 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        prevArrow: false,
+                        nextArrow: false,
                     }
                 },
                 {
@@ -150,10 +129,14 @@ $('.homeSlider').slick({
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '0px',
                     }
                 }
             ]
         });
+
 
 $('.jewellerySlider').slick({
     arrows: false,
@@ -191,12 +174,10 @@ $('.jewellerySlider').slick({
     ]
 });
 
+
 $('.designerSlider').slick({
-            // dots: true,
-            prevArrow:
-                '<div class="slick-dir slick-prev"><svg width="12" height="24" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 31.084L1 16.084L16 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
-            nextArrow:
-                '<div class="slick-dir slick-next"><svg width="12" height="24" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 31.084L16 16.084L1 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+            prevArrow: false,
+            nextArrow: false,
             infinite: true,
             speed: 300,
             slidesToShow: 3,
@@ -221,6 +202,44 @@ $('.designerSlider').slick({
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+
+        $('.slickSlider').slick({
+            // dots: true,
+            prevArrow:
+                '<div class="slick-dir slick-prev"><svg width="17" height="33" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 31.084L1 16.084L16 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+            nextArrow:
+                '<div class="slick-dir slick-next"><svg width="17" height="33" viewBox="0 0 17 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 31.084L16 16.084L1 1.08398" stroke="#616161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        // dots: true
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
                     }
                 }
             ]

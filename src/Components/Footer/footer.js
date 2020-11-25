@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "../Home/home.css";
 
 class Footer extends Component {
@@ -10,30 +10,30 @@ class Footer extends Component {
   render() {
     return (
       <body>
-        <footer className="amrutamFooter">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-4 mb-5 order-lg-2 text-center text-md-left">
+        <footer class="amrutamFooter">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 mb-5 order-lg-2 text-center text-md-left">
                 <h5>Sign up for our news letters</h5>
                 <p>
                   Be the first to know about new designer launches, exclusive
                   collections, latest trends, stories and more.
                 </p>
-                <div className="inputWrap">
+                <div class="inputWrap">
                   <input
                     type="email"
-                    className="form-control"
+                    class="form-control"
                     placeholder="Enter your e-mail address"
                   />
                 </div>
-                <button className="btn btn-outline-dark">SUBMIT</button>
+                <button class="btn btn-outline-dark">SUBMIT</button>
               </div>
 
-              <div className="col-md-6 col-lg-4 mb-4">
-                <div className="row">
-                  <div className="col-6">
-                    <h5>Information</h5>
-                    <ul className="list-unstyled">
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="pl-3">Information</h5>
+                    <ul class="list-unstyled pl-3">
                       <li>
                         <a href="#">Returns & Exchanges</a>
                       </li>
@@ -41,7 +41,9 @@ class Footer extends Component {
                         <a href="#">Shipping Information</a>
                       </li>
                       <li>
-                        <a href="#">Terms & Conditions</a>
+                        <a href="#" class="text-nowrap">
+                          Terms & Conditions
+                        </a>
                       </li>
                       <li>
                         <a href="#">Privacy & Cookies</a>
@@ -51,9 +53,9 @@ class Footer extends Component {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-6">
-                    <h5>Amrutam</h5>
-                    <ul className="list-unstyled">
+                  <div class="col-6">
+                    <h5 class="pl-3">Amrutam</h5>
+                    <ul class="list-unstyled pl-3">
                       <li>
                         <a href="#">About Us</a>
                       </li>
@@ -80,9 +82,9 @@ class Footer extends Component {
                 </div>
               </div>
 
-              <div className="col-md-6 col-lg-4 mb-3 mb-lg-4 text-center text-md-left">
+              <div class="col-md-6 col-lg-4 mb-3 mb-lg-4 text-center text-md-left">
                 <h5>Services</h5>
-                <ul className="list-unstyled">
+                <ul class="list-unstyled">
                   <li>
                     <a href="tel:+91-9871024847">Need help? +91-9871024847</a>
                   </li>
@@ -100,8 +102,8 @@ class Footer extends Component {
                 </ul>
               </div>
             </div>
-            <div className="row subFooter">
-              <div className="col text-center">
+            <div class="row subFooter">
+              <div class="col text-center">
                 <a href="#">
                   <svg
                     width="24"
