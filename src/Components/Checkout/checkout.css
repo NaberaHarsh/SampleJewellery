@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Poppins:wght@200;300;500&display=swap");
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Book.otf") format("opentype");
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .customContainer {
+    max-width: 1220px;
+  }
+}
+@media (min-width: 992px) {
+  .disOcc .titleHeading span {
+    display: block;
+  }
+}
+
+.titleHeading,
+.disOcc .titleHeading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .titleHeading {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .priceBar .offerPrice,
+.checkoutPage .productDetails .productItem .itemDetails .priceBar .offerPrice {
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.13em;
+  color: #292929;
+}
+
+@media (min-width: 576px) {
+  .shopSection .shopGrid .shopItem .itemDetails .priceBar .offerPrice,
+  .checkoutPage
+    .productDetails
+    .productItem
+    .itemDetails
+    .priceBar
+    .offerPrice {
+    font-size: 15px;
+  }
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .priceBar .prePrice,
+.checkoutPage .productDetails .productItem .itemDetails .priceBar .prePrice {
+  font-family: "Avenir";
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.13em;
+  color: #777777;
+  text-decoration: line-through;
+}
+
+@media (min-width: 576px) {
+  .shopSection .shopGrid .shopItem .itemDetails .priceBar .prePrice,
+  .checkoutPage .productDetails .productItem .itemDetails .priceBar .prePrice {
+    font-size: 13px;
+    margin: 0 8px;
+  }
+}
+
+.shopSection .shopGrid .shopItem .itemDetails .priceBar .discount,
+.checkoutPage .productDetails .productItem .itemDetails .priceBar .discount {
+  font-family: "Avenir";
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.13em;
+  color: #3cac5b;
+}
+
+@media (min-width: 576px) {
+  .shopSection .shopGrid .shopItem .itemDetails .priceBar .discount,
+  .checkoutPage .productDetails .productItem .itemDetails .priceBar .discount {
+    font-size: 13px;
+  }
+}
+
+.shopSection .shopCategory .accordion .card .card-body .custom-checkbox,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox {
+  padding-left: 1.75rem;
+}
+
+.shopSection .shopCategory .accordion .card .card-body .custom-checkbox label,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  label {
+  padding: 4px 0;
+  padding-left: 10px;
+  margin-bottom: 4px;
+  font-family: "Avenir";
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.51);
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .shopSection .shopCategory .accordion .card .card-body .custom-checkbox label,
+  .checkoutPage
+    .productDetails
+    .productItem
+    .priceDetails
+    .table
+    .custom-checkbox
+    label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.shopSection
+  .shopCategory
+  .accordion
+  .card
+  .card-body
+  .custom-checkbox
+  label::before,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  label::before {
+  border-radius: 0;
+  border-color: #616161;
+  margin-right: 20px;
+}
+.shopSection
+  .shopCategory
+  .accordion
+  .card
+  .card-body
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background: #616161;
+}
+
+.shopSection
+  .shopCategory
+  .accordion
+  .card
+  .card-body
+  .custom-checkbox
+  .custom-control-input:focus
+  ~ .custom-control-label::before,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  .custom-control-input:focus
+  ~ .custom-control-label::before {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(97, 97, 97, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(97, 97, 97, 0.25);
+}
+
+@media (min-width: 992px) {
+  .checkoutPage .titleHeading {
+    font-size: 23px;
+    line-height: 27px;
+    margin: 30px auto 60px;
+  }
+}
+
+.checkoutPage .titleHeading {
+  margin: 20px auto 40px;
+  font-family: "Avenir";
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.21em;
+  color: #313131;
+}
+
+.checkoutPage .productDetails .productItem {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+.checkoutPage .productDetails .productItem .imgWrap {
+  width: 100px;
+  height: 100px;
+}
+
+.checkoutPage .productDetails .productItem .itemDetails {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.47);
+}
+
+.checkoutPage .productDetails .productItem .itemDetails .itemWrap {
+  margin-left: 25px;
+}
+
+.checkoutPage .productDetails .productItem .itemDetails .itemWrap h5 {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.checkoutPage .productDetails .productItem .itemDetails .priceBar .offerPrice {
+  font-weight: 600;
+}
+
+.checkoutPage .productDetails .productItem .priceDetails .table td {
+  font-family: "Avenir";
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+  color: #262626;
+  border-top: none;
+  padding: 6px 12px;
+}
+
+.checkoutPage .productDetails .productItem .priceDetails .table th {
+  border-bottom: 1px solid rgba(97, 97, 97, 0.47);
+}
+
+.checkoutPage .productDetails .productItem .priceDetails .table th label {
+  font-family: "EB Garamond", serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  cursor: pointer;
+}
+
+.checkoutPage .productDetails .productItem .priceDetails .table tfoot td {
+  border-top: 1px solid rgba(97, 97, 97, 0.47);
+}
+
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  label {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: initial;
+}
+
+.checkoutPage .productDetails .productItem .priceDetails .table .fontEb {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  text-align: right;
+}
