@@ -35,6 +35,32 @@ body {
   text-align: center;
 }
 
+.headerAmrutam .mobileSearch .searchWrap {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.headerAmrutam .mobileSearch .searchWrap input {
+  font-family: "Avenir";
+  font-size: 11px;
+  line-height: 15px;
+  color: #616161;
+  background: rgba(241, 241, 241, 0.63);
+  border-radius: 24px;
+  padding-left: 55px;
+  border: none;
+}
+
+.headerAmrutam .mobileSearch .searchWrap svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 20px;
+}
+
 .headerAmrutam .topHeader,
 .headerAmrutam .midHeader,
 .headerAmrutam .navbar .mobNavWrap,

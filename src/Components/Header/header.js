@@ -74,7 +74,7 @@ class Header extends Component {
               <span className="active">Women</span>
               <span>Men</span>
             </div>
-            <div className="searchBar">
+            <div className="searchBar" style={{ marginLeft: "54px" }}>
               <div className="searchWrap">
                 <svg
                   width="16"
@@ -874,6 +874,41 @@ class Header extends Component {
               </div>
             </div>
           </nav>
+
+          <div class="mobileSearch d-lg-none">
+            <div class="container">
+              <div class="searchWrap">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.22222 13.4454C10.6587 13.4454 13.4444 10.6596 13.4444 7.2232C13.4444 3.78676 10.6587 1.00098 7.22222 1.00098C3.78578 1.00098 1 3.78676 1 7.2232C1 10.6596 3.78578 13.4454 7.22222 13.4454Z"
+                    stroke="#84766F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 15.001L11.6167 11.6177"
+                    stroke="#84766F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="What are you looking for?"
+                />
+              </div>
+            </div>
+          </div>
 
           <div className="freeShippingMob">
             <svg
