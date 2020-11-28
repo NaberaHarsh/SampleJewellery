@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./checkout.css";
+import withWidth from "@material-ui/core/withWidth";
 
 class Checkout extends Component {
   constructor(props) {
@@ -7,6 +8,9 @@ class Checkout extends Component {
   }
 
   render() {
+    const { width, classes } = this.props;
+
+    let mobileView = ["sm", "xs"].includes(width);
     return (
       <body>
         <main>
@@ -1062,9 +1066,21 @@ class Checkout extends Component {
             </div>
           </section>
         </main>
+        {mobileView && (
+          <div
+            className="fixedBtn"
+            style={{
+              textAlign: "center",
+              backgroundColor: "#f4f2f0",
+              width: "100%",
+            }}
+          >
+            PLACE ORDER
+          </div>
+        )}
       </body>
     );
   }
 }
 
-export default Checkout;
+export default withWidth()(Checkout);

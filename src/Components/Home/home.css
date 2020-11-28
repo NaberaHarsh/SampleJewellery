@@ -65,6 +65,8 @@ body {
 .headerAmrutam .midHeader,
 .headerAmrutam .navbar .mobNavWrap,
 .headerAmrutam .navbar .navbar-collapse .menuClose,
+.headerAmrutam .cartWrap .myBag .cartHead,
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .totalCheckout .subTotal,
 .detailInfo .detailtabs .nav-tabs .nav-link,
 .detailInfo .detailCollapse .card .card-header .btn,
 .shopSection .byWrap,
@@ -74,7 +76,18 @@ body {
 .shopSection .shopCategory .accordion .card .card-header button,
 .shopSection .topBar,
 .shopSection .shopGrid .shopItem .itemDetails .itemTitle,
-.shopSection .btnWrap .backTop {
+.shopSection .btnWrap .backTop,
+.checkoutPage .checkoutCollapse .card .card-header button,
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .addressContent
+  .addressCard
+  .foot,
+.checkoutPage .productDetails .couponCode .codeWrap,
+.checkoutPage .productDetails .couponCode .selectedCode {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2453,4 +2466,535 @@ body {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
   margin-left: 10px;
+}
+
+.headerAmrutam .cartWrap {
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.headerAmrutam .cartWrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000080;
+}
+
+.headerAmrutam .cartWrap .myBag {
+  position: fixed;
+  right: 0;
+  background: #fff;
+  z-index: 99;
+  padding: 15px;
+  height: 100%;
+  width: 380px;
+  max-width: 100%;
+}
+
+.headerAmrutam .cartWrap .myBag .cartHead {
+  padding: 15px 4px 15px 15px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.headerAmrutam .cartWrap .myBag .cartHead span {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody {
+  height: calc(100% - 55px);
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem {
+  position: relative;
+  height: 100%;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails h5,
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .prePrice,
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .disPrice {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  font-weight: 400;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .prePrice {
+  padding: 4px 14px;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #9f2323;
+  text-decoration-color: #9f2323;
+  color: #404040;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .disPrice {
+  background: #f4f2f0;
+  border-radius: 2px;
+  color: #424040;
+  margin-top: 4px;
+  width: 75px;
+  height: 25px;
+  padding: 4px;
+  text-align: center;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .qtyWrap {
+  width: 80px;
+  margin-top: 15px;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .deleteButton {
+  width: 18px;
+  height: 24px;
+  display: block;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .totalCheckout {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox
+  label {
+  padding-left: 0 !important;
+  text-transform: initial;
+  font-size: 12px;
+  color: #616161;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox
+  label::before {
+  margin-right: 12px;
+  border-radius: 2px;
+  width: 12px;
+  height: 12px;
+  top: 7px;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox
+  label::after {
+  left: -26px;
+  top: 5px;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .totalCheckout .subTotal {
+  padding: 15px 4px 15px 15px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  margin: 15px 0;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .subTotal
+  h4 {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+  color: #424040;
+  margin-bottom: 0;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .subTotal
+  span {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .totalCheckout .goCheck a {
+  width: 236px;
+  height: 32px;
+  display: block;
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+  color: #424040;
+  background: #f4f2f0;
+  border-radius: 6px;
+  padding: 10px 24px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .totalCheckout .goCheck p {
+  font-family: "Avenir";
+  font-size: 8px;
+  line-height: 11px;
+  letter-spacing: 0.11em;
+  color: rgba(97, 97, 97, 0.9);
+  text-align: center;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .emptyCart {
+  text-align: center;
+  padding: 20px;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .emptyCart h4 {
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .emptyCart p {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  margin-top: 24px;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .emptyCart a {
+  width: 236px;
+  height: 33px;
+  display: block;
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+  color: #424040;
+  background: #f4f2f0;
+  border-radius: 6px;
+  padding: 10px 24px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox,
+.shopSection .shopCategory .accordion .card .card-body .custom-checkbox,
+.checkoutPage .checkoutCollapse .custom-checkbox,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox {
+  padding-left: 1.75rem;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox
+  label,
+.shopSection .shopCategory .accordion .card .card-body .custom-checkbox label,
+.checkoutPage .checkoutCollapse .custom-checkbox label,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  label {
+  padding: 4px 0;
+  padding-left: 10px;
+  margin-bottom: 4px;
+  font-family: "Avenir";
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.51);
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .headerAmrutam
+    .cartWrap
+    .myBag
+    .cartBody
+    .cartItem
+    .totalCheckout
+    .custom-checkbox
+    label,
+  .shopSection .shopCategory .accordion .card .card-body .custom-checkbox label,
+  .checkoutPage .checkoutCollapse .custom-checkbox label,
+  .checkoutPage
+    .productDetails
+    .productItem
+    .priceDetails
+    .table
+    .custom-checkbox
+    label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox
+  label::before,
+.shopSection
+  .shopCategory
+  .accordion
+  .card
+  .card-body
+  .custom-checkbox
+  label::before,
+.checkoutPage .checkoutCollapse .custom-checkbox label::before,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  label::before {
+  border-radius: 0;
+  border-color: #616161;
+  margin-right: 20px;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before,
+.shopSection
+  .shopCategory
+  .accordion
+  .card
+  .card-body
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before,
+.checkoutPage
+  .checkoutCollapse
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
+  background: #616161;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .totalCheckout
+  .custom-checkbox
+  .custom-control-input:focus
+  ~ .custom-control-label::before,
+.shopSection
+  .shopCategory
+  .accordion
+  .card
+  .card-body
+  .custom-checkbox
+  .custom-control-input:focus
+  ~ .custom-control-label::before,
+.checkoutPage
+  .checkoutCollapse
+  .custom-checkbox
+  .custom-control-input:focus
+  ~ .custom-control-label::before,
+.checkoutPage
+  .productDetails
+  .productItem
+  .priceDetails
+  .table
+  .custom-checkbox
+  .custom-control-input:focus
+  ~ .custom-control-label::before {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(97, 97, 97, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(97, 97, 97, 0.25);
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .qtyWrap,
+.checkoutPage .productDetails .productItem .itemDetails .itemWrap .qtyWrap {
+  position: relative;
+  width: 60px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .qtyWrap input,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  input {
+  height: 24px;
+  border: 1px solid #b5b5b5;
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .itemDetails
+  .qtyWrap
+  input::-webkit-inner-spin-button,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  input::-webkit-inner-spin-button,
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .itemDetails
+  .qtyWrap
+  input::-webkit-outer-spin-button,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .itemDetails
+  .qtyWrap
+  .minus,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  .minus {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .qtyWrap .plus,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  .plus {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.barSlider {
+  background-color: #f4f2f0;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.barSlider .sliderTopBar .barItem {
+  text-align: center;
+}
+
+.barSlider .sliderTopBar .barItem span {
+  font-family: "Avenir";
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: 0.11em;
+  color: rgba(97, 97, 97, 0.9);
+  margin-left: 8px;
 }

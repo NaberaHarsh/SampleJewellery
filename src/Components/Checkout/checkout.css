@@ -1339,3 +1339,16 @@ body {
 .checkoutPage .productDetails .couponCode .selectedCode a {
   text-decoration: none;
 }
+
+.fixedBtn {
+  position: fixed;
+  bottom: 0px;
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.15em;
+  color: #262626;
+  background: #f4f2f0;
+  border-radius: 2px;
+  padding: 14px;
+}

@@ -1,19 +1,50 @@
 import React, { Component, Fragment } from "react";
 import "../Home/home.css";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showFilter: false,
+      cartOpen: false,
     };
   }
 
   handleFilter = () => {
     this.setState({ showFilter: !this.state.showFilter });
   };
-
+  handleCartOpen = () => {
+    this.setState({ cartOpen: !this.state.cartOpen }, () =>
+      console.log(this.state.cartOpen)
+    );
+  };
   render() {
+    const settings = {
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
     return (
       <body>
         <header className="headerAmrutam">
@@ -74,7 +105,7 @@ class Header extends Component {
               <span className="active">Women</span>
               <span>Men</span>
             </div>
-            <div className="searchBar" style={{ marginLeft: "54px" }}>
+            <div className="searchBar">
               <div className="searchWrap">
                 <svg
                   width="16"
@@ -121,7 +152,7 @@ class Header extends Component {
                   />
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" onClick={() => this.handleCartOpen()}>
                 <svg
                   width="17"
                   height="19"
@@ -164,20 +195,6 @@ class Header extends Component {
                   <path
                     d="M10.1 15.55L10 15.65L9.89 15.55C5.14 11.24 2 8.39 2 5.5C2 3.5 3.5 2 5.5 2C7.04 2 8.54 3 9.07 4.36H10.93C11.46 3 12.96 2 14.5 2C16.5 2 18 3.5 18 5.5C18 8.39 14.86 11.24 10.1 15.55ZM14.5 0C12.76 0 11.09 0.81 10 2.08C8.91 0.81 7.24 0 5.5 0C2.42 0 0 2.41 0 5.5C0 9.27 3.4 12.36 8.55 17.03L10 18.35L11.45 17.03C16.6 12.36 20 9.27 20 5.5C20 2.41 17.58 0 14.5 0Z"
                     fill="#616161"
-                  />
-                </svg>
-              </a>
-              <a href="#">
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.86583 6.16708C4.00583 8.4075 5.8425 10.2442 8.08292 11.3842L9.82458 9.6425C10.0463 9.42083 10.355 9.3575 10.6321 9.44458C11.5188 9.7375 12.4688 9.89583 13.4583 9.89583C13.6683 9.89583 13.8697 9.97924 14.0181 10.1277C14.1666 10.2762 14.25 10.4775 14.25 10.6875V13.4583C14.25 13.6683 14.1666 13.8697 14.0181 14.0181C13.8697 14.1666 13.6683 14.25 13.4583 14.25C9.88896 14.25 6.46578 12.8321 3.94185 10.3081C1.41793 7.78422 0 4.36104 0 0.791667C0 0.581704 0.0834075 0.38034 0.231874 0.231874C0.38034 0.0834075 0.581704 0 0.791667 0H3.5625C3.77246 0 3.97383 0.0834075 4.12229 0.231874C4.27076 0.38034 4.35417 0.581704 4.35417 0.791667C4.35417 1.78125 4.5125 2.73125 4.80542 3.61792C4.8925 3.895 4.82917 4.20375 4.6075 4.42542L2.86583 6.16708Z"
-                    fill="#84766F"
                   />
                 </svg>
               </a>
@@ -258,7 +275,7 @@ class Header extends Component {
                       />
                     </svg>
                   </a>
-                  <a href="#">
+                  <a href="#" onClick={() => this.handleCartOpen()}>
                     <svg
                       width="17"
                       height="19"
@@ -925,6 +942,196 @@ class Header extends Component {
               />
             </svg>
             <span>FREE SHIPPING ON ALL ORDERS</span>
+          </div>
+
+          {/* <div className="barSlider">
+            <div className="container">
+              <div className="row sliderTopBar">
+                <Slider {...settings}>
+                  <div className="barItem">
+                    <svg
+                      width="22"
+                      height="17"
+                      viewBox="0 0 22 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.0699 8.4107C20.8599 7.4108 20.0299 6.81086 19.2299 7.08583L13.9199 8.86065L6.99986 0.823975L5.08986 1.46141L9.22987 10.423L4.25985 12.0853L2.28985 10.1605L0.839844 10.648L2.65985 14.5976L3.42985 16.2599L5.02986 15.7349L10.3399 13.9476L14.6899 12.4978L19.9999 10.7355C20.8099 10.4355 21.2799 9.41059 21.0699 8.4107Z"
+                        fill="black"
+                        fill-opacity="0.47"
+                      />
+                    </svg>
+                    <span>FREE SHIPPING ON ALL ORDERS</span>
+                  </div>
+
+                  <div className="barItem">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11 11.9167C9.78442 11.9167 8.61864 11.4339 7.75909 10.5743C6.89955 9.71478 6.41667 8.54899 6.41667 7.33341H8.25C8.25 8.06276 8.53973 8.76223 9.05546 9.27796C9.57118 9.79368 10.2707 10.0834 11 10.0834C11.7293 10.0834 12.4288 9.79368 12.9445 9.27796C13.4603 8.76223 13.75 8.06276 13.75 7.33341H15.5833C15.5833 8.54899 15.1004 9.71478 14.2409 10.5743C13.3814 11.4339 12.2156 11.9167 11 11.9167ZM11 2.75008C11.7293 2.75008 12.4288 3.03981 12.9445 3.55554C13.4603 4.07126 13.75 4.77074 13.75 5.50008H8.25C8.25 4.77074 8.53973 4.07126 9.05546 3.55554C9.57118 3.03981 10.2707 2.75008 11 2.75008ZM17.4167 5.50008H15.5833C15.5833 4.89819 15.4648 4.30219 15.2344 3.74611C15.0041 3.19004 14.6665 2.68478 14.2409 2.25918C13.8153 1.83357 13.31 1.49597 12.754 1.26563C12.1979 1.0353 11.6019 0.916748 11 0.916748C9.78442 0.916748 8.61864 1.39963 7.75909 2.25918C6.89955 3.11872 6.41667 4.28451 6.41667 5.50008H4.58333C3.56583 5.50008 2.75 6.31591 2.75 7.33341V18.3334C2.75 18.8196 2.94315 19.286 3.28697 19.6298C3.63079 19.9736 4.0971 20.1667 4.58333 20.1667H17.4167C17.9029 20.1667 18.3692 19.9736 18.713 19.6298C19.0568 19.286 19.25 18.8196 19.25 18.3334V7.33341C19.25 6.31591 18.425 5.50008 17.4167 5.50008Z"
+                        fill="#81807F"
+                      />
+                    </svg>
+                    <span>PREPAID ORDERS ONLY</span>
+                  </div>
+
+                  <div className="barItem">
+                    <svg
+                      width="21"
+                      height="16"
+                      viewBox="0 0 21 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.9 4H2.1V2H18.9V4ZM18.9 14H2.1V8H18.9V14ZM18.9 0H2.1C0.9345 0 0 0.89 0 2V14C0 14.5304 0.221249 15.0391 0.615076 15.4142C1.0089 15.7893 1.54305 16 2.1 16H18.9C19.457 16 19.9911 15.7893 20.3849 15.4142C20.7787 15.0391 21 14.5304 21 14V2C21 0.89 20.055 0 18.9 0Z"
+                        fill="black"
+                        fill-opacity="0.47"
+                      />
+                    </svg>
+                    <span>SECURE ONLINE PAYMENT</span>
+                  </div>
+                </Slider>
+              </div>
+            </div>
+          </div> */}
+
+          <div
+            className={this.state.cartOpen ? "cartWrap " : "cartWrap d-none "}
+            id="shoppingCart"
+          >
+            <div className="myBag">
+              <div className="cartHead">
+                <span>My Bag</span>
+                <a
+                  href="#"
+                  className="closeBtn"
+                  onClick={() => this.handleCartOpen()}
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
+                      fill="#616161"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div className="cartBody">
+                <div className="cartItem ">
+                  <div className="d-flex justify-content-between px-2 py-3">
+                    <div className="imgWrap flex-shrink-0">
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/necklace.png"
+                        alt=""
+                      />
+                    </div>
+                    <div className="itemDetails">
+                      <h5>Artisan Square Necklace 18ct Gold Plate</h5>
+                      <div className="itemPrice d-flex flex-column">
+                        <span className="prePrice">Rs. 6,850</span>
+                        <span className="disPrice">Rs. 5,850</span>
+                      </div>
+                      <div className="qtyWrap">
+                        <div className="qtyChange">
+                          <a href="#" className="minus">
+                            <svg
+                              width="4"
+                              height="2"
+                              viewBox="0 0 4 2"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.54 1.516H0.456V0.724H3.54V1.516Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </a>
+                          <input
+                            type="number"
+                            className="form-control"
+                            placeholder="1"
+                          />
+                          <a href="#" className="plus">
+                            <svg
+                              width="8"
+                              height="7"
+                              viewBox="0 0 8 7"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.356 3.004H7.056V3.724H4.356V6.424H3.636V3.724H0.936V3.004H3.636V0.304H4.356V3.004Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" className="deleteButton">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.5 14.25C4.5 14.6478 4.65804 15.0294 4.93934 15.3107C5.22064 15.592 5.60218 15.75 6 15.75H12C12.3978 15.75 12.7794 15.592 13.0607 15.3107C13.342 15.0294 13.5 14.6478 13.5 14.25V5.25H4.5V14.25ZM6 6.75H12V14.25H6V6.75ZM11.625 3L10.875 2.25H7.125L6.375 3H3.75V4.5H14.25V3H11.625Z"
+                          fill="#A7A7A7"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="totalCheckout">
+                    <div className="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        className="custom-control-input"
+                        id="checkoutGift"
+                      />
+                      <label
+                        className="custom-control-label pl-2 mb-0"
+                        for="checkoutGift"
+                      >
+                        This is a gift
+                      </label>
+                    </div>
+                    <div className="subTotal">
+                      <h4>SUBTOTAL</h4>
+                      <span>Rs. 10,000</span>
+                    </div>
+                    <div className="goCheck">
+                      <a href="#" className="btn">
+                        GO TO CHECKOUT
+                      </a>
+                      <p>FREE SHIPPING ON ALL ORDERS</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="emptyCart">
+                  <h4>Your Bag</h4>
+                  <p>Your bag is currently empty.</p>
+                  <a href="#" className="btn">
+                    CONTINUE SHOPPING
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </header>
       </body>
