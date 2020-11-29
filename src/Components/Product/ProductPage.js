@@ -1,7 +1,61 @@
 import React, { Component, Fragment } from "react";
 import "./Product.css";
+import {
+  ExpansionPanelSummary,
+  ExpansionPanel,
+  ExpansionPanelDetails,
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 class ProductPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      details: true,
+      shipping: false,
+      care: false,
+      return: false,
+      expanded: "panel1",
+    };
+  }
+
+  handleChange = (panel) => {
+    this.setState({ expanded: panel });
+  };
+
+  handleDetails = () => {
+    this.setState({
+      details: true,
+      shipping: false,
+      care: false,
+      return: false,
+    });
+  };
+  handleShipping = () => {
+    this.setState({
+      details: false,
+      shipping: true,
+      care: false,
+      return: false,
+    });
+  };
+  handleCare = () => {
+    this.setState({
+      details: false,
+      shipping: false,
+      care: true,
+      return: false,
+    });
+  };
+  handleReturn = () => {
+    this.setState({
+      details: false,
+      shipping: false,
+      care: false,
+      return: true,
+    });
+  };
+
   render() {
     return (
       <Fragment>
@@ -205,13 +259,16 @@ class ProductPage extends Component {
                   <nav className="datailNav">
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
                       <a
-                        className="nav-link active"
+                        className={
+                          this.state.details ? "nav-link active" : "nav-link"
+                        }
                         id="nav-details-tab"
                         data-toggle="tab"
-                        href="#nav-details"
+                        // href="#nav-details"
                         role="tab"
                         aria-controls="nav-details"
                         aria-selected="true"
+                        onClick={this.handleDetails}
                       >
                         <span>DETAILS</span>{" "}
                         <svg
@@ -229,13 +286,16 @@ class ProductPage extends Component {
                         </svg>
                       </a>
                       <a
-                        className="nav-link"
+                        className={
+                          this.state.shipping ? "nav-link active" : "nav-link"
+                        }
                         id="nav-shipping-tab"
                         data-toggle="tab"
-                        href="#nav-shipping"
+                        // href="#nav-shipping"
                         role="tab"
                         aria-controls="nav-shipping"
                         aria-selected="false"
+                        onClick={this.handleShipping}
                       >
                         <span>SHIPPING INFO</span>{" "}
                         <svg
@@ -253,13 +313,16 @@ class ProductPage extends Component {
                         </svg>
                       </a>
                       <a
-                        className="nav-link"
+                        className={
+                          this.state.care ? "nav-link active" : "nav-link"
+                        }
                         id="nav-instruction-tab"
                         data-toggle="tab"
-                        href="#nav-instruction"
+                        // href="#nav-instruction"
                         role="tab"
                         aria-controls="nav-instruction"
                         aria-selected="false"
+                        onClick={this.handleCare}
                       >
                         <span>CARE INSTRUCTIONS</span>{" "}
                         <svg
@@ -277,13 +340,16 @@ class ProductPage extends Component {
                         </svg>
                       </a>
                       <a
-                        className="nav-link"
+                        className={
+                          this.state.return ? "nav-link active" : "nav-link"
+                        }
                         id="nav-warrenty-tab"
                         data-toggle="tab"
-                        href="#nav-warrenty"
+                        // href="#nav-warrenty"
                         role="tab"
                         aria-controls="nav-warrenty"
                         aria-selected="false"
+                        onClick={this.handleReturn}
                       >
                         <span>RETURNS AND WARRANTY</span>
                         <svg
@@ -304,7 +370,11 @@ class ProductPage extends Component {
                   </nav>
                   <div className="tab-content" id="nav-tabContent">
                     <div
-                      className="tab-pane fade show active"
+                      className={
+                        this.state.details
+                          ? "tab-pane fade show active"
+                          : "tab-pane fade"
+                      }
                       id="nav-details"
                       role="tabpanel"
                       aria-labelledby="nav-details-tab"
@@ -359,7 +429,11 @@ class ProductPage extends Component {
                       </div>
                     </div>
                     <div
-                      className="tab-pane fade"
+                      className={
+                        this.state.shipping
+                          ? "tab-pane fade show active"
+                          : "tab-pane fade"
+                      }
                       id="nav-shipping"
                       role="tabpanel"
                       aria-labelledby="nav-shipping-tab"
@@ -414,7 +488,11 @@ class ProductPage extends Component {
                       </div>
                     </div>
                     <div
-                      className="tab-pane fade"
+                      className={
+                        this.state.care
+                          ? "tab-pane fade show active"
+                          : "tab-pane fade"
+                      }
                       id="nav-instruction"
                       role="tabpanel"
                       aria-labelledby="nav-instruction-tab"
@@ -469,7 +547,11 @@ class ProductPage extends Component {
                       </div>
                     </div>
                     <div
-                      className="tab-pane fade"
+                      className={
+                        this.state.return
+                          ? "tab-pane fade show active"
+                          : "tab-pane fade"
+                      }
                       id="nav-warrenty"
                       role="tabpanel"
                       aria-labelledby="nav-warrenty-tab"
@@ -528,316 +610,396 @@ class ProductPage extends Component {
                 <div className="detailCollapse d-block d-md-none mb-5">
                   <div className="accordion" id="accordionProduct">
                     <div className="card">
-                      <div className="card-header" id="headingOne">
-                        <button
-                          className="btn btn-link d-flex justify-content-between align-items-center"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseOne"
-                          aria-expanded="true"
-                          aria-controls="collapseOne"
-                        >
-                          <span>DETAILS</span>
-                          <svg
-                            width="7"
-                            height="12"
-                            viewBox="0 0 7 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                              fill="#616161"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <div
-                        id="collapseOne"
-                        className="collapse show"
-                        aria-labelledby="headingOne"
-                        data-parent="#accordionProduct"
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel1"}
+                        onChange={() => this.handleChange("panel1")}
+                        elevation={0}
+                        style={{ width: "100%" }}
                       >
-                        <div className="card-body">
-                          <p>
-                            At Amrutam, discover unusual luxury pieces that we
-                            have scoured the world to find. We specialise in
-                            unique, designer fine jewellery, dreamt up by
-                            artists and brought to life by skilled craftspeople
-                            in under-the-radar ateliers and workshops scattered
-                            across the globe.{" "}
-                          </p>
-                          <div className="table-responsive">
-                            <table className="table">
-                              <tbody>
-                                <tr>
-                                  <td className="border-top-0">SKU</td>
-                                  <td className="text-right border-top-0">
-                                    AM00400159
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Colour</td>
-                                  <td className="text-right">Sliver</td>
-                                </tr>
-                                <tr>
-                                  <td>Base material</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Weight</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Measurements</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                        <ExpansionPanelSummary
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            className="card-header"
+                            id="headingOne"
+                            style={{
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="btn btn-link d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <span>DETAILS</span>
+                              <svg
+                                width="7"
+                                height="12"
+                                viewBox="0 0 7 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                  fill="#616161"
+                                />
+                              </svg>
+                            </button>
                           </div>
-                        </div>
-                      </div>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            id="collapseOne"
+                            className="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent="#accordionProduct"
+                          >
+                            <div className="card-body">
+                              <p>
+                                At Amrutam, discover unusual luxury pieces that
+                                we have scoured the world to find. We specialise
+                                in unique, designer fine jewellery, dreamt up by
+                                artists and brought to life by skilled
+                                craftspeople in under-the-radar ateliers and
+                                workshops scattered across the globe.{" "}
+                              </p>
+                              <div className="table-responsive">
+                                <table className="table">
+                                  <tbody>
+                                    <tr>
+                                      <td className="border-top-0">SKU</td>
+                                      <td className="text-right border-top-0">
+                                        AM00400159
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Colour</td>
+                                      <td className="text-right">Sliver</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Base material</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Weight</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Measurements</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
                     </div>
                     <div className="card">
-                      <div className="card-header" id="headingTwo">
-                        <button
-                          className="btn btn-link d-flex justify-content-between align-items-center"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseTwo"
-                          aria-expanded="true"
-                          aria-controls="collapseTwo"
-                        >
-                          <span>SHIPPING INFO</span>
-                          <svg
-                            width="7"
-                            height="12"
-                            viewBox="0 0 7 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                              fill="#616161"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <div
-                        id="collapseTwo"
-                        className="collapse"
-                        aria-labelledby="headingTwo"
-                        data-parent="#accordionProduct"
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel2"}
+                        onChange={() => this.handleChange("panel2")}
+                        elevation={0}
+                        style={{ width: "100%" }}
                       >
-                        <div className="card-body">
-                          <p>
-                            At Amrutam, discover unusual luxury pieces that we
-                            have scoured the world to find. We specialise in
-                            unique, designer fine jewellery, dreamt up by
-                            artists and brought to life by skilled craftspeople
-                            in under-the-radar ateliers and workshops scattered
-                            across the globe.{" "}
-                          </p>
-                          <div className="table-responsive">
-                            <table className="table">
-                              <tbody>
-                                <tr>
-                                  <td className="border-top-0">SKU</td>
-                                  <td className="text-right border-top-0">
-                                    AM00400159
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Colour</td>
-                                  <td className="text-right">Sliver</td>
-                                </tr>
-                                <tr>
-                                  <td>Base material</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Weight</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Measurements</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                        <ExpansionPanelSummary
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            className="card-header"
+                            id="headingOne"
+                            style={{
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="btn btn-link d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <span>SHIPPING INFO</span>
+                              <svg
+                                width="7"
+                                height="12"
+                                viewBox="0 0 7 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                  fill="#616161"
+                                />
+                              </svg>
+                            </button>
                           </div>
-                        </div>
-                      </div>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            id="collapseOne"
+                            className="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent="#accordionProduct"
+                          >
+                            <div className="card-body">
+                              <p>
+                                At Amrutam, discover unusual luxury pieces that
+                                we have scoured the world to find. We specialise
+                                in unique, designer fine jewellery, dreamt up by
+                                artists and brought to life by skilled
+                                craftspeople in under-the-radar ateliers and
+                                workshops scattered across the globe.{" "}
+                              </p>
+                              <div className="table-responsive">
+                                <table className="table">
+                                  <tbody>
+                                    <tr>
+                                      <td className="border-top-0">SKU</td>
+                                      <td className="text-right border-top-0">
+                                        AM00400159
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Colour</td>
+                                      <td className="text-right">Sliver</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Base material</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Weight</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Measurements</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
                     </div>
                     <div className="card">
-                      <div className="card-header" id="headingThree">
-                        <button
-                          className="btn btn-link d-flex justify-content-between align-items-center"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseThree"
-                          aria-expanded="true"
-                          aria-controls="collapseThree"
-                        >
-                          <span>CARE & INSTRUCTIONS</span>
-                          <svg
-                            width="7"
-                            height="12"
-                            viewBox="0 0 7 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                              fill="#616161"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <div
-                        id="collapseThree"
-                        className="collapse"
-                        aria-labelledby="headingThree"
-                        data-parent="#accordionProduct"
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel3"}
+                        onChange={() => this.handleChange("panel3")}
+                        elevation={0}
+                        style={{ width: "100%" }}
                       >
-                        <div className="card-body">
-                          <p>
-                            At Amrutam, discover unusual luxury pieces that we
-                            have scoured the world to find. We specialise in
-                            unique, designer fine jewellery, dreamt up by
-                            artists and brought to life by skilled craftspeople
-                            in under-the-radar ateliers and workshops scattered
-                            across the globe.{" "}
-                          </p>
-                          <div className="table-responsive">
-                            <table className="table">
-                              <tbody>
-                                <tr>
-                                  <td className="border-top-0">SKU</td>
-                                  <td className="text-right border-top-0">
-                                    AM00400159
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Colour</td>
-                                  <td className="text-right">Sliver</td>
-                                </tr>
-                                <tr>
-                                  <td>Base material</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Weight</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Measurements</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                        <ExpansionPanelSummary
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            className="card-header"
+                            id="headingOne"
+                            style={{
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="btn btn-link d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <span>CARE & INSTRUCTIONS</span>
+                              <svg
+                                width="7"
+                                height="12"
+                                viewBox="0 0 7 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                  fill="#616161"
+                                />
+                              </svg>
+                            </button>
                           </div>
-                        </div>
-                      </div>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            id="collapseOne"
+                            className="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent="#accordionProduct"
+                          >
+                            <div className="card-body">
+                              <p>
+                                At Amrutam, discover unusual luxury pieces that
+                                we have scoured the world to find. We specialise
+                                in unique, designer fine jewellery, dreamt up by
+                                artists and brought to life by skilled
+                                craftspeople in under-the-radar ateliers and
+                                workshops scattered across the globe.{" "}
+                              </p>
+                              <div className="table-responsive">
+                                <table className="table">
+                                  <tbody>
+                                    <tr>
+                                      <td className="border-top-0">SKU</td>
+                                      <td className="text-right border-top-0">
+                                        AM00400159
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Colour</td>
+                                      <td className="text-right">Sliver</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Base material</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Weight</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Measurements</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
                     </div>
                     <div className="card">
-                      <div className="card-header" id="headingFour">
-                        <button
-                          className="btn btn-link d-flex justify-content-between align-items-center"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseFour"
-                          aria-expanded="true"
-                          aria-controls="collapseFour"
-                        >
-                          <span>RETURNS & WARRANTY</span>
-                          <svg
-                            width="7"
-                            height="12"
-                            viewBox="0 0 7 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                              fill="#616161"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <div
-                        id="collapseFour"
-                        className="collapse"
-                        aria-labelledby="headingFour"
-                        data-parent="#accordionProduct"
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel4"}
+                        onChange={() => this.handleChange("panel4")}
+                        elevation={0}
+                        style={{ width: "100%" }}
                       >
-                        <div className="card-body">
-                          <p>
-                            At Amrutam, discover unusual luxury pieces that we
-                            have scoured the world to find. We specialise in
-                            unique, designer fine jewellery, dreamt up by
-                            artists and brought to life by skilled craftspeople
-                            in under-the-radar ateliers and workshops scattered
-                            across the globe.{" "}
-                          </p>
-                          <div className="table-responsive">
-                            <table className="table">
-                              <tbody>
-                                <tr>
-                                  <td className="border-top-0">SKU</td>
-                                  <td className="text-right border-top-0">
-                                    AM00400159
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Colour</td>
-                                  <td className="text-right">Sliver</td>
-                                </tr>
-                                <tr>
-                                  <td>Base material</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Weight</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Measurements</td>
-                                  <td className="text-right">
-                                    Stainless steel(316L)
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                        <ExpansionPanelSummary
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            className="card-header"
+                            id="headingOne"
+                            style={{
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="btn btn-link d-flex justify-content-between align-items-center"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <span>RETURN & WARRANTY</span>
+                              <svg
+                                width="7"
+                                height="12"
+                                viewBox="0 0 7 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                  fill="#616161"
+                                />
+                              </svg>
+                            </button>
                           </div>
-                        </div>
-                      </div>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
+                          <div
+                            id="collapseOne"
+                            className="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent="#accordionProduct"
+                          >
+                            <div className="card-body">
+                              <p>
+                                At Amrutam, discover unusual luxury pieces that
+                                we have scoured the world to find. We specialise
+                                in unique, designer fine jewellery, dreamt up by
+                                artists and brought to life by skilled
+                                craftspeople in under-the-radar ateliers and
+                                workshops scattered across the globe.{" "}
+                              </p>
+                              <div className="table-responsive">
+                                <table className="table">
+                                  <tbody>
+                                    <tr>
+                                      <td className="border-top-0">SKU</td>
+                                      <td className="text-right border-top-0">
+                                        AM00400159
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Colour</td>
+                                      <td className="text-right">Sliver</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Base material</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Weight</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Measurements</td>
+                                      <td className="text-right">
+                                        Stainless steel(316L)
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
                     </div>
                   </div>
                 </div>

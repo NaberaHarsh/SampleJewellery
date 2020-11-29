@@ -587,8 +587,8 @@ class Checkout extends Component {
                           elevation={0}
                         >
                           <ExpansionPanelSummary
-                            className="expansion"
                             // expandIcon={<ExpandMoreIcon />}
+                            style={{ paddingLeft: "0px", paddingRight: "0px" }}
                           >
                             <div
                               className="card-header"
@@ -625,7 +625,13 @@ class Checkout extends Component {
                               </h2>
                             </div>
                           </ExpansionPanelSummary>
-                          <ExpansionPanelDetails style={{ width: "100%" }}>
+                          <ExpansionPanelDetails
+                            style={{
+                              width: "100%",
+                              paddingLeft: "0px",
+                              paddingRight: "0px",
+                            }}
+                          >
                             <div
                               id="collapseOne"
                               className=" collapse show"
@@ -664,7 +670,7 @@ class Checkout extends Component {
                           elevation={0}
                         >
                           <ExpansionPanelSummary
-                            className="expansion"
+                            style={{ paddingLeft: "0px", paddingRight: "0px" }}
                             // expandIcon={<ExpandMoreIcon />}
                           >
                             <div
@@ -702,7 +708,13 @@ class Checkout extends Component {
                               </h2>
                             </div>
                           </ExpansionPanelSummary>
-                          <ExpansionPanelDetails style={{ width: "100%" }}>
+                          <ExpansionPanelDetails
+                            style={{
+                              width: "100%",
+                              paddingLeft: "0px",
+                              paddingRight: "0px",
+                            }}
+                          >
                             <div
                               id="collapseOne"
                               className=" collapse show"
@@ -1000,7 +1012,7 @@ class Checkout extends Component {
                           elevation={0}
                         >
                           <ExpansionPanelSummary
-                            className="expansion"
+                            style={{ paddingLeft: "0px", paddingRight: "0px" }}
                             // expandIcon={<ExpandMoreIcon />}
                           >
                             <div
@@ -1038,7 +1050,13 @@ class Checkout extends Component {
                               </h2>
                             </div>
                           </ExpansionPanelSummary>
-                          <ExpansionPanelDetails style={{ width: "100%" }}>
+                          <ExpansionPanelDetails
+                            style={{
+                              width: "100%",
+                              paddingLeft: "0px",
+                              paddingRight: "0px",
+                            }}
+                          >
                             <div
                               id="collapseOne"
                               className=" collapse show"

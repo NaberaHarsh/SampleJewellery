@@ -155,7 +155,7 @@ class Header extends Component {
               <span className="active">Women</span>
               <span>Men</span>
             </div>
-            <div className="searchBar">
+            <div className="searchBar" style={{ position: "relative" }}>
               <div className="searchWrap">
                 <svg
                   width="16"

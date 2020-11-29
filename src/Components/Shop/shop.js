@@ -209,13 +209,16 @@ class Shop extends Component {
                         <ExpansionPanelSummary
                           className="expansion"
                           expandIcon={<ExpandMoreIcon />}
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
                         >
                           <div>
                             {" "}
                             <span>SHOP BY CATEGORY</span>
                           </div>
                         </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
                           <div
                             id="collapseOne"
                             className="collapse show"
@@ -422,10 +425,13 @@ class Shop extends Component {
                         <ExpansionPanelSummary
                           className="expansion"
                           expandIcon={<ExpandMoreIcon />}
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
                         >
                           <span>DESIGNERS</span>
                         </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
                           <div
                             id="collapseTwo"
                             className="collapse show"
@@ -451,10 +457,13 @@ class Shop extends Component {
                         <ExpansionPanelSummary
                           className="expansion"
                           expandIcon={<ExpandMoreIcon />}
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
                         >
                           <span>OCCASION</span>
                         </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
                           <div
                             id="collapseThree"
                             className="collapse show"
@@ -484,10 +493,13 @@ class Shop extends Component {
                         <ExpansionPanelSummary
                           className="expansion"
                           expandIcon={<ExpandMoreIcon />}
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
                         >
                           <span>MATERIAL</span>
                         </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
                           <div
                             id="collapseFour"
                             className="collapse show"
@@ -515,10 +527,13 @@ class Shop extends Component {
                         <ExpansionPanelSummary
                           className="expansion"
                           expandIcon={<ExpandMoreIcon />}
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
                         >
                           <span>PRICE</span>
                         </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
+                        <ExpansionPanelDetails
+                          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+                        >
                           <div
                             id="collapseFive"
                             className="collapse show"
