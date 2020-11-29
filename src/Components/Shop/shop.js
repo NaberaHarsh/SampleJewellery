@@ -2,6 +2,12 @@ import React, { Component, Fragment } from "react";
 import "../Home/home.css";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import {
+  ExpansionPanelSummary,
+  ExpansionPanel,
+  ExpansionPanelDetails,
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 class Shop extends Component {
   constructor(props) {
@@ -9,6 +15,7 @@ class Shop extends Component {
     this.state = {
       showFilter: false,
       openMenu: false,
+      expanded: "panel1",
     };
   }
 
@@ -17,6 +24,10 @@ class Shop extends Component {
   };
   handleMenu = (e) => {
     this.setState({ openMenu: e.target });
+  };
+
+  handleChange = (panel) => {
+    this.setState({ expanded: panel });
   };
 
   render() {
@@ -190,400 +201,349 @@ class Shop extends Component {
                   </div>
                   <div className="accordion" id="accordionCategory">
                     <div className="card">
-                      <div className="card-header" id="headingOne">
-                        <h2 className="mb-0">
-                          <button
-                            className="btn btn-link btn-block text-left"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne"
-                          >
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel1"}
+                        onChange={() => this.handleChange("panel1")}
+                        elevation={0}
+                      >
+                        <ExpansionPanelSummary
+                          className="expansion"
+                          expandIcon={<ExpandMoreIcon />}
+                        >
+                          <div>
+                            {" "}
                             <span>SHOP BY CATEGORY</span>
-                            <svg
-                              width="20"
-                              height="20"
-                              viewBox="0 0 24 25"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7 10.2344L12 15.2344L17 10.2344H7Z"
-                                fill="#333232"
-                              />
-                            </svg>
-                          </button>
-                        </h2>
-                      </div>
+                          </div>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                          <div
+                            id="collapseOne"
+                            className="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent="#accordionCategory"
+                          >
+                            <div className="card-body">
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="bracelets"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="bracelets"
+                                >
+                                  bracelets
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="brooches"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="brooches"
+                                >
+                                  brooches
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="rings"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="rings"
+                                >
+                                  rings
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="earrings"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="earrings"
+                                >
+                                  earrings
+                                </label>
+                              </div>
 
-                      <div
-                        id="collapseOne"
-                        className="collapse show"
-                        aria-labelledby="headingOne"
-                        data-parent="#accordionCategory"
-                      >
-                        <div className="card-body">
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="bracelets"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="bracelets"
-                            >
-                              bracelets
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="brooches"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="brooches"
-                            >
-                              brooches
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="rings"
-                            />
-                            <label className="custom-control-label" for="rings">
-                              rings
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="earrings"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="earrings"
-                            >
-                              earrings
-                            </label>
-                          </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="necklaces"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="necklaces"
+                                >
+                                  necklaces
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="whatNew"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="whatNew"
+                                >
+                                  what's new
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="treasures"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="treasures"
+                                >
+                                  tiny treasures
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="trends"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="trends"
+                                >
+                                  spring summer trends
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="readyShip"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="readyShip"
+                                >
+                                  ready to ship
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="engagement"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="engagement"
+                                >
+                                  engagement
+                                </label>
+                              </div>
 
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="necklaces"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="necklaces"
-                            >
-                              necklaces
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="whatNew"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="whatNew"
-                            >
-                              what's new
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="treasures"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="treasures"
-                            >
-                              tiny treasures
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="trends"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="trends"
-                            >
-                              spring summer trends
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="readyShip"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="readyShip"
-                            >
-                              ready to ship
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="engagement"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="engagement"
-                            >
-                              engagement
-                            </label>
-                          </div>
-
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="anklets"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="anklets"
-                            >
-                              anklets
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="exclusives"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="exclusives"
-                            >
-                              auverture exclusives
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="singlEarrings"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="singlEarrings"
-                            >
-                              single earrings
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="united"
-                            />
-                            <label
-                              className="custom-control-label"
-                              for="united"
-                            >
-                              auverture united
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div className="card-header" id="headingTwo">
-                        <h2 className="mb-0">
-                          <button
-                            className="btn btn-link btn-block text-left collapsed"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                          >
-                            <span>DESIGNERS</span>
-                            <svg
-                              width="20"
-                              height="20"
-                              viewBox="0 0 24 25"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7 10.2344L12 15.2344L17 10.2344H7Z"
-                                fill="#333232"
-                              />
-                            </svg>
-                          </button>
-                        </h2>
-                      </div>
-                      <div
-                        id="collapseTwo"
-                        className="collapse show"
-                        aria-labelledby="headingTwo"
-                        data-parent="#accordionCategory"
-                      >
-                        <div className="card-body">
-                          <a href="#">bracelets</a>
-                          <a href="#">brooches</a>
-                          <a href="#">rings</a>
-                          <a href="#">earrings</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div className="card-header" id="headingThree">
-                        <h2 className="mb-0">
-                          <button
-                            className="btn btn-link btn-block text-left collapsed"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
-                          >
-                            <span>OCCASION</span>
-                            <svg
-                              width="20"
-                              height="20"
-                              viewBox="0 0 24 25"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7 10.2344L12 15.2344L17 10.2344H7Z"
-                                fill="#333232"
-                              />
-                            </svg>
-                          </button>
-                        </h2>
-                      </div>
-                      <div
-                        id="collapseThree"
-                        className="collapse"
-                        aria-labelledby="headingThree"
-                        data-parent="#accordionCategory"
-                      >
-                        <div className="card-body">
-                          <a href="#">bracelets</a>
-                          <a href="#">brooches</a>
-                          <a href="#">rings</a>
-                          <a href="#">earrings</a>
-                          <a href="#">necklaces</a>
-                          <a href="#">what's new</a>
-                          <a href="#">tiny treasures</a>
-                          <a href="#">spring summer trends</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div className="card-header" id="headingFour">
-                        <h2 className="mb-0">
-                          <button
-                            className="btn btn-link btn-block text-left collapsed"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFour"
-                            aria-expanded="false"
-                            aria-controls="collapseFour"
-                          >
-                            <span>MATERIAL</span>
-                            <svg
-                              width="20"
-                              height="20"
-                              viewBox="0 0 24 25"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7 10.2344L12 15.2344L17 10.2344H7Z"
-                                fill="#333232"
-                              />
-                            </svg>
-                          </button>
-                        </h2>
-                      </div>
-                      <div
-                        id="collapseFour"
-                        className="collapse"
-                        aria-labelledby="headingFour"
-                        data-parent="#accordionCategory"
-                      >
-                        <div className="card-body">
-                          <a href="#">bracelets</a>
-                          <a href="#">brooches</a>
-                          <a href="#">anklets</a>
-                          <a href="#">auverture exclusives</a>
-                          <a href="#">single earrings</a>
-                          <a href="#">auverture united</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div className="card-header" id="headingFive">
-                        <h2 className="mb-0">
-                          <button
-                            className="btn btn-link btn-block text-left collapsed"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFive"
-                            aria-expanded="false"
-                            aria-controls="collapseFive"
-                          >
-                            <span>PRICE</span>
-                            <svg
-                              width="20"
-                              height="20"
-                              viewBox="0 0 24 25"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7 10.2344L12 15.2344L17 10.2344H7Z"
-                                fill="#333232"
-                              />
-                            </svg>
-                          </button>
-                        </h2>
-                      </div>
-                      <div
-                        id="collapseFive"
-                        className="collapse show"
-                        aria-labelledby="headingFive"
-                        data-parent="#accordionCategory"
-                      >
-                        <div className="card-body">
-                          <div className="form-group priceRange">
-                            <input
-                              type="range"
-                              className="form-control-range"
-                              id="formControlRange"
-                            />
-                            <div className="d-flex justify-content-between align-items-center">
-                              <label for="formControlRange">6,850</label>
-                              <label for="formControlRange">68,500</label>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="anklets"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="anklets"
+                                >
+                                  anklets
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="exclusives"
+                                >
+                                  auverture exclusives
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="singlEarrings"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="singlEarrings"
+                                >
+                                  single earrings
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="united"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="united"
+                                >
+                                  auverture united
+                                </label>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
+                    </div>
+
+                    <div className="card">
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel2"}
+                        onChange={() => this.handleChange("panel2")}
+                        elevation={0}
+                      >
+                        <ExpansionPanelSummary
+                          className="expansion"
+                          expandIcon={<ExpandMoreIcon />}
+                        >
+                          <span>DESIGNERS</span>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                          <div
+                            id="collapseTwo"
+                            className="collapse show"
+                            aria-labelledby="headingTwo"
+                            data-parent="#accordionCategory"
+                          >
+                            <div className="card-body">
+                              <a href="#">bracelets</a>
+                              <a href="#">brooches</a>
+                              <a href="#">rings</a>
+                              <a href="#">earrings</a>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
+                    </div>
+                    <div className="card">
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel3"}
+                        onChange={() => this.handleChange("panel3")}
+                        elevation={0}
+                      >
+                        <ExpansionPanelSummary
+                          className="expansion"
+                          expandIcon={<ExpandMoreIcon />}
+                        >
+                          <span>OCCASION</span>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                          <div
+                            id="collapseThree"
+                            className="collapse show"
+                            aria-labelledby="headingThree"
+                            data-parent="#accordionCategory"
+                          >
+                            <div className="card-body">
+                              <a href="#">bracelets</a>
+                              <a href="#">brooches</a>
+                              <a href="#">rings</a>
+                              <a href="#">earrings</a>
+                              <a href="#">necklaces</a>
+                              <a href="#">what's new</a>
+                              <a href="#">tiny treasures</a>
+                              <a href="#">spring summer trends</a>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
+                    </div>
+                    <div className="card">
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel4"}
+                        onChange={() => this.handleChange("panel4")}
+                        elevation={0}
+                      >
+                        <ExpansionPanelSummary
+                          className="expansion"
+                          expandIcon={<ExpandMoreIcon />}
+                        >
+                          <span>MATERIAL</span>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                          <div
+                            id="collapseFour"
+                            className="collapse show"
+                            aria-labelledby="headingFour"
+                            data-parent="#accordionCategory"
+                          >
+                            <div className="card-body">
+                              <a href="#">bracelets</a>
+                              <a href="#">brooches</a>
+                              <a href="#">anklets</a>
+                              <a href="#">auverture exclusives</a>
+                              <a href="#">single earrings</a>
+                              <a href="#">auverture united</a>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
+                    </div>
+                    <div className="card">
+                      <ExpansionPanel
+                        expanded={this.state.expanded === "panel5"}
+                        onChange={() => this.handleChange("panel5")}
+                        elevation={0}
+                      >
+                        <ExpansionPanelSummary
+                          className="expansion"
+                          expandIcon={<ExpandMoreIcon />}
+                        >
+                          <span>PRICE</span>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                          <div
+                            id="collapseFive"
+                            className="collapse show"
+                            aria-labelledby="headingFive"
+                            data-parent="#accordionCategory"
+                          >
+                            <div
+                              className="card-body"
+                              style={{ width: "240px" }}
+                            >
+                              <div className="form-group priceRange">
+                                <input
+                                  type="range"
+                                  className="form-control-range"
+                                  id="formControlRange"
+                                />
+                                <div className="d-flex justify-content-between align-items-center">
+                                  <label for="formControlRange">6,850</label>
+                                  <label for="formControlRange">68,500</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </ExpansionPanelDetails>
+                      </ExpansionPanel>
                     </div>
                   </div>
                   <div className="resetWrap">

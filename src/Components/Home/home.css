@@ -1995,6 +1995,18 @@ body {
   padding: 10px 0;
 }
 
+.expansion {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.13em;
+  color: #333232;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .shopSection .shopCategory .accordion .card .card-header button {
   font-family: "Avenir";
   font-weight: 600;
