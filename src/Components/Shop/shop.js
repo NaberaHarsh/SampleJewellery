@@ -1,16 +1,22 @@
 import React, { Component, Fragment } from "react";
 import "../Home/home.css";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 class Shop extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showFilter: false,
+      openMenu: false,
     };
   }
 
   handleFilter = () => {
     this.setState({ showFilter: !this.state.showFilter });
+  };
+  handleMenu = (e) => {
+    this.setState({ openMenu: e.target });
   };
 
   render() {
@@ -65,6 +71,7 @@ class Shop extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      onClick={(e) => this.handleMenu(e)}
                     >
                       SORT BY
                     </a>
@@ -617,32 +624,81 @@ class Shop extends Component {
                     <div className="dropdown">
                       <a
                         className="btn sortBtn dropdown-toggle"
-                        href="#"
                         role="button"
                         id="dropdownMenuLink"
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
+                        onClick={(e) => this.handleMenu(e)}
                       >
                         Recommendations
                       </a>
-
                       <div
                         className="dropdown-menu dropdown-menu-right"
                         aria-labelledby="dropdownMenuLink"
                       >
-                        <a className="dropdown-item active" href="#">
-                          Best Sellers
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          New Arrivals
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          Price high to low
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          Price low to high
-                        </a>
+                        <Menu
+                          open={Boolean(this.state.openMenu)}
+                          anchorEl={this.state.openMenu}
+                          onClose={() => this.setState({ openMenu: null })}
+                          anchorOrigin={{
+                            vertical: "bottom",
+                            horizontal: "right",
+                          }}
+                          transformOrigin={{
+                            vertical: "top",
+                            horizontal: "center",
+                          }}
+                        >
+                          <MenuItem
+                            style={{
+                              fontfamily: "Avenir",
+                              fontWeight: 500,
+                              fontSize: "12px",
+                              lineHeight: "16px",
+                              color: "#616161",
+                            }}
+                          >
+                            {" "}
+                            Best Sellers
+                          </MenuItem>
+                          <MenuItem
+                            style={{
+                              fontfamily: "Avenir",
+                              fontWeight: 500,
+                              fontSize: "12px",
+                              lineHeight: "16px",
+                              color: "#616161",
+                            }}
+                          >
+                            {" "}
+                            New Arrivals
+                          </MenuItem>
+                          <MenuItem
+                            style={{
+                              fontfamily: "Avenir",
+                              fontWeight: 500,
+                              fontSize: "12px",
+                              lineHeight: "16px",
+                              color: "#616161",
+                            }}
+                          >
+                            {" "}
+                            Price high to low
+                          </MenuItem>
+                          <MenuItem
+                            style={{
+                              fontfamily: "Avenir",
+                              fontWeight: 500,
+                              fontSize: "12px",
+                              lineHeight: "16px",
+                              color: "#616161",
+                            }}
+                          >
+                            {" "}
+                            Price low to high
+                          </MenuItem>
+                        </Menu>
                       </div>
                     </div>
                   </div>
