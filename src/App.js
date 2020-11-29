@@ -7,6 +7,7 @@ import Header from "./Components/Header/header";
 import Home from "./Components/Home/Home";
 import ProductPage from "./Components/Product/ProductPage";
 import Shop from "./Components/Shop/shop";
+import Thankyou from "./Components/Thankyou/thankyou";
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/product" render={() => <ProductPage />} />
           <Route path="/shop" render={() => <Shop />} />
           <Route path="/checkout" render={() => <Checkout />} />
+          <Route path="/thankyou" render={() => <Thankyou />} />
 
           <Route path="/" component={Footer} />
         </Router>

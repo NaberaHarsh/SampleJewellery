@@ -11,16 +11,63 @@ class Header extends Component {
     this.state = {
       showFilter: false,
       cartOpen: false,
+      shop: false,
+      designer: false,
+      occassion: false,
     };
   }
 
   handleFilter = () => {
-    this.setState({ showFilter: !this.state.showFilter });
+    this.setState(
+      {
+        showFilter: !this.state.showFilter,
+        cartOpen: false,
+        shop: false,
+        designer: false,
+        occassion: false,
+      },
+      () => console.log(this.state.showFilter)
+    );
   };
   handleCartOpen = () => {
-    this.setState({ cartOpen: !this.state.cartOpen }, () =>
-      console.log(this.state.cartOpen)
+    this.setState(
+      {
+        cartOpen: !this.state.cartOpen,
+        showFilter: false,
+        shop: false,
+        designer: false,
+        occassion: false,
+      },
+      () => console.log(this.state.cartOpen)
     );
+  };
+
+  handleShop = () => {
+    this.setState(
+      {
+        shop: !this.state.shop,
+        cartOpen: false,
+        designer: false,
+        occassion: false,
+      },
+      () => console.log(this.state.shop)
+    );
+  };
+  handleDesigner = () => {
+    this.setState({
+      designer: !this.state.designer,
+      cartOpen: false,
+      shop: false,
+      occassion: false,
+    });
+  };
+  handleOccassion = () => {
+    this.setState({
+      occassion: !this.state.occassion,
+      cartOpen: false,
+      shop: false,
+      designer: false,
+    });
   };
   render() {
     const settings = {
@@ -212,6 +259,7 @@ class Header extends Component {
                   aria-controls="navbarNavDropdown"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
+                  onClick={() => this.handleFilter()}
                 >
                   <svg
                     width="30"
@@ -219,7 +267,6 @@ class Header extends Component {
                     viewBox="0 0 30 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    onClick={() => this.handleFilter()}
                   >
                     <path
                       d="M1 17H18"
@@ -312,8 +359,8 @@ class Header extends Component {
               <div
                 className={
                   this.state.showFilter
-                    ? "collapse navbar-collapse  d-md-block"
-                    : "scollapse navbar-collapse d-none d-md-block"
+                    ? " navbar-collapse d-md-block"
+                    : " navbar-collapse d-none d-md-block"
                 }
                 id="navbarNavDropdown"
               >
@@ -360,21 +407,26 @@ class Header extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      onClick={this.handleShop}
                     >
                       Shop
                     </a>
                     <div
-                      class="dropdown-menu megaMenu"
+                      className={
+                        this.state.shop
+                          ? "dropdown-menu megaMenu d-block "
+                          : "dropdown-menu megaMenu d-none"
+                      }
                       aria-labelledby="navbarDropdownMenuLink"
                     >
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12 d-lg-none">
-                            <div class="menuClose">
-                              <span>Back</span>
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-12 d-lg-none">
+                            <div className="menuClose">
+                              <span onClick={this.handleShop}>Back</span>
                               <a
                                 href="#"
-                                class="closeBtn"
+                                className="closeBtn"
                                 id="btnClose"
                                 onClick={() => this.handleFilter()}
                               >
@@ -392,17 +444,17 @@ class Header extends Component {
                                 </svg>
                               </a>
                             </div>
-                            <div class="subMenu">SHOP</div>
+                            <div className="subMenu">SHOP</div>
                           </div>
-                          <div class="col-lg-5">
-                            <div class="row">
-                              <div class="col-12">
+                          <div className="col-lg-5">
+                            <div className="row">
+                              <div className="col-12">
                                 <h4>FEATURED</h4>
                               </div>
-                              <div class="col-sm-12">
-                                <div class="row">
-                                  <div class="col-6">
-                                    <ul class="list-unstyled">
+                              <div className="col-sm-12">
+                                <div className="row">
+                                  <div className="col-6">
+                                    <ul className="list-unstyled">
                                       <li>
                                         <a href="#">spring summer trends</a>
                                       </li>
@@ -421,13 +473,13 @@ class Header extends Component {
                                       <li>
                                         <a href="#">fine jewellery gifts</a>
                                       </li>
-                                      <li class="d-none d-sm-block">
+                                      <li className="d-none d-sm-block">
                                         <a href="#">show all</a>
                                       </li>
                                     </ul>
                                   </div>
-                                  <div class="col-6">
-                                    <ul class="list-unstyled">
+                                  <div className="col-6">
+                                    <ul className="list-unstyled">
                                       <li>
                                         <a href="#">spring summer trends</a>
                                       </li>
@@ -453,9 +505,9 @@ class Header extends Component {
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-sm-6 mt-4 mt-sm-0 d-sm-none">
+                              <div className="col-sm-6 mt-4 mt-sm-0 d-sm-none">
                                 <h4>CATEGORIES</h4>
-                                <ul class="list-unstyled">
+                                <ul className="list-unstyled">
                                   <li>
                                     <a href="#">rings</a>
                                   </li>
@@ -481,21 +533,21 @@ class Header extends Component {
                               </div>
                             </div>
                           </div>
-                          <div class="col-lg-7 d-none d-sm-block mt-4 mt-lg-0">
-                            <div class="row">
-                              <div class="col-sm-6">
-                                <div class="imgWrap">
+                          <div className="col-lg-7 d-none d-sm-block mt-4 mt-lg-0">
+                            <div className="row">
+                              <div className="col-sm-6">
+                                <div className="imgWrap">
                                   <img
-                                    class="img-fluid"
+                                    className="img-fluid"
                                     src="https://dummyimage.com/348x250/d3d3d3/fff.jpg"
                                     alt=""
                                   />
                                 </div>
                               </div>
-                              <div class="col-sm-6">
-                                <div class="imgWrap">
+                              <div className="col-sm-6">
+                                <div className="imgWrap">
                                   <img
-                                    class="img-fluid"
+                                    className="img-fluid"
                                     src="https://dummyimage.com/348x250/d3d3d3/fff.jpg"
                                     alt=""
                                   />
@@ -516,18 +568,23 @@ class Header extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      onClick={this.handleDesigner}
                     >
                       Designers
                     </a>
                     <div
-                      className="dropdown-menu megaMenu"
+                      className={
+                        this.state.designer
+                          ? "dropdown-menu megaMenu d-block"
+                          : "dropdown-menu megaMenu d-none"
+                      }
                       aria-labelledby="navbarDropdownMenuLink"
                     >
                       <div className="container">
                         <div className="row w-100">
                           <div className="col-12 d-lg-none">
                             <div className="menuClose">
-                              <span>Back</span>
+                              <span onClick={this.handleDesigner}>Back</span>
                               <a
                                 href="#"
                                 className="closeBtn"
@@ -713,18 +770,23 @@ class Header extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      onClick={this.handleOccassion}
                     >
                       Occasion
                     </a>
                     <div
-                      className="dropdown-menu megaMenu"
+                      className={
+                        this.state.occassion
+                          ? "dropdown-menu megaMenu d-block"
+                          : "dropdown-menu megaMenu d-none"
+                      }
                       aria-labelledby="navbarDropdownMenuLink"
                     >
                       <div className="container">
                         <div className="row w-100">
                           <div className="col-12 d-lg-none">
                             <div className="menuClose">
-                              <span>Back</span>
+                              <span onClick={this.handleOccassion}>Back</span>
                               <a
                                 href="#"
                                 className="closeBtn"
@@ -892,9 +954,9 @@ class Header extends Component {
             </div>
           </nav>
 
-          <div class="mobileSearch d-lg-none">
-            <div class="container">
-              <div class="searchWrap">
+          <div className="mobileSearch d-lg-none">
+            <div className="container">
+              <div className="searchWrap">
                 <svg
                   width="14"
                   height="14"
@@ -920,7 +982,7 @@ class Header extends Component {
 
                 <input
                   type="search"
-                  class="form-control"
+                  className="form-control"
                   placeholder="What are you looking for?"
                 />
               </div>
