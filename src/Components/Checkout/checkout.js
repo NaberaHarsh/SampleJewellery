@@ -1,11 +1,24 @@
 import React, { Component } from "react";
 import "./checkout.css";
 import withWidth from "@material-ui/core/withWidth";
+import {
+  ExpansionPanelSummary,
+  ExpansionPanel,
+  ExpansionPanelDetails,
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 class Checkout extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      expanded: "panel1",
+    };
   }
+
+  handleChange = (panel) => {
+    this.setState({ expanded: panel });
+  };
 
   render() {
     const { width, classes } = this.props;
@@ -494,6 +507,10 @@ class Checkout extends Component {
                                     <label
                                       className="custom-control-label pl-2 mb-0"
                                       for="gift"
+                                      style={{
+                                        textTransform: "none",
+                                        paddingTop: "0px",
+                                      }}
                                     >
                                       This is a gift
                                     </label>
@@ -564,433 +581,529 @@ class Checkout extends Component {
                   <div className="checkoutCollapse">
                     <div className="accordion" id="accordionCheckout">
                       <div className="card">
-                        <div className="card-header" id="headingOne">
-                          <h2 className="mb-0">
-                            <button
-                              className="btn btn-link"
-                              type="button"
-                              data-toggle="collapse"
-                              data-target="#collapseOne"
-                              aria-expanded="true"
-                              aria-controls="collapseOne"
-                            >
-                              <span>1. LOGIN</span>
-                              <svg
-                                width="7"
-                                height="12"
-                                viewBox="0 0 7 12"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                                  fill="#616161"
-                                />
-                              </svg>
-                            </button>
-                          </h2>
-                        </div>
-
-                        <div
-                          id="collapseOne"
-                          className="collapse show"
-                          aria-labelledby="headingOne"
-                          data-parent="#accordionCheckout"
+                        <ExpansionPanel
+                          expanded={this.state.expanded === "panel1"}
+                          onChange={() => this.handleChange("panel1")}
+                          elevation={0}
                         >
-                          <div className="card-body">
-                            <div className="loginWrap">
-                              <span>Aanchal</span>
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="9560811484"
-                              />
-                              <a href="#" className="btn btnChange">
-                                CHANGE
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="card">
-                        <div className="card-header" id="headingTwo">
-                          <h2 className="mb-0">
-                            <button
-                              className="btn btn-link btn-block text-left collapsed"
-                              type="button"
-                              data-toggle="collapse"
-                              data-target="#collapseTwo"
-                              aria-expanded="false"
-                              aria-controls="collapseTwo"
+                          <ExpansionPanelSummary
+                            className="expansion"
+                            // expandIcon={<ExpandMoreIcon />}
+                          >
+                            <div
+                              className="card-header"
+                              id="headingTwo"
+                              style={{ width: "100%" }}
                             >
-                              <span>2. DELIVERY ADDRESS</span>
-                              <svg
-                                width="7"
-                                height="12"
-                                viewBox="0 0 7 12"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                                  fill="#616161"
-                                />
-                              </svg>
-                            </button>
-                          </h2>
-                        </div>
-                        <div
-                          id="collapseTwo"
-                          className="collapse show"
-                          aria-labelledby="headingTwo"
-                          data-parent="#accordionCheckout"
-                        >
-                          <div className="card-body">
-                            <div className="deliveryAdd">
-                              <div className="savedAdd">
-                                <div className="addressBtn">
-                                  <button type="button" className="btn btnAdd">
-                                    + ADD NEW ADDRESS
-                                  </button>
-                                  <button type="button" className="btn btnAdd">
-                                    SAVE ADDRESS
-                                  </button>
-                                </div>
-                                <div className="addressContent">
-                                  <label>Default Address</label>
-                                  <div className="addressCard">
-                                    <div className="body">
-                                      <div className="addWrap">
-                                        <h6>Aanchal</h6>
-                                        <p>
-                                          Sign up to our newsletter to be <br />
-                                          the first to know about our latest{" "}
-                                          <br />
-                                          news and get access to <br />
-                                          exclusive offers.
-                                          <br />
-                                          exclusive offers.
-                                        </p>
-                                      </div>
-                                      <div className="labelWrap">
-                                        <label>HOME</label>
-                                      </div>
-                                    </div>
-                                    <div className="foot">
-                                      <a href="#" className="btn">
-                                        EDIT
-                                      </a>
-                                      <a href="#" className="btn">
-                                        REMOVE
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div className="addressContent">
-                                  <label>Ohter Addresses</label>
-                                  <div className="addressCard">
-                                    <div className="body">
-                                      <div className="addWrap">
-                                        <h6>Aanchal</h6>
-                                        <p>
-                                          Sign up to our newsletter to be the
-                                          first to
-                                          <br />
-                                          know about our latest news and get
-                                          access to
-                                          <br />
-                                          exclusive offers. <br />
-                                        </p>
-                                      </div>
-                                      <div className="labelWrap">
-                                        <label>OFFICE</label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="addressCard">
-                                    <div className="body">
-                                      <div className="addWrap">
-                                        <h6>Aanchal</h6>
-                                        <p>
-                                          Sign up to our newsletter to be the
-                                          first to
-                                          <br />
-                                          know about our latest news and get
-                                          access to
-                                          <br />
-                                          exclusive offers. <br />
-                                        </p>
-                                      </div>
-                                      <div className="labelWrap">
-                                        <label>OFFICE</label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="newAdd">
-                                <form>
-                                  <div className="form-group">
-                                    <label for="inputEmail">E-MAIL *</label>
-                                    <input
-                                      type="email"
-                                      className="form-control"
-                                      id="inputEmail"
-                                    />
-                                  </div>
-                                  <div className="form-row">
-                                    <div className="form-group col-md-6">
-                                      <label for="firstName">
-                                        FIRST NAME *
-                                      </label>
-                                      <input
-                                        type="email"
-                                        className="form-control"
-                                        id="firstName"
-                                      />
-                                    </div>
-                                    <div className="form-group col-md-6">
-                                      <label for="lastName">LAST NAME *</label>
-                                      <input
-                                        type="text"
-                                        className="form-control"
-                                        id="lastName"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div className="form-row">
-                                    <div className="form-group col-md-12 mb-0">
-                                      <label for="firstName">
-                                        PHONE NUMBER *
-                                      </label>
-                                    </div>
-                                    <div className="form-group col-2 col-lg-1">
-                                      <input
-                                        type="email"
-                                        className="form-control"
-                                        id="firstName"
-                                        placeholder="+91"
-                                      />
-                                    </div>
-                                    <div className="form-group col-10 col-lg-11">
-                                      <input
-                                        type="text"
-                                        className="form-control"
-                                        id="lastName"
-                                        placeholder="Enter a valid 10 digit mobile number"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div className="form-group">
-                                    <label for="inputAddress">ADDRESS *</label>
-                                    <input
-                                      type="text"
-                                      className="form-control"
-                                      id="inputAddress"
-                                      placeholder=""
-                                    />
-                                  </div>
-                                  <div className="form-row">
-                                    <div className="form-group col-md-7">
-                                      <label for="inputCity">CITY *</label>
-                                      <input
-                                        type="text"
-                                        className="form-control"
-                                        id="inputCity"
-                                      />
-                                    </div>
-
-                                    <div className="form-group col-md-5">
-                                      <label for="inputZip">PIN CODE *</label>
-                                      <input
-                                        type="text"
-                                        className="form-control"
-                                        id="inputZip"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div className="form-group">
-                                    <label for="inputState">STATE *</label>
-                                    <select
-                                      id="inputState"
-                                      className="form-control"
-                                    >
-                                      <option selected value="Select state">
-                                        Select state
-                                      </option>
-                                      <option value="Select state">UK</option>
-                                      <option value="Select state">UP</option>
-                                    </select>
-                                  </div>
-
-                                  <div className="form-group">
-                                    <label>COUNTRY:</label>
-                                    <span>India</span>
-                                  </div>
-                                  <div className="form-group">
-                                    <label>ADDRESS TYPE</label>
-                                  </div>
-                                  <div className="form-row">
-                                    <div className="form-group col-md-4">
-                                      <div className="custom-control custom-checkbox">
-                                        <input
-                                          type="checkbox"
-                                          className="custom-control-input"
-                                          id="home"
-                                        />
-                                        <label
-                                          className="custom-control-label pl-2 mb-0"
-                                          for="home"
-                                        >
-                                          HOME
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div className="form-group col-md-4">
-                                      <div className="custom-control custom-checkbox">
-                                        <input
-                                          type="checkbox"
-                                          className="custom-control-input"
-                                          id="office"
-                                        />
-                                        <label
-                                          className="custom-control-label pl-2 mb-0"
-                                          for="office"
-                                        >
-                                          OFFICE
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div className="form-group col-md-4">
-                                      <div className="custom-control custom-checkbox">
-                                        <input
-                                          type="checkbox"
-                                          className="custom-control-input"
-                                          id="other"
-                                        />
-                                        <label
-                                          className="custom-control-label pl-2 mb-0"
-                                          for="other"
-                                        >
-                                          OTHER
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div className="form-group col-md-4">
-                                      <div className="custom-control custom-checkbox">
-                                        <input
-                                          type="checkbox"
-                                          className="custom-control-input"
-                                          id="save"
-                                        />
-                                        <label
-                                          className="custom-control-label pl-2 mb-0"
-                                          for="save"
-                                        >
-                                          SAVE AND DELIVER HERE
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </form>
-                              </div>
-
-                              <div className="btnWrap">
+                              <h2 className="mb-0" style={{ width: "100%" }}>
                                 <button
+                                  className="btn btn-link btn-block text-left collapsed"
                                   type="button"
-                                  className="btn btnContinue"
+                                  data-toggle="collapse"
+                                  data-target="#collapseTwo"
+                                  aria-expanded="false"
+                                  aria-controls="collapseTwo"
+                                  style={{
+                                    width: "100%",
+                                    paddingBottom: "20px",
+                                  }}
                                 >
-                                  CONTINUE
+                                  <span>1. LOGIN</span>
+                                  <svg
+                                    width="7"
+                                    height="12"
+                                    viewBox="0 0 7 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                      fill="#616161"
+                                    />
+                                  </svg>
                                 </button>
+                              </h2>
+                            </div>
+                          </ExpansionPanelSummary>
+                          <ExpansionPanelDetails style={{ width: "100%" }}>
+                            <div
+                              id="collapseOne"
+                              className=" collapse show"
+                              aria-labelledby="headingOne"
+                              data-parent="#accordionCheckout"
+                              style={{ width: "100%" }}
+                            >
+                              <div
+                                className="card-body"
+                                style={{ width: "100%" }}
+                              >
+                                <div
+                                  className="loginWrap"
+                                  style={{ width: "100%" }}
+                                >
+                                  <span>Aanchal</span>
+                                  <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="9560811484"
+                                  />
+                                  <a href="#" className="btn btnChange">
+                                    CHANGE
+                                  </a>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
+                          </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                      </div>
+
+                      <div className="card">
+                        <ExpansionPanel
+                          expanded={this.state.expanded === "panel2"}
+                          onChange={() => this.handleChange("panel2")}
+                          elevation={0}
+                        >
+                          <ExpansionPanelSummary
+                            className="expansion"
+                            // expandIcon={<ExpandMoreIcon />}
+                          >
+                            <div
+                              className="card-header"
+                              id="headingTwo"
+                              style={{ width: "100%" }}
+                            >
+                              <h2 className="mb-0" style={{ width: "100%" }}>
+                                <button
+                                  className="btn btn-link btn-block text-left collapsed"
+                                  type="button"
+                                  data-toggle="collapse"
+                                  data-target="#collapseTwo"
+                                  aria-expanded="false"
+                                  aria-controls="collapseTwo"
+                                  style={{
+                                    width: "100%",
+                                    paddingBottom: "20px",
+                                  }}
+                                >
+                                  <span>2. DELIVERY ADDRESS</span>
+                                  <svg
+                                    width="7"
+                                    height="12"
+                                    viewBox="0 0 7 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                      fill="#616161"
+                                    />
+                                  </svg>
+                                </button>
+                              </h2>
+                            </div>
+                          </ExpansionPanelSummary>
+                          <ExpansionPanelDetails style={{ width: "100%" }}>
+                            <div
+                              id="collapseOne"
+                              className=" collapse show"
+                              aria-labelledby="headingOne"
+                              data-parent="#accordionCheckout"
+                              style={{ width: "100%" }}
+                            >
+                              <div className="card-body">
+                                <div className="deliveryAdd">
+                                  <div className="savedAdd">
+                                    <div className="addressBtn">
+                                      <button
+                                        type="button"
+                                        className="btn btnAdd"
+                                      >
+                                        + ADD NEW ADDRESS
+                                      </button>
+                                      <button
+                                        type="button"
+                                        className="btn btnAdd"
+                                      >
+                                        SAVE ADDRESS
+                                      </button>
+                                    </div>
+                                    <div className="addressContent">
+                                      <label>Default Address</label>
+                                      <div className="addressCard">
+                                        <div className="body">
+                                          <div className="addWrap">
+                                            <h6>Aanchal</h6>
+                                            <p>
+                                              Sign up to our newsletter to be{" "}
+                                              <br />
+                                              the first to know about our latest{" "}
+                                              <br />
+                                              news and get access to <br />
+                                              exclusive offers.
+                                              <br />
+                                              exclusive offers.
+                                            </p>
+                                          </div>
+                                          <div className="labelWrap">
+                                            <label>HOME</label>
+                                          </div>
+                                        </div>
+                                        <div className="foot">
+                                          <a href="#" className="btn">
+                                            EDIT
+                                          </a>
+                                          <a href="#" className="btn">
+                                            REMOVE
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className="addressContent">
+                                      <label>Ohter Addresses</label>
+                                      <div className="addressCard">
+                                        <div className="body">
+                                          <div className="addWrap">
+                                            <h6>Aanchal</h6>
+                                            <p>
+                                              Sign up to our newsletter to be
+                                              the first to
+                                              <br />
+                                              know about our latest news and get
+                                              access to
+                                              <br />
+                                              exclusive offers. <br />
+                                            </p>
+                                          </div>
+                                          <div className="labelWrap">
+                                            <label>OFFICE</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="addressCard">
+                                        <div className="body">
+                                          <div className="addWrap">
+                                            <h6>Aanchal</h6>
+                                            <p>
+                                              Sign up to our newsletter to be
+                                              the first to
+                                              <br />
+                                              know about our latest news and get
+                                              access to
+                                              <br />
+                                              exclusive offers. <br />
+                                            </p>
+                                          </div>
+                                          <div className="labelWrap">
+                                            <label>OFFICE</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="newAdd">
+                                    <form>
+                                      <div className="form-group">
+                                        <label for="inputEmail">E-MAIL *</label>
+                                        <input
+                                          type="email"
+                                          className="form-control"
+                                          id="inputEmail"
+                                        />
+                                      </div>
+                                      <div className="form-row">
+                                        <div className="form-group col-md-6">
+                                          <label for="firstName">
+                                            FIRST NAME *
+                                          </label>
+                                          <input
+                                            type="email"
+                                            className="form-control"
+                                            id="firstName"
+                                          />
+                                        </div>
+                                        <div className="form-group col-md-6">
+                                          <label for="lastName">
+                                            LAST NAME *
+                                          </label>
+                                          <input
+                                            type="text"
+                                            className="form-control"
+                                            id="lastName"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="form-row">
+                                        <div className="form-group col-md-12 mb-0">
+                                          <label for="firstName">
+                                            PHONE NUMBER *
+                                          </label>
+                                        </div>
+                                        <div className="form-group col-2 col-lg-1">
+                                          <input
+                                            type="email"
+                                            className="form-control"
+                                            id="firstName"
+                                            placeholder="+91"
+                                          />
+                                        </div>
+                                        <div className="form-group col-10 col-lg-11">
+                                          <input
+                                            type="text"
+                                            className="form-control"
+                                            id="lastName"
+                                            placeholder="Enter a valid 10 digit mobile number"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="form-group">
+                                        <label for="inputAddress">
+                                          ADDRESS *
+                                        </label>
+                                        <input
+                                          type="text"
+                                          className="form-control"
+                                          id="inputAddress"
+                                          placeholder=""
+                                        />
+                                      </div>
+                                      <div className="form-row">
+                                        <div className="form-group col-md-7">
+                                          <label for="inputCity">CITY *</label>
+                                          <input
+                                            type="text"
+                                            className="form-control"
+                                            id="inputCity"
+                                          />
+                                        </div>
+
+                                        <div className="form-group col-md-5">
+                                          <label for="inputZip">
+                                            PIN CODE *
+                                          </label>
+                                          <input
+                                            type="text"
+                                            className="form-control"
+                                            id="inputZip"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="form-group">
+                                        <label for="inputState">STATE *</label>
+                                        <select
+                                          id="inputState"
+                                          className="form-control"
+                                        >
+                                          <option selected value="Select state">
+                                            Select state
+                                          </option>
+                                          <option value="Select state">
+                                            UK
+                                          </option>
+                                          <option value="Select state">
+                                            UP
+                                          </option>
+                                        </select>
+                                      </div>
+
+                                      <div className="form-group">
+                                        <label>COUNTRY:</label>
+                                        <span>India</span>
+                                      </div>
+                                      <div className="form-group">
+                                        <label>ADDRESS TYPE</label>
+                                      </div>
+                                      <div className="form-row">
+                                        <div className="form-group col-md-4">
+                                          <div className="custom-control custom-checkbox">
+                                            <input
+                                              type="checkbox"
+                                              className="custom-control-input"
+                                              id="home"
+                                            />
+                                            <label
+                                              className="custom-control-label pl-2 mb-0"
+                                              for="home"
+                                            >
+                                              HOME
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <div className="form-group col-md-4">
+                                          <div className="custom-control custom-checkbox">
+                                            <input
+                                              type="checkbox"
+                                              className="custom-control-input"
+                                              id="office"
+                                            />
+                                            <label
+                                              className="custom-control-label pl-2 mb-0"
+                                              for="office"
+                                            >
+                                              OFFICE
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <div className="form-group col-md-4">
+                                          <div className="custom-control custom-checkbox">
+                                            <input
+                                              type="checkbox"
+                                              className="custom-control-input"
+                                              id="other"
+                                            />
+                                            <label
+                                              className="custom-control-label pl-2 mb-0"
+                                              for="other"
+                                            >
+                                              OTHER
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <div className="form-group col-md-4">
+                                          <div className="custom-control custom-checkbox">
+                                            <input
+                                              type="checkbox"
+                                              className="custom-control-input"
+                                              id="save"
+                                            />
+                                            <label
+                                              className="custom-control-label pl-2 mb-0"
+                                              for="save"
+                                            >
+                                              SAVE AND DELIVER HERE
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+
+                                  <div className="btnWrap">
+                                    <button
+                                      type="button"
+                                      className="btn btnContinue"
+                                    >
+                                      CONTINUE
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </ExpansionPanelDetails>
+                        </ExpansionPanel>
                       </div>
                       <div className="card">
-                        <div className="card-header" id="headingThree">
-                          <h2 className="mb-0">
-                            <button
-                              className="btn btn-link btn-block text-left collapsed"
-                              type="button"
-                              data-toggle="collapse"
-                              data-target="#collapseThree"
-                              aria-expanded="false"
-                              aria-controls="collapseThree"
+                        <ExpansionPanel
+                          expanded={this.state.expanded === "panel3"}
+                          onChange={() => this.handleChange("panel3")}
+                          elevation={0}
+                        >
+                          <ExpansionPanelSummary
+                            className="expansion"
+                            // expandIcon={<ExpandMoreIcon />}
+                          >
+                            <div
+                              className="card-header"
+                              id="headingTwo"
+                              style={{ width: "100%" }}
                             >
-                              <span>3. SHIPPING</span>
-                              <svg
-                                width="7"
-                                height="12"
-                                viewBox="0 0 7 12"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                                  fill="#616161"
-                                />
-                              </svg>
-                            </button>
-                          </h2>
-                        </div>
+                              <h2 className="mb-0" style={{ width: "100%" }}>
+                                <button
+                                  className="btn btn-link btn-block text-left collapsed"
+                                  type="button"
+                                  data-toggle="collapse"
+                                  data-target="#collapseTwo"
+                                  aria-expanded="false"
+                                  aria-controls="collapseTwo"
+                                  style={{
+                                    width: "100%",
+                                    paddingBottom: "20px",
+                                  }}
+                                >
+                                  <span>3. SHIPPING</span>
+                                  <svg
+                                    width="7"
+                                    height="12"
+                                    viewBox="0 0 7 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                      fill="#616161"
+                                    />
+                                  </svg>
+                                </button>
+                              </h2>
+                            </div>
+                          </ExpansionPanelSummary>
+                          <ExpansionPanelDetails style={{ width: "100%" }}>
+                            <div
+                              id="collapseOne"
+                              className=" collapse show"
+                              aria-labelledby="headingOne"
+                              data-parent="#accordionCheckout"
+                              style={{ width: "100%" }}
+                            >
+                              <div className="card-body">
+                                <div className="shippingDetail">
+                                  <div className="shipWrap">
+                                    <div className="d-flex align-items-center active">
+                                      <span className="dot"></span>
+                                      <span className="shipType">STANDARD</span>
+                                    </div>
+                                    <span className="shipCharge">FREE</span>
+                                  </div>
+                                  <div className="shipWrap">
+                                    <div className="d-flex align-items-center">
+                                      <span className="dot"></span>
+                                      <span className="shipType">
+                                        CASH ON DELIVERY
+                                      </span>
+                                    </div>
+                                    <span className="shipCharge">Rs. 100</span>
+                                  </div>
+                                  <div className="noteText">
+                                    <p>
+                                      <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M7.33301 5.99992H8.66634V4.66659H7.33301V5.99992ZM7.99967 13.3333C5.05967 13.3333 2.66634 10.9399 2.66634 7.99992C2.66634 5.05992 5.05967 2.66659 7.99967 2.66659C10.9397 2.66659 13.333 5.05992 13.333 7.99992C13.333 10.9399 10.9397 13.3333 7.99967 13.3333ZM7.99967 1.33325C7.1242 1.33325 6.25729 1.50569 5.44845 1.84072C4.63961 2.17575 3.90469 2.66682 3.28563 3.28587C2.03539 4.53612 1.33301 6.23181 1.33301 7.99992C1.33301 9.76803 2.03539 11.4637 3.28563 12.714C3.90469 13.333 4.63961 13.8241 5.44845 14.1591C6.25729 14.4941 7.1242 14.6666 7.99967 14.6666C9.76779 14.6666 11.4635 13.9642 12.7137 12.714C13.964 11.4637 14.6663 9.76803 14.6663 7.99992C14.6663 7.12444 14.4939 6.25753 14.1589 5.4487C13.8238 4.63986 13.3328 3.90493 12.7137 3.28587C12.0947 2.66682 11.3597 2.17575 10.5509 1.84072C9.74206 1.50569 8.87515 1.33325 7.99967 1.33325ZM7.33301 11.3333H8.66634V7.33325H7.33301V11.3333Z"
+                                          fill="#878786"
+                                        />
+                                      </svg>
+                                      <span>
+                                        * Delivery timeline may take slightly
+                                        longer than usual due to Covid19.
+                                      </span>
+                                    </p>
+                                  </div>
+                                  <div className="btnWrap">
+                                    <button
+                                      type="button"
+                                      className="btn btnContinue"
+                                    >
+                                      CONTINUE
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </ExpansionPanelDetails>
+                        </ExpansionPanel>
+
                         <div
                           id="collapseThree"
                           className="collapse show"
                           aria-labelledby="headingThree"
                           data-parent="#accordionCheckout"
-                        >
-                          <div className="card-body">
-                            <div className="shippingDetail">
-                              <div className="shipWrap">
-                                <div className="d-flex align-items-center active">
-                                  <span className="dot"></span>
-                                  <span className="shipType">STANDARD</span>
-                                </div>
-                                <span className="shipCharge">FREE</span>
-                              </div>
-                              <div className="shipWrap">
-                                <div className="d-flex align-items-center">
-                                  <span className="dot"></span>
-                                  <span className="shipType">
-                                    CASH ON DELIVERY
-                                  </span>
-                                </div>
-                                <span className="shipCharge">Rs. 100</span>
-                              </div>
-                              <div className="noteText">
-                                <p>
-                                  <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M7.33301 5.99992H8.66634V4.66659H7.33301V5.99992ZM7.99967 13.3333C5.05967 13.3333 2.66634 10.9399 2.66634 7.99992C2.66634 5.05992 5.05967 2.66659 7.99967 2.66659C10.9397 2.66659 13.333 5.05992 13.333 7.99992C13.333 10.9399 10.9397 13.3333 7.99967 13.3333ZM7.99967 1.33325C7.1242 1.33325 6.25729 1.50569 5.44845 1.84072C4.63961 2.17575 3.90469 2.66682 3.28563 3.28587C2.03539 4.53612 1.33301 6.23181 1.33301 7.99992C1.33301 9.76803 2.03539 11.4637 3.28563 12.714C3.90469 13.333 4.63961 13.8241 5.44845 14.1591C6.25729 14.4941 7.1242 14.6666 7.99967 14.6666C9.76779 14.6666 11.4635 13.9642 12.7137 12.714C13.964 11.4637 14.6663 9.76803 14.6663 7.99992C14.6663 7.12444 14.4939 6.25753 14.1589 5.4487C13.8238 4.63986 13.3328 3.90493 12.7137 3.28587C12.0947 2.66682 11.3597 2.17575 10.5509 1.84072C9.74206 1.50569 8.87515 1.33325 7.99967 1.33325ZM7.33301 11.3333H8.66634V7.33325H7.33301V11.3333Z"
-                                      fill="#878786"
-                                    />
-                                  </svg>
-                                  <span>
-                                    * Delivery timeline may take slightly longer
-                                    than usual due to Covid19.
-                                  </span>
-                                </p>
-                              </div>
-                              <div className="btnWrap">
-                                <button
-                                  type="button"
-                                  className="btn btnContinue"
-                                >
-                                  CONTINUE
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        ></div>
                       </div>
                     </div>
                     <div className="completePay">
@@ -1003,6 +1116,10 @@ class Checkout extends Component {
                         <label
                           className="custom-control-label pl-2 mb-0"
                           for="subscribe"
+                          style={{
+                            textTransform: "uppercase",
+                            paddingTop: "0px",
+                          }}
                         >
                           SUBSCRIBE TO OUR NEWSLETTER
                         </label>
@@ -1013,9 +1130,11 @@ class Checkout extends Component {
                         </p>
                       </div>
                       <div className="btnWrap">
-                        <button type="button" className="btn btnPay">
-                          COMPLETE PAYMENT
-                        </button>
+                        {!mobileView && (
+                          <button type="button" className="btn btnPay">
+                            COMPLETE PAYMENT
+                          </button>
+                        )}
                         <p>
                           By placing your order you agree to our{" "}
                           <strong>Terms& Conditions</strong> and you understand
@@ -1073,6 +1192,7 @@ class Checkout extends Component {
               textAlign: "center",
               backgroundColor: "#f4f2f0",
               width: "100%",
+              zIndex: 999,
             }}
           >
             PLACE ORDER
