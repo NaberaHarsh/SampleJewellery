@@ -1002,7 +1002,7 @@ class Header extends Component {
                       fill-opacity="0.47"
                     />
                   </svg>
-                  <span>FREE SHIPPING ON ALL ORDERS</span>
+                  <span>FREE SHIPPING ON ALL PREPAID ORDERS</span>
                 </div>
                 <div style={{ textAlign: "center" }} className="checkoutSlider">
                   {" "}
@@ -1019,7 +1019,7 @@ class Header extends Component {
                       fill="#81807F"
                     />
                   </svg>
-                  <span>PREPAID ORDERS ONLY</span>
+                  <span>COD AVAILABLE</span>
                 </div>
                 <div style={{ textAlign: "center" }} className="checkoutSlider">
                   {" "}
@@ -1037,7 +1037,7 @@ class Header extends Component {
                       fill-opacity="0.47"
                     />
                   </svg>
-                  <span>SECURE ONLINE PAYMENT</span>
+                  <span>EASY EMI</span>
                 </div>
               </Slider>
             </div>
