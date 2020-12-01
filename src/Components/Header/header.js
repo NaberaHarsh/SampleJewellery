@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react";
 import "../Home/home.css";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 class Header extends Component {
   constructor(props) {
@@ -14,8 +15,13 @@ class Header extends Component {
       shop: false,
       designer: false,
       occassion: false,
+      openMenu: false,
     };
   }
+
+  handleMenu = (e) => {
+    this.setState({ openMenu: e.target });
+  };
 
   handleFilter = () => {
     this.setState(
@@ -188,7 +194,7 @@ class Header extends Component {
               </div>
             </div>
             <div className="buttonWrap">
-              <a href="#">
+              <a onClick={this.handleMenu}>
                 <svg
                   width="15"
                   height="15"
@@ -251,7 +257,10 @@ class Header extends Component {
             </div>
           </div>
 
-          <nav className="navbar navbar-expand-lg navbar-light py-0">
+          <nav
+            className="navbar navbar-expand-lg navbar-light py-0"
+            style={{ padding: "14px", marginTop: "4px", marginBottom: "4px" }}
+          >
             <div className="container-fluid">
               <div className="mobNavWrap">
                 <button
@@ -291,9 +300,10 @@ class Header extends Component {
                     />
                   </svg>
                 </button>
-                <a className="navbar-brand d-lg-none mr-0" href="#">
+                <a className="avbar-brand d-lg-none mr-0 ml-3" href="#">
                   <img
                     className="img-fluid"
+                    style={{ marginLeft: "30px" }}
                     src="https://photos.angel.co/startups/i/7310596-61638d95a6e4ae3eefe9454badaa4ea5-medium_jpg.jpg?buster=1573556992"
                     alt="Brand Logo"
                     height="46"
@@ -301,22 +311,211 @@ class Header extends Component {
                   />
                 </a>
                 <div className="buttonWrap d-lg-none">
-                  <a href="#">
+                  <a
+                    className=""
+                    href="#"
+                    role="button"
+                    id="dropdownMenuUser"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    onClick={this.handleMenu}
+                  >
                     <svg
-                      className="heartLine"
-                      width="20"
-                      height="19"
-                      viewBox="0 0 20 19"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M10.1 15.55L10 15.65L9.89 15.55C5.14 11.24 2 8.39 2 5.5C2 3.5 3.5 2 5.5 2C7.04 2 8.54 3 9.07 4.36H10.93C11.46 3 12.96 2 14.5 2C16.5 2 18 3.5 18 5.5C18 8.39 14.86 11.24 10.1 15.55ZM14.5 0C12.76 0 11.09 0.81 10 2.08C8.91 0.81 7.24 0 5.5 0C2.42 0 0 2.41 0 5.5C0 9.27 3.4 12.36 8.55 17.03L10 18.35L11.45 17.03C16.6 12.36 20 9.27 20 5.5C20 2.41 17.58 0 14.5 0Z"
-                        fill="#616161"
+                        d="M7.5 0C8.49456 0 9.44839 0.395088 10.1517 1.09835C10.8549 1.80161 11.25 2.75544 11.25 3.75C11.25 4.74456 10.8549 5.69839 10.1517 6.40165C9.44839 7.10491 8.49456 7.5 7.5 7.5C6.50544 7.5 5.55161 7.10491 4.84835 6.40165C4.14509 5.69839 3.75 4.74456 3.75 3.75C3.75 2.75544 4.14509 1.80161 4.84835 1.09835C5.55161 0.395088 6.50544 0 7.5 0ZM7.5 9.375C11.6438 9.375 15 11.0531 15 13.125V15H0V13.125C0 11.0531 3.35625 9.375 7.5 9.375Z"
+                        fill="#84766F"
                       />
                     </svg>
                   </a>
-                  <a href="#" onClick={() => this.handleCartOpen()}>
+                  <div class="buttonWrap">
+                    <div class="dropdown">
+                      <Menu
+                        style={{ borderRadius: "none" }}
+                        open={Boolean(this.state.openMenu)}
+                        anchorEl={this.state.openMenu}
+                        onClose={() => this.setState({ openMenu: null })}
+                        anchorOrigin={{
+                          vertical: "top",
+                          horizontal: "right",
+                        }}
+                        transformOrigin={{
+                          vertical: "top",
+                          horizontal: "right",
+                        }}
+                      >
+                        <MenuItem
+                          style={{
+                            fontfamily: "Avenir",
+                            fontWeight: 500,
+                            fontSize: "12px",
+                            lineHeight: "16px",
+                            color: "#616161",
+                            padding: "8px 10px 8px 10px",
+                          }}
+                          onClick={() => this.setState({ openMenu: null })}
+                        >
+                          {" "}
+                          <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 15 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.5 0C8.49456 0 9.44839 0.395088 10.1517 1.09835C10.8549 1.80161 11.25 2.75544 11.25 3.75C11.25 4.74456 10.8549 5.69839 10.1517 6.40165C9.44839 7.10491 8.49456 7.5 7.5 7.5C6.50544 7.5 5.55161 7.10491 4.84835 6.40165C4.14509 5.69839 3.75 4.74456 3.75 3.75C3.75 2.75544 4.14509 1.80161 4.84835 1.09835C5.55161 0.395088 6.50544 0 7.5 0ZM7.5 9.375C11.6438 9.375 15 11.0531 15 13.125V15H0V13.125C0 11.0531 3.35625 9.375 7.5 9.375Z"
+                              fill="#84766F"
+                            />
+                          </svg>
+                          <span style={{ padding: "4px 30px 4px 30px" }}>
+                            Hi, Aanchal
+                          </span>
+                        </MenuItem>
+                        <MenuItem
+                          style={{
+                            fontfamily: "Avenir",
+                            fontWeight: 500,
+                            fontSize: "12px",
+                            lineHeight: "16px",
+                            color: "#616161",
+                            padding: "8px 10px 8px 10px",
+                          }}
+                          onClick={() => this.setState({ openMenu: null })}
+                        >
+                          {" "}
+                          <svg
+                            width="16"
+                            height="15"
+                            viewBox="0 0 16 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect width="16" height="15" fill="white" />
+                            <path
+                              d="M11.6 0C10.208 0 8.872 0.662125 8 1.70027C7.128 0.662125 5.792 0 4.4 0C1.936 0 0 1.97003 0 4.49591C0 7.57766 2.72 10.1035 6.84 13.921L8 15L9.16 13.921C13.28 10.1035 16 7.57766 16 4.49591C16 1.97003 14.064 0 11.6 0Z"
+                              fill="#84766F"
+                            />
+                          </svg>
+                          <span style={{ padding: "4px 30px 4px 28px" }}>
+                            My Wishlist
+                          </span>
+                        </MenuItem>
+                        <MenuItem
+                          style={{
+                            fontfamily: "Avenir",
+                            fontWeight: 500,
+                            fontSize: "12px",
+                            lineHeight: "16px",
+                            color: "#616161",
+                            padding: "8px 10px 8px 10px",
+                          }}
+                          onClick={() => this.setState({ openMenu: null })}
+                        >
+                          {" "}
+                          <svg
+                            width="15"
+                            height="17"
+                            viewBox="0 0 15 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.16667 1L1 3.91788V14.1304C1 14.5174 1.15218 14.8885 1.42307 15.1621C1.69395 15.4357 2.06135 15.5894 2.44444 15.5894H12.5556C12.9386 15.5894 13.306 15.4357 13.5769 15.1621C13.8478 14.8885 14 14.5174 14 14.1304V3.91788L11.8333 1H3.16667Z"
+                              stroke="#84766F"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M1 3.91797H14"
+                              stroke="#84766F"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.3891 6.83569C10.3891 7.60956 10.0847 8.35173 9.54297 8.89894C9.0012 9.44615 8.2664 9.75357 7.50022 9.75357C6.73404 9.75357 5.99924 9.44615 5.45746 8.89894C4.91569 8.35173 4.61133 7.60956 4.61133 6.83569"
+                              stroke="#84766F"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          <span style={{ padding: "4px 30px 4px 28px" }}>
+                            My Orders
+                          </span>
+                        </MenuItem>
+                        <MenuItem
+                          style={{
+                            fontfamily: "Avenir",
+                            fontWeight: 500,
+                            fontSize: "12px",
+                            lineHeight: "16px",
+                            color: "#616161",
+                            padding: "8px 10px 8px 10px",
+                          }}
+                          onClick={() => this.setState({ openMenu: null })}
+                        >
+                          {" "}
+                          <svg
+                            style={{ marginLeft: "-4px" }}
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12 11.5C11.337 11.5 10.7011 11.2366 10.2322 10.7678C9.76339 10.2989 9.5 9.66304 9.5 9C9.5 8.33696 9.76339 7.70107 10.2322 7.23223C10.7011 6.76339 11.337 6.5 12 6.5C12.663 6.5 13.2989 6.76339 13.7678 7.23223C14.2366 7.70107 14.5 8.33696 14.5 9C14.5 9.3283 14.4353 9.65339 14.3097 9.95671C14.1841 10.26 13.9999 10.5356 13.7678 10.7678C13.5356 10.9999 13.26 11.1841 12.9567 11.3097C12.6534 11.4353 12.3283 11.5 12 11.5ZM12 2C10.1435 2 8.36301 2.7375 7.05025 4.05025C5.7375 5.36301 5 7.14348 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 7.14348 18.2625 5.36301 16.9497 4.05025C15.637 2.7375 13.8565 2 12 2Z"
+                              fill="#84766F"
+                            />
+                          </svg>
+                          <span style={{ padding: "4px 30px 4px 24px" }}>
+                            My Addresses
+                          </span>
+                        </MenuItem>
+                        <MenuItem
+                          style={{
+                            fontfamily: "Avenir",
+                            fontWeight: 500,
+                            fontSize: "12px",
+                            lineHeight: "16px",
+                            color: "#616161",
+                            padding: "8px 10px 8px 10px",
+                          }}
+                          onClick={() => this.setState({ openMenu: null })}
+                        >
+                          <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.6667 15.5833V12.8333H8.25V9.16659H14.6667V6.41659L19.25 10.9999L14.6667 15.5833ZM12.8333 1.83325C13.3196 1.83325 13.7859 2.02641 14.1297 2.37022C14.4735 2.71404 14.6667 3.18036 14.6667 3.66659V5.49992H12.8333V3.66659H4.58333V18.3333H12.8333V16.4999H14.6667V18.3333C14.6667 18.8195 14.4735 19.2858 14.1297 19.6296C13.7859 19.9734 13.3196 20.1666 12.8333 20.1666H4.58333C4.0971 20.1666 3.63079 19.9734 3.28697 19.6296C2.94315 19.2858 2.75 18.8195 2.75 18.3333V3.66659C2.75 3.18036 2.94315 2.71404 3.28697 2.37022C3.63079 2.02641 4.0971 1.83325 4.58333 1.83325H12.8333Z"
+                              fill="#84766F"
+                            />
+                          </svg>
+                          <span style={{ padding: "4px 30px 4px 24px" }}>
+                            Logout
+                          </span>
+                        </MenuItem>
+                      </Menu>
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    className="mx-2"
+                    onClick={() => this.handleCartOpen()}
+                  >
                     <svg
                       width="17"
                       height="19"
@@ -347,6 +546,21 @@ class Header extends Component {
                       />
                     </svg>
                   </a>
+                  <a href="#">
+                    <svg
+                      className="heartLine"
+                      width="20"
+                      height="19"
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.1 15.55L10 15.65L9.89 15.55C5.14 11.24 2 8.39 2 5.5C2 3.5 3.5 2 5.5 2C7.04 2 8.54 3 9.07 4.36H10.93C11.46 3 12.96 2 14.5 2C16.5 2 18 3.5 18 5.5C18 8.39 14.86 11.24 10.1 15.55ZM14.5 0C12.76 0 11.09 0.81 10 2.08C8.91 0.81 7.24 0 5.5 0C2.42 0 0 2.41 0 5.5C0 9.27 3.4 12.36 8.55 17.03L10 18.35L11.45 17.03C16.6 12.36 20 9.27 20 5.5C20 2.41 17.58 0 14.5 0Z"
+                        fill="#616161"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </div>
 
@@ -357,6 +571,7 @@ class Header extends Component {
                     : " navbar-collapse d-none d-md-block"
                 }
                 id="navbarNavDropdown"
+                style={{ zIndex: 999 }}
               >
                 <div className="d-lg-none">
                   <div className="menuClose">
@@ -390,6 +605,45 @@ class Header extends Component {
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       About <span className="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      My Orders
+                    </a>
+                  </li>{" "}
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      My Address
+                    </a>
+                  </li>{" "}
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      My Wishlist
                     </a>
                   </li>
                   <li className="nav-item dropdown">
@@ -916,13 +1170,11 @@ class Header extends Component {
                       </div>
                     </div>
                   </li>
-
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       Discover
                     </a>
                   </li>
-
                   <li className="nav-item">
                     <a className="nav-link" href="#">
                       Gifts
@@ -941,6 +1193,11 @@ class Header extends Component {
                   <li className="nav-item d-lg-none">
                     <a className="nav-link" href="#">
                       Contact
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Logout
                     </a>
                   </li>
                 </ul>

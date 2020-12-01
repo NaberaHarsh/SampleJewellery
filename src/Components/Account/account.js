@@ -7,20 +7,45 @@ class Account extends React.Component {
     this.state = {
       orders: false,
       address: false,
-      wishlist: true,
+      wishlist: false,
+      profile: true,
     };
   }
 
   handleOrders = () => {
-    this.setState({ orders: true, address: false, wishlist: false });
+    this.setState({
+      orders: true,
+      address: false,
+      wishlist: false,
+      profile: false,
+    });
   };
 
   handleAddress = () => {
-    this.setState({ orders: false, address: true, wishlist: false });
+    this.setState({
+      orders: false,
+      address: true,
+      wishlist: false,
+      profile: false,
+    });
   };
   handleWishlist = () => {
-    this.setState({ orders: false, address: false, wishlist: true });
+    this.setState({
+      orders: false,
+      address: false,
+      wishlist: true,
+      profile: false,
+    });
   };
+  handleProfile = () => {
+    this.setState({
+      orders: false,
+      address: false,
+      wishlist: false,
+      profile: true,
+    });
+  };
+
   render() {
     return (
       <body>
@@ -31,9 +56,6 @@ class Account extends React.Component {
                 <div className="col">
                   <div className="titleHeading">
                     <h3>MY ACCOUNT</h3>
-                    <a href="#" className="logOut">
-                      LOGOUT
-                    </a>
                   </div>
                 </div>
               </div>
@@ -45,6 +67,19 @@ class Account extends React.Component {
                     role="tablist"
                     aria-orientation="vertical"
                   >
+                    <a
+                      className={
+                        this.state.profile ? "nav-link active" : "nav-link "
+                      }
+                      id="v-pills-profile-tab"
+                      data-toggle="pill"
+                      role="tab"
+                      aria-controls="v-pills-profile"
+                      aria-selected="false"
+                      onClick={this.handleProfile}
+                    >
+                      MY PROFILE
+                    </a>
                     <a
                       className={
                         this.state.orders ? "nav-link active" : "nav-link "
@@ -89,13 +124,141 @@ class Account extends React.Component {
                     >
                       WISHLIST
                     </a>
-                    <a href="#" className="nav-link logOut">
-                      LOGOUT
-                    </a>
                   </div>
                 </div>
                 <div className="col-md-9 col-lg-7 mr-auto">
                   <div className="tab-content" id="v-pills-tabContent">
+                    <div
+                      className={
+                        this.state.profile
+                          ? "tab-pane fade show active"
+                          : "tab-pane fade "
+                      }
+                      id="v-pills-profile"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-profile-tab"
+                    >
+                      <h4>MY PROFILE</h4>
+                      <div className="myProfile">
+                        <h5>Edit Details</h5>
+                        <form>
+                          <div className="form-group">
+                            <div className="customPhone">
+                              <label for="phoneNum">PHONE NUMBER *</label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="phoneNum"
+                                placeholder="9560811484"
+                              />
+                              <a href="#" className="btnChange">
+                                CHANGE
+                              </a>
+                            </div>
+                          </div>
+                          <div className="form-group">
+                            <label for="profileEmail">E-MAIL *</label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              id="profileEmail"
+                              placeholder="aanchalkalra99@gmail.com"
+                            />
+                          </div>
+                          <div className="form-row">
+                            <div className="form-group col-md-6">
+                              <label for="firstName">FIRST NAME *</label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="firstName"
+                                placeholder="Aanchal"
+                              />
+                            </div>
+                            <div className="form-group col-md-6">
+                              <label for="lastName">LAST NAME *</label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="lastName"
+                                placeholder="Kalra"
+                              />
+                            </div>
+                          </div>
+                          <div className="form-row my-3">
+                            <div className="form-group col-4 col-md-2">
+                              <label className="radioContainer">
+                                <input
+                                  type="radio"
+                                  checked="checked"
+                                  name="defaultAddress"
+                                />
+                                <span className="radioCheckmark"></span>
+                                <span>MALE</span>
+                              </label>
+                            </div>
+                            <div className="form-group col-4 col-md-2">
+                              <label className="radioContainer">
+                                <input
+                                  type="radio"
+                                  checked="checked"
+                                  name="defaultAddress"
+                                />
+                                <span className="radioCheckmark"></span>
+                                <span>FEMALE</span>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div className="form-group">
+                            <input
+                              type="date"
+                              className="form-control"
+                              id="birthDate"
+                            />
+                          </div>
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="profileLocation"
+                              placeholder="Location"
+                            />
+                          </div>
+                          <div className="form-row">
+                            <div className="col-12">
+                              <label for="altMobile">
+                                ALERNATE MOBILE NUMBER
+                              </label>
+                            </div>
+                            <div className="form-group col-3 col-md-2">
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="inputCity"
+                                placeholder="+91"
+                              />
+                            </div>
+                            <div className="form-group col-9 col-md-10">
+                              <input
+                                type="text"
+                                className="form-control"
+                                id="altMobile"
+                                placeholder="Enter a valid 10 digit mobile number"
+                              />
+                            </div>
+                          </div>
+                          <div className="buttonWrap mt-4">
+                            <button type="button" className="btn saveChange">
+                              SAVE CHANGES
+                            </button>
+                            <button type="button" className="btn changePass">
+                              CHANGE PASSWORD
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                     <div
                       className={
                         this.state.orders
@@ -106,7 +269,121 @@ class Account extends React.Component {
                       role="tabpanel"
                       aria-labelledby="v-pills-orders-tab"
                     >
-                      <h4>ORDERS</h4>
+                      <h4>MY ORDERS</h4>
+                      <div class="myOrders">
+                        <div class="orderCard">
+                          <div class="d-flex justify-content-between mb-3">
+                            <div>
+                              <p>Order No. 4564768</p>
+                              <p>Order Date 10/12/2020</p>
+                            </div>
+                            <button type="button" class="btn orderDetail">
+                              ORDER DETAILS
+                            </button>
+                          </div>
+                          <div class="imgContainer mb-2">
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <a href="#" class="trackOrder">
+                            <span class="mr-2">TRACK</span>
+                            <svg
+                              width="7"
+                              height="7"
+                              viewBox="0 0 7 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                fill="#616161"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="orderCard">
+                          <div class="d-flex justify-content-between mb-3">
+                            <div>
+                              <p>Order No. 4564768</p>
+                              <p>Order Date 10/12/2020</p>
+                            </div>
+                            <button type="button" class="btn orderDetail">
+                              ORDER DETAILS
+                            </button>
+                          </div>
+                          <div class="imgContainer mb-2">
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <a href="#" class="trackOrder">
+                            <span class="mr-2">TRACK</span>
+                            <svg
+                              width="7"
+                              height="7"
+                              viewBox="0 0 7 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                fill="#616161"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                     <div
                       className={
@@ -119,7 +396,123 @@ class Account extends React.Component {
                       aria-labelledby="v-pills-addresses-tab"
                     >
                       <h4>ADDRESSES</h4>
-                      ...
+                      <div class="savedAdd">
+                        <div class="addressBtn px-1">
+                          <h5>Saved Addresses</h5>
+                          <button
+                            type="button"
+                            class="btn btnAdd"
+                            data-toggle="modal"
+                            data-target="#addModal"
+                          >
+                            + ADD NEW ADDRESS
+                          </button>
+                        </div>
+                        <div class="addressContent">
+                          <label>Default Address</label>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <label class="radioContainer">
+                                <input
+                                  type="radio"
+                                  checked="checked"
+                                  name="defaultAddress"
+                                />
+                                <span class="radioCheckmark"></span>
+
+                                <div class="addressCard">
+                                  <div class="body">
+                                    <div class="addWrap">
+                                      <h6>Aanchal</h6>
+                                      <p>
+                                        D1/1 A Rana Pratap Bagh,
+                                        <br />
+                                        New Delhi- 110007 <br />
+                                        <br />
+                                        aanchalkalra99@gmail.com
+                                        <br />
+                                        +91 9560811484
+                                        <br />
+                                      </p>
+                                    </div>
+                                    <div class="labelWrap">
+                                      <label>HOME</label>
+                                    </div>
+                                  </div>
+                                  <div class="foot">
+                                    <a href="#" class="btn">
+                                      EDIT
+                                    </a>
+                                    <a href="#" class="btn">
+                                      REMOVE
+                                    </a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="addressContent">
+                          <label>Other Addresses</label>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <label class="radioContainer">
+                                <input type="radio" name="defaultAddress" />
+                                <span class="radioCheckmark"></span>
+
+                                <div class="addressCard">
+                                  <div class="body">
+                                    <div class="addWrap">
+                                      <h6>Aanchal</h6>
+                                      <p>
+                                        D1/1 A Rana Pratap Bagh,
+                                        <br />
+                                        New Delhi- 110007 <br />
+                                        <br />
+                                        aanchalkalra99@gmail.com
+                                        <br />
+                                        +91 9560811484
+                                        <br />
+                                      </p>
+                                    </div>
+                                    <div class="labelWrap">
+                                      <label>OFFICE</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="col-lg-6">
+                              <label class="radioContainer">
+                                <input type="radio" name="defaultAddress" />
+                                <span class="radioCheckmark"></span>
+
+                                <div class="addressCard">
+                                  <div class="body">
+                                    <div class="addWrap">
+                                      <h6>Aanchal</h6>
+                                      <p>
+                                        D1/1 A Rana Pratap Bagh,
+                                        <br />
+                                        New Delhi- 110007 <br />
+                                        <br />
+                                        aanchalkalra99@gmail.com
+                                        <br />
+                                        +91 9560811484
+                                        <br />
+                                      </p>
+                                    </div>
+                                    <div class="labelWrap">
+                                      <label>OFFICE</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div
                       className={

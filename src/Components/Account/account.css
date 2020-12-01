@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Poppins:wght@200;300;500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Poppins:wght@200;300;500&display=swap");
 @font-face {
   font-family: "Avenir";
   src: url("../fonts/Avenir-Book.otf") format("opentype");
@@ -693,6 +693,1008 @@ body {
 }
 
 .account .tab-content .tab-pane .wishItem .buttonWrap .btnRemove {
+  color: #616161;
+  border: 1px solid #84766f;
+}
+
+@media (max-width: 767px) {
+  .account .tabOuter {
+    text-align: center;
+  }
+}
+
+.account .tabOuter .btnContinue {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #262626;
+  background: #f4f2f0;
+  border-radius: 2px;
+  width: 278px;
+  padding: 14px 24px;
+  margin: 40px auto 0;
+} */
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard
+  .foot,
+.account .tab-content .tab-pane .savedAdd .addressContent .addressCard .foot,
+.headerAmrutam .topHeader,
+.headerAmrutam .midHeader,
+.headerAmrutam .midHeader .buttonWrap,
+.headerAmrutam .navbar .mobNavWrap,
+.headerAmrutam .navbar .mobNavWrap .buttonWrap,
+.headerAmrutam .navbar .navbar-collapse .menuClose,
+.headerAmrutam .cartWrap .myBag .cartHead,
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .totalCheckout .subTotal,
+.detailInfo .detailtabs .nav-tabs .nav-link,
+.detailInfo .detailCollapse .card .card-header .btn,
+.shopSection .byWrap,
+.shopSection .shopCategory .filterWrap .filterClose,
+.shopSection .shopCategory .filterWrap .chipsWrap,
+.shopSection .shopCategory .filterWrap .chipsWrap .filterChip,
+.shopSection .shopCategory .accordion .card .card-header button,
+.shopSection .topBar,
+.shopSection .shopGrid .shopItem .itemDetails .itemTitle,
+.shopSection .btnWrap .backTop,
+.checkoutPage .checkoutCollapse .card .card-header button,
+.checkoutPage .productDetails .couponCode .codeWrap,
+.checkoutPage .productDetails .couponCode .selectedCode,
+.account .tab-content .tab-pane .savedAdd .addressBtn,
+.account .tab-content .tab-pane .myOrders .orderCard .imgContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .radioContainer,
+.account .tab-content .tab-pane .savedAdd .addressContent .radioContainer,
+.account .tab-content .tab-pane .myProfile .radioContainer {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .checkoutPage
+    .checkoutCollapse
+    .card
+    .card-body
+    .deliveryAdd
+    .savedAdd
+    .addressContent
+    .radioContainer,
+  .account .tab-content .tab-pane .savedAdd .addressContent .radioContainer,
+  .account .tab-content .tab-pane .myProfile .radioContainer {
+    padding-left: 15px;
+  }
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .radioContainer
+  input,
+.account .tab-content .tab-pane .savedAdd .addressContent .radioContainer input,
+.account .tab-content .tab-pane .myProfile .radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .radioCheckmark,
+.account .tab-content .tab-pane .savedAdd .addressContent .radioCheckmark,
+.account .tab-content .tab-pane .myProfile .radioCheckmark {
+  position: absolute;
+  top: 0;
+  left: -24px;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #d3ccc9;
+  border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .checkoutPage
+    .checkoutCollapse
+    .card
+    .card-body
+    .deliveryAdd
+    .savedAdd
+    .addressContent
+    .radioCheckmark,
+  .account .tab-content .tab-pane .savedAdd .addressContent .radioCheckmark,
+  .account .tab-content .tab-pane .myProfile .radioCheckmark {
+    left: -12px;
+  }
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .radioContainer:hover
+  input
+  ~ .radioCheckmark,
+.account
+  .tab-content
+  .tab-pane
+  .savedAdd
+  .addressContent
+  .radioContainer:hover
+  input
+  ~ .radioCheckmark,
+.account
+  .tab-content
+  .tab-pane
+  .myProfile
+  .radioContainer:hover
+  input
+  ~ .radioCheckmark {
+  border: 2px solid #d3ccc9;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .radioContainer
+  input:checked
+  ~ .radioCheckmark,
+.account
+  .tab-content
+  .tab-pane
+  .savedAdd
+  .addressContent
+  .radioContainer
+  input:checked
+  ~ .radioCheckmark,
+.account
+  .tab-content
+  .tab-pane
+  .myProfile
+  .radioContainer
+  input:checked
+  ~ .radioCheckmark {
+  background-color: #d3ccc9;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .radioCheckmark:after,
+.account .tab-content .tab-pane .savedAdd .addressContent .radioCheckmark:after,
+.account .tab-content .tab-pane .myProfile .radioCheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .qtyWrap,
+.checkoutPage .productDetails .productItem .itemDetails .itemWrap .qtyWrap,
+.account .tab-content .tab-pane .wishItem .detailWrap .qtyWrap {
+  position: relative;
+  width: 60px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .qtyWrap input,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  input,
+.account .tab-content .tab-pane .wishItem .detailWrap .qtyWrap input {
+  height: 24px;
+  border: 1px solid #b5b5b5;
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .itemDetails
+  .qtyWrap
+  input::-webkit-inner-spin-button,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  input::-webkit-inner-spin-button,
+.account
+  .tab-content
+  .tab-pane
+  .wishItem
+  .detailWrap
+  .qtyWrap
+  input::-webkit-inner-spin-button,
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .itemDetails
+  .qtyWrap
+  input::-webkit-outer-spin-button,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  input::-webkit-outer-spin-button,
+.account
+  .tab-content
+  .tab-pane
+  .wishItem
+  .detailWrap
+  .qtyWrap
+  input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.headerAmrutam
+  .cartWrap
+  .myBag
+  .cartBody
+  .cartItem
+  .itemDetails
+  .qtyWrap
+  .minus,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  .minus,
+.account .tab-content .tab-pane .wishItem .detailWrap .qtyWrap .minus {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.headerAmrutam .cartWrap .myBag .cartBody .cartItem .itemDetails .qtyWrap .plus,
+.checkoutPage
+  .productDetails
+  .productItem
+  .itemDetails
+  .itemWrap
+  .qtyWrap
+  .plus,
+.account .tab-content .tab-pane .wishItem .detailWrap .qtyWrap .plus {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressBtn,
+.account .tab-content .tab-pane .savedAdd .addressBtn {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressBtn
+  button,
+.account .tab-content .tab-pane .savedAdd .addressBtn button {
+  border: 1px solid #84766f;
+  border-radius: 2px;
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #616161;
+  padding: 12px 16px;
+  margin-left: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent,
+.account .tab-content .tab-pane .savedAdd .addressContent {
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  label,
+.account .tab-content .tab-pane .savedAdd .addressContent label {
+  font-family: "Avenir";
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard,
+.account .tab-content .tab-pane .savedAdd .addressContent .addressCard {
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+  margin-bottom: 20px;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard
+  .body,
+.account .tab-content .tab-pane .savedAdd .addressContent .addressCard .body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard
+  .body
+  .addWrap
+  h6,
+.account
+  .tab-content
+  .tab-pane
+  .savedAdd
+  .addressContent
+  .addressCard
+  .body
+  .addWrap
+  h6 {
+  font-family: "Avenir";
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard
+  .body
+  .addWrap
+  p,
+.account
+  .tab-content
+  .tab-pane
+  .savedAdd
+  .addressContent
+  .addressCard
+  .body
+  .addWrap
+  p {
+  font-family: "Avenir";
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: rgba(97, 97, 97, 0.74);
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard
+  .body
+  label,
+.account
+  .tab-content
+  .tab-pane
+  .savedAdd
+  .addressContent
+  .addressCard
+  .body
+  label {
+  background: #d3ccc9;
+  border-radius: 14px;
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #616161;
+  padding: 6px 12px;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard
+  .foot
+  .btn,
+.account
+  .tab-content
+  .tab-pane
+  .savedAdd
+  .addressContent
+  .addressCard
+  .foot
+  .btn {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #262626;
+  width: 100%;
+  padding: 12px 24px;
+  border-top: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+  border-radius: 0;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.checkoutPage
+  .checkoutCollapse
+  .card
+  .card-body
+  .deliveryAdd
+  .savedAdd
+  .addressContent
+  .addressCard
+  .foot
+  .btn:last-child,
+.account
+  .tab-content
+  .tab-pane
+  .savedAdd
+  .addressContent
+  .addressCard
+  .foot
+  .btn:last-child {
+  border-left: 1px solid #c4c4c4;
+  border-right: none;
+}
+
+.account {
+  padding: 40px 0 40px;
+}
+
+@media (min-width: 768px) {
+  .account {
+    padding: 70px 0 40px;
+  }
+}
+
+.account .titleHeading {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .account .titleHeading {
+    margin-bottom: 35px;
+  }
+}
+
+.account .titleHeading h3 {
+  font-family: "Avenir";
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  margin-bottom: 0px;
+}
+
+.account .titleHeading .logOut {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  color: #84766f;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .account .titleHeading .logOut {
+    display: none;
+  }
+}
+
+.account .nav-pills {
+  background: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .account .nav-pills {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+.account .nav-pills .nav-link {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  color: rgba(97, 97, 97, 0.7);
+  background-color: #fff;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .account .nav-pills .nav-link {
+    text-align: center;
+    border: 1px solid #c4c4c4;
+    border-bottom: 0;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .account .nav-pills .nav-link:last-child {
+    border-bottom: 1px solid #c4c4c4;
+  }
+}
+
+@media (min-width: 992px) {
+  .account .nav-pills .nav-link {
+    padding-left: 50px;
+    text-align: left;
+  }
+}
+
+.account .nav-pills .nav-link.active {
+  color: #616161;
+}
+
+@media (max-width: 767px) {
+  .account .nav-pills .nav-link.active {
+    border-bottom: 2px solid #616161;
+  }
+}
+
+@media (min-width: 768px) {
+  .account .nav-pills .nav-link.active {
+    background: #f4f2f0;
+    color: rgba(97, 97, 97, 0.7);
+    border-color: #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  .account .nav-pills .nav-link.active:last-child {
+    border-bottom: 2px solid #c4c4c4;
+  }
+}
+
+.account .nav-pills .logOut {
+  color: #84766f;
+  font-weight: 300;
+  border-top: 0;
+}
+
+@media (max-width: 767px) {
+  .account .nav-pills .logOut {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .account .tab-content {
+    margin-top: 30px;
+  }
+}
+
+.account .tab-content .tab-pane h4 {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  color: rgba(97, 97, 97, 0.7);
+  padding: 12px;
+  padding-left: 40px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .account .tab-content .tab-pane h4 {
+    display: none;
+  }
+}
+
+.account .tab-content .tab-pane .wishItem {
+  padding: 25px 22px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+}
+
+.account .tab-content .tab-pane .wishItem .detailWrap h5,
+.account .tab-content .tab-pane .wishItem .detailWrap p {
+  font-family: "EB Garamond", serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.account .tab-content .tab-pane .wishItem .buttonWrap {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .account .tab-content .tab-pane .wishItem .buttonWrap {
+    display: none;
+  }
+}
+
+.account .tab-content .tab-pane .wishItem .buttonWrap .btn {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  padding: 12px;
+}
+
+@media (min-width: 1200px) {
+  .account .tab-content .tab-pane .wishItem .buttonWrap .btn {
+    padding: 12px 24px;
+  }
+}
+
+.account .tab-content .tab-pane .wishItem .buttonWrap .btnBag {
+  background: #f4f2f0;
+  color: #262626;
+  border: 1px solid #f4f2f0;
+  margin-right: 8px;
+}
+
+.account .tab-content .tab-pane .wishItem .buttonWrap .btnRemove {
+  color: #616161;
+  border: 1px solid #84766f;
+}
+
+.account .tab-content .tab-pane .savedAdd .addressBtn {
+  margin-top: 25px;
+}
+
+.account .tab-content .tab-pane .savedAdd .addressBtn h5 {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  margin-bottom: 0;
+}
+
+.account .tab-content .tab-pane .myOrders .orderCard {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  padding: 12px 12px 12px 30px;
+}
+
+.account .tab-content .tab-pane .myOrders .orderCard .imgContainer {
+  width: 300px;
+  max-width: 100%;
+}
+
+.account .tab-content .tab-pane .myOrders .orderCard p {
+  font-family: "Avenir";
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: 0.03em;
+  color: rgba(97, 97, 97, 0.74);
+  margin-bottom: 8px;
+}
+
+.account .tab-content .tab-pane .myOrders .orderCard button {
+  border: 1px solid #84766f;
+  border-radius: 2px;
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #616161;
+  height: 32px;
+}
+
+.account .tab-content .tab-pane .myOrders .orderCard .trackOrder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  text-align: right;
+  letter-spacing: 0.13em;
+  color: #70645e;
+}
+
+.account .tab-content .tab-pane .myProfile {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px 25px 30px;
+}
+
+.account .tab-content .tab-pane .myProfile h5 {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  margin-bottom: 20px;
+}
+
+.account .tab-content .tab-pane .myProfile label {
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #616161;
+}
+
+.account .tab-content .tab-pane .myProfile input {
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.account .tab-content .tab-pane .myProfile input::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.account .tab-content .tab-pane .myProfile input::-moz-placeholder {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.account .tab-content .tab-pane .myProfile input:-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.account .tab-content .tab-pane .myProfile input::-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.account .tab-content .tab-pane .myProfile input::placeholder {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.account .tab-content .tab-pane .myProfile input:checked ~ .radioCheckmark {
+  background: #84766f !important;
+}
+
+.account .tab-content .tab-pane .myProfile .radioContainer {
+  padding-left: 32px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.account .tab-content .tab-pane .myProfile .radioContainer .radioCheckmark {
+  width: 22px;
+  height: 22px;
+  border: 0.5px solid #c4c4c4;
+  border-radius: 2px;
+  left: 0;
+}
+
+.account .tab-content .tab-pane .myProfile .customPhone {
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.account .tab-content .tab-pane .myProfile .customPhone input {
+  border: none;
+  padding-left: 0;
+}
+
+.account .tab-content .tab-pane .myProfile .customPhone .btnChange {
+  display: inline-block;
+  width: 136px;
+  height: 32px;
+  font-family: "Avenir";
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #616161;
+  border: 1px solid #84766f;
+  border-radius: 2px;
+  padding: 10px 12px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.account .tab-content .tab-pane .myProfile .buttonWrap .btn {
+  width: 278px;
+  max-width: 100%;
+  height: 43px;
+  font-family: "Avenir";
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #262626;
+  border-radius: 2px;
+  display: block;
+  margin: 15px auto;
+}
+
+.account .tab-content .tab-pane .myProfile .buttonWrap .saveChange {
+  background: #f4f2f0;
+  border: 1px solid #f4f2f0;
+}
+
+.account .tab-content .tab-pane .myProfile .buttonWrap .changePass {
   color: #616161;
   border: 1px solid #84766f;
 }

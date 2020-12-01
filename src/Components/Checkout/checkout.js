@@ -972,7 +972,7 @@ class Checkout extends Component {
                                             </label>
                                           </div>
                                         </div>
-                                        <div className="form-group col-md-4">
+                                        {/* <div className="form-group col-md-4">
                                           <div className="custom-control custom-checkbox">
                                             <input
                                               type="checkbox"
@@ -986,7 +986,7 @@ class Checkout extends Component {
                                               SAVE AND DELIVER HERE
                                             </label>
                                           </div>
-                                        </div>
+                                        </div> */}
                                       </div>
                                     </form>
                                   </div>
@@ -1210,7 +1210,7 @@ class Checkout extends Component {
               textAlign: "center",
               backgroundColor: "#f4f2f0",
               width: "100%",
-              zIndex: 999,
+              zIndex: 99,
             }}
           >
             PLACE ORDER
