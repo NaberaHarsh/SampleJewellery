@@ -1,5 +1,7 @@
 import React from "react";
 import "../Home/home.css";
+import { Dialog, DialogContent } from "@material-ui/core";
+import AddressButton from "../AddressButton/addressButton";
 
 class Account extends React.Component {
   constructor(props) {
@@ -498,14 +500,8 @@ class Account extends React.Component {
                       <div className="savedAdd">
                         <div className="addressBtn px-1">
                           <h5>Saved Addresses</h5>
-                          <button
-                            type="button"
-                            className="btn btnAdd"
-                            data-toggle="modal"
-                            data-target="#addModal"
-                          >
-                            + ADD NEW ADDRESS
-                          </button>
+
+                          <AddressButton />
                         </div>
                         <div className="addressContent">
                           <label>Default Address</label>

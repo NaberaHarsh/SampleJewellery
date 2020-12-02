@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import AddressButton from "../AddressButton/addressButton";
 
 class Header extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class Header extends Component {
       wishlist: false,
       address: false,
       orders: false,
+      profile: false,
     };
   }
 
@@ -37,6 +39,7 @@ class Header extends Component {
         wishlist: false,
         address: false,
         orders: false,
+        profile: false,
       },
       () => console.log(this.state.showFilter)
     );
@@ -52,6 +55,7 @@ class Header extends Component {
         wishlist: false,
         address: false,
         orders: false,
+        profile: false,
       },
       () => console.log(this.state.cartOpen)
     );
@@ -67,6 +71,7 @@ class Header extends Component {
         wishlist: false,
         address: false,
         orders: false,
+        profile: false,
       },
       () => console.log(this.state.shop)
     );
@@ -80,6 +85,7 @@ class Header extends Component {
       wishlist: false,
       address: false,
       orders: false,
+      profile: false,
     });
   };
   handleOccassion = () => {
@@ -91,6 +97,7 @@ class Header extends Component {
       wishlist: false,
       address: false,
       orders: false,
+      profile: false,
     });
   };
   handleWishlist = () => {
@@ -102,6 +109,7 @@ class Header extends Component {
       wishlist: !this.state.wishlist,
       address: false,
       orders: false,
+      profile: false,
     });
   };
   handleAddress = () => {
@@ -113,6 +121,7 @@ class Header extends Component {
       wishlist: false,
       address: !this.state.address,
       orders: false,
+      profile: false,
     });
   };
   handleOrders = () => {
@@ -123,10 +132,22 @@ class Header extends Component {
       occassion: false,
       wishlist: false,
       address: false,
+      profile: false,
       orders: !this.state.orders,
     });
   };
-
+  handleProfile = () => {
+    this.setState({
+      designer: false,
+      cartOpen: false,
+      shop: false,
+      occassion: false,
+      wishlist: false,
+      address: false,
+      profile: !this.state.profile,
+      orders: false,
+    });
+  };
   render() {
     const settings = {
       nextArrow: false,
@@ -375,7 +396,7 @@ class Header extends Component {
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
-                    onClick={this.handleMenu}
+                    // onClick={this.handleMenu}
                   >
                     <svg
                       width="15"
@@ -663,6 +684,213 @@ class Header extends Component {
                       About <span className="sr-only">(current)</span>
                     </a>
                   </li>
+                  <li className="nav-item dropdown d-lg-none">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      onClick={this.handleProfile}
+                    >
+                      My Profile
+                    </a>
+                    <div
+                      className={
+                        this.state.profile
+                          ? "dropdown-menu megaMenu d-block "
+                          : "dropdown-menu megaMenu d-none"
+                      }
+                      aria-labelledby="navbarDropdownMenuLink"
+                    >
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-12 d-lg-none">
+                            <div className="menuClose">
+                              <span onClick={this.handleProfile}>Back</span>
+                              <a
+                                href="#"
+                                className="closeBtn"
+                                id="btnClose"
+                                onClick={() => this.handleFilter()}
+                              >
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 18 18"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
+                                    fill="#616161"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                            <div className="subMenu">My Profile</div>
+                          </div>
+
+                          <div
+                            className="account"
+                            style={{ padding: "20px", marginTop: "-40px" }}
+                          >
+                            <div className="row">
+                              <div className="col-md-9 col-lg-7 mr-auto">
+                                <div
+                                  className="tab-content"
+                                  id="v-pills-tabContent"
+                                >
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="v-pills-profile"
+                                    role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab"
+                                  >
+                                    <div className="myProfile">
+                                      <h5>Edit Details</h5>
+                                      <form>
+                                        <div className="form-group">
+                                          <div className="customPhone">
+                                            <label for="phoneNum">
+                                              PHONE NUMBER *
+                                            </label>
+                                            <input
+                                              type="text"
+                                              className="form-control"
+                                              id="phoneNum"
+                                              placeholder="9560811484"
+                                            />
+                                            <a href="#" className="btnChange">
+                                              CHANGE
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div className="form-group">
+                                          <label for="profileEmail">
+                                            E-MAIL *
+                                          </label>
+                                          <input
+                                            type="email"
+                                            className="form-control"
+                                            id="profileEmail"
+                                            placeholder="aanchalkalra99@gmail.com"
+                                          />
+                                        </div>
+                                        <div className="form-row">
+                                          <div className="form-group col-md-6">
+                                            <label for="firstName">
+                                              FIRST NAME *
+                                            </label>
+                                            <input
+                                              type="text"
+                                              className="form-control"
+                                              id="firstName"
+                                              placeholder="Aanchal"
+                                            />
+                                          </div>
+                                          <div className="form-group col-md-6">
+                                            <label for="lastName">
+                                              LAST NAME *
+                                            </label>
+                                            <input
+                                              type="text"
+                                              className="form-control"
+                                              id="lastName"
+                                              placeholder="Kalra"
+                                            />
+                                          </div>
+                                        </div>
+                                        <div className="form-row my-3">
+                                          <div className="form-group col-4 col-md-2">
+                                            <label className="radioContainer">
+                                              <input
+                                                type="radio"
+                                                // checked="checked"
+                                                name="gender"
+                                              />
+                                              <span className="radioCheckmark"></span>
+                                              <span>MALE</span>
+                                            </label>
+                                          </div>
+                                          <div className="form-group col-4 col-md-2">
+                                            <label className="radioContainer">
+                                              <input
+                                                type="radio"
+                                                // checked="checked"
+                                                name="gender"
+                                              />
+                                              <span className="radioCheckmark"></span>
+                                              <span>FEMALE</span>
+                                            </label>
+                                          </div>
+                                        </div>
+
+                                        <div className="form-group">
+                                          <input
+                                            type="date"
+                                            className="form-control"
+                                            id="birthDate"
+                                          />
+                                        </div>
+                                        <div className="form-group">
+                                          <input
+                                            type="text"
+                                            className="form-control"
+                                            id="profileLocation"
+                                            placeholder="Location"
+                                          />
+                                        </div>
+                                        <div className="form-row">
+                                          <div className="col-12">
+                                            <label for="altMobile">
+                                              ALERNATE MOBILE NUMBER
+                                            </label>
+                                          </div>
+                                          <div className="form-group col-3 col-md-2">
+                                            <input
+                                              type="text"
+                                              className="form-control"
+                                              id="inputCity"
+                                              placeholder="+91"
+                                            />
+                                          </div>
+                                          <div className="form-group col-9 col-md-10">
+                                            <input
+                                              type="text"
+                                              className="form-control"
+                                              id="altMobile"
+                                              placeholder="Enter a valid 10 digit mobile number"
+                                            />
+                                          </div>
+                                        </div>
+                                        <div className="buttonWrap mt-4">
+                                          <button
+                                            type="button"
+                                            className="btn saveChange"
+                                          >
+                                            SAVE CHANGES
+                                          </button>
+                                          <button
+                                            type="button"
+                                            className="btn changePass"
+                                          >
+                                            CHANGE PASSWORD
+                                          </button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>{" "}
                   <li className="nav-item dropdown d-lg-none">
                     <a
                       className="nav-link dropdown-toggle"
@@ -1036,14 +1264,7 @@ class Header extends Component {
                                     <div class="savedAdd">
                                       <div class="addressBtn px-1">
                                         <h5>Saved Addresses</h5>
-                                        <button
-                                          type="button"
-                                          class="btn btnAdd"
-                                          data-toggle="modal"
-                                          data-target="#addModal"
-                                        >
-                                          + ADD NEW ADDRESS
-                                        </button>
+                                        <AddressButton />
                                       </div>
                                       <div class="addressContent">
                                         <label>Default Address</label>
