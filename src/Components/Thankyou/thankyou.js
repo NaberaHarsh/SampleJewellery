@@ -1,5 +1,5 @@
 import React from "react";
-import "./thankyou.css";
+import "../Home/home.css";
 class Thankyou extends React.Component {
   render() {
     return (

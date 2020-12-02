@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./checkout.css";
+import "../Home/home.css";
 import withWidth from "@material-ui/core/withWidth";
 import {
   ExpansionPanelSummary,

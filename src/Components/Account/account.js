@@ -1,5 +1,5 @@
 import React from "react";
-import "./account.css";
+import "../Home/home.css";
 
 class Account extends React.Component {
   constructor(props) {

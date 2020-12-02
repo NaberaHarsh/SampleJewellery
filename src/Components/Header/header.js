@@ -208,7 +208,11 @@ class Header extends Component {
                   />
                 </svg>
               </a>
-              <a href="#" onClick={() => this.handleCartOpen()}>
+              <a
+                href="#"
+                className="mx-4"
+                onClick={() => this.handleCartOpen()}
+              >
                 <svg
                   width="17"
                   height="19"
@@ -607,7 +611,7 @@ class Header extends Component {
                       About <span className="sr-only">(current)</span>
                     </a>
                   </li>
-                  <li className="nav-item dropdown">
+                  {/* <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
                       href="#"
@@ -645,7 +649,7 @@ class Header extends Component {
                     >
                       My Wishlist
                     </a>
-                  </li>
+                  </li> */}
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -1195,11 +1199,11 @@ class Header extends Component {
                       Contact
                     </a>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a className="nav-link" href="#">
                       Logout
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

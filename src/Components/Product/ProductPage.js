@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import "./Product.css";
+import "../Home/home.css";
 import {
   ExpansionPanelSummary,
   ExpansionPanel,
