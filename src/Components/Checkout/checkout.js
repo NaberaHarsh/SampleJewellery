@@ -13,8 +13,17 @@ class Checkout extends Component {
     super(props);
     this.state = {
       expanded: "panel1",
+      standard: true,
+      cod: false,
     };
   }
+
+  handleStandard = () => {
+    this.setState({ standard: true, cod: false });
+  };
+  handleCOD = () => {
+    this.setState({ standard: false, cod: true });
+  };
 
   handleChange = (panel) => {
     this.setState({ expanded: panel });
@@ -739,78 +748,115 @@ class Checkout extends Component {
                                         SAVE ADDRESS
                                       </button>
                                     </div>
+
                                     <div className="addressContent">
-                                      <label>Default Address</label>
-                                      <div className="addressCard">
-                                        <div className="body">
-                                          <div className="addWrap">
-                                            <h6>Aanchal</h6>
-                                            <p>
-                                              Sign up to our newsletter to be{" "}
-                                              <br />
-                                              the first to know about our latest{" "}
-                                              <br />
-                                              news and get access to <br />
-                                              exclusive offers.
-                                              <br />
-                                              exclusive offers.
-                                            </p>
+                                      <label style={{ marginLeft: "20px" }}>
+                                        Default Address
+                                      </label>
+
+                                      <label className="radioContainer">
+                                        <input type="radio" name="address" />
+                                        <span
+                                          className="radioCheckmark"
+                                          style={{ marginLeft: "20px" }}
+                                        ></span>
+
+                                        <div
+                                          className="addressCard"
+                                          style={{ marginLeft: "20px" }}
+                                        >
+                                          <div className="body">
+                                            <div className="addWrap">
+                                              <h6>Aanchal</h6>
+                                              <p>
+                                                Sign up to our newsletter to be{" "}
+                                                <br />
+                                                the first to know about our
+                                                latest <br />
+                                                news and get access to <br />
+                                                exclusive offers.
+                                                <br />
+                                                exclusive offers.
+                                              </p>
+                                            </div>
+                                            <div className="labelWrap">
+                                              <label>HOME</label>
+                                            </div>
                                           </div>
-                                          <div className="labelWrap">
-                                            <label>HOME</label>
+                                          <div className="foot">
+                                            <a href="#" className="btn">
+                                              EDIT
+                                            </a>
+                                            <a href="#" className="btn">
+                                              REMOVE
+                                            </a>
                                           </div>
                                         </div>
-                                        <div className="foot">
-                                          <a href="#" className="btn">
-                                            EDIT
-                                          </a>
-                                          <a href="#" className="btn">
-                                            REMOVE
-                                          </a>
-                                        </div>
-                                      </div>
+                                      </label>
                                     </div>
 
                                     <div className="addressContent">
-                                      <label>Ohter Addresses</label>
-                                      <div className="addressCard">
-                                        <div className="body">
-                                          <div className="addWrap">
-                                            <h6>Aanchal</h6>
-                                            <p>
-                                              Sign up to our newsletter to be
-                                              the first to
-                                              <br />
-                                              know about our latest news and get
-                                              access to
-                                              <br />
-                                              exclusive offers. <br />
-                                            </p>
-                                          </div>
-                                          <div className="labelWrap">
-                                            <label>OFFICE</label>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="addressCard">
-                                        <div className="body">
-                                          <div className="addWrap">
-                                            <h6>Aanchal</h6>
-                                            <p>
-                                              Sign up to our newsletter to be
-                                              the first to
-                                              <br />
-                                              know about our latest news and get
-                                              access to
-                                              <br />
-                                              exclusive offers. <br />
-                                            </p>
-                                          </div>
-                                          <div className="labelWrap">
-                                            <label>OFFICE</label>
+                                      <label style={{ marginLeft: "20px" }}>
+                                        Ohter Addresses
+                                      </label>
+                                      <label className="radioContainer">
+                                        <input type="radio" name="address" />
+                                        <span
+                                          className="radioCheckmark"
+                                          style={{ marginLeft: "20px" }}
+                                        ></span>
+                                        <div
+                                          className="addressCard"
+                                          style={{ marginLeft: "20px" }}
+                                        >
+                                          <div className="body">
+                                            <div className="addWrap">
+                                              <h6>Aanchal</h6>
+                                              <p>
+                                                Sign up to our newsletter to be
+                                                the first to
+                                                <br />
+                                                know about our latest news and
+                                                get access to
+                                                <br />
+                                                exclusive offers. <br />
+                                              </p>
+                                            </div>
+                                            <div className="labelWrap">
+                                              <label>OFFICE</label>
+                                            </div>
                                           </div>
                                         </div>
-                                      </div>
+                                      </label>
+                                      <label className="radioContainer">
+                                        <input type="radio" name="address" />
+                                        <span
+                                          className="radioCheckmark"
+                                          style={{ marginLeft: "20px" }}
+                                        ></span>
+                                        <div
+                                          className="addressCard"
+                                          style={{ marginLeft: "20px" }}
+                                        >
+                                          <div className="body">
+                                            <div className="addWrap">
+                                              <h6>Aanchal</h6>
+                                              <p>
+                                                Sign up to our newsletter to be
+                                                the first to
+                                                <br />
+                                                know about our latest news and
+                                                get access to
+                                                <br />
+                                                exclusive offers. <br />
+                                              </p>
+                                            </div>
+                                            <div className="labelWrap">
+                                              <label>OFFICE</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </label>
                                     </div>
                                   </div>
 
@@ -1067,15 +1113,33 @@ class Checkout extends Component {
                               <div className="card-body">
                                 <div className="shippingDetail">
                                   <div className="shipWrap">
-                                    <div className="d-flex align-items-center active">
-                                      <span className="dot"></span>
+                                    <div
+                                      className={
+                                        this.state.standard
+                                          ? "d-flex align-items-center active"
+                                          : "d-flex align-items-center "
+                                      }
+                                    >
+                                      <span
+                                        className="dot"
+                                        onClick={this.handleStandard}
+                                      ></span>
                                       <span className="shipType">STANDARD</span>
                                     </div>
                                     <span className="shipCharge">FREE</span>
                                   </div>
                                   <div className="shipWrap">
-                                    <div className="d-flex align-items-center">
-                                      <span className="dot"></span>
+                                    <div
+                                      className={
+                                        this.state.cod
+                                          ? "d-flex align-items-center active"
+                                          : "d-flex align-items-center "
+                                      }
+                                    >
+                                      <span
+                                        className="dot"
+                                        onClick={this.handleCOD}
+                                      ></span>
                                       <span className="shipType">
                                         CASH ON DELIVERY
                                       </span>

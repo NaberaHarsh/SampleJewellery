@@ -16,6 +16,9 @@ class Header extends Component {
       designer: false,
       occassion: false,
       openMenu: false,
+      wishlist: false,
+      address: false,
+      orders: false,
     };
   }
 
@@ -31,6 +34,9 @@ class Header extends Component {
         shop: false,
         designer: false,
         occassion: false,
+        wishlist: false,
+        address: false,
+        orders: false,
       },
       () => console.log(this.state.showFilter)
     );
@@ -43,6 +49,9 @@ class Header extends Component {
         shop: false,
         designer: false,
         occassion: false,
+        wishlist: false,
+        address: false,
+        orders: false,
       },
       () => console.log(this.state.cartOpen)
     );
@@ -55,6 +64,9 @@ class Header extends Component {
         cartOpen: false,
         designer: false,
         occassion: false,
+        wishlist: false,
+        address: false,
+        orders: false,
       },
       () => console.log(this.state.shop)
     );
@@ -65,6 +77,9 @@ class Header extends Component {
       cartOpen: false,
       shop: false,
       occassion: false,
+      wishlist: false,
+      address: false,
+      orders: false,
     });
   };
   handleOccassion = () => {
@@ -73,8 +88,45 @@ class Header extends Component {
       cartOpen: false,
       shop: false,
       designer: false,
+      wishlist: false,
+      address: false,
+      orders: false,
     });
   };
+  handleWishlist = () => {
+    this.setState({
+      designer: false,
+      cartOpen: false,
+      shop: false,
+      occassion: false,
+      wishlist: !this.state.wishlist,
+      address: false,
+      orders: false,
+    });
+  };
+  handleAddress = () => {
+    this.setState({
+      designer: false,
+      cartOpen: false,
+      shop: false,
+      occassion: false,
+      wishlist: false,
+      address: !this.state.address,
+      orders: false,
+    });
+  };
+  handleOrders = () => {
+    this.setState({
+      designer: false,
+      cartOpen: false,
+      shop: false,
+      occassion: false,
+      wishlist: false,
+      address: false,
+      orders: !this.state.orders,
+    });
+  };
+
   render() {
     const settings = {
       nextArrow: false,
@@ -611,7 +663,7 @@ class Header extends Component {
                       About <span className="sr-only">(current)</span>
                     </a>
                   </li>
-                  {/* <li className="nav-item dropdown">
+                  <li className="nav-item dropdown d-lg-none">
                     <a
                       className="nav-link dropdown-toggle"
                       href="#"
@@ -620,11 +672,303 @@ class Header extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      onClick={this.handleOrders}
                     >
                       My Orders
                     </a>
+                    <div
+                      className={
+                        this.state.orders
+                          ? "dropdown-menu megaMenu d-block "
+                          : "dropdown-menu megaMenu d-none"
+                      }
+                      aria-labelledby="navbarDropdownMenuLink"
+                    >
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-12 d-lg-none">
+                            <div className="menuClose">
+                              <span onClick={this.handleOrders}>Back</span>
+                              <a
+                                href="#"
+                                className="closeBtn"
+                                id="btnClose"
+                                onClick={() => this.handleFilter()}
+                              >
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 18 18"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
+                                    fill="#616161"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                            <div className="subMenu">My Orders</div>
+                          </div>
+
+                          <div
+                            className="account"
+                            style={{ padding: "20px", marginTop: "-40px" }}
+                          >
+                            <div className="row">
+                              <div className="col-md-9 col-lg-7 mr-auto">
+                                <div
+                                  className="tab-content"
+                                  id="v-pills-tabContent"
+                                >
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="v-pills-profile"
+                                    role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab"
+                                  >
+                                    <div class="orderDetails">
+                                      <div class="orderHead">
+                                        <div>
+                                          <p>
+                                            <span>Order No.</span>{" "}
+                                            <span>4564768</span>
+                                          </p>
+                                          <p>
+                                            <span>Order Date</span>{" "}
+                                            <span>10/12/2020</span>
+                                          </p>
+                                        </div>
+                                        <div>
+                                          <p class="ml-3 pl-1">
+                                            <span>Order qty</span>{" "}
+                                            <span class="ml-3">3</span>
+                                          </p>
+                                          <p>
+                                            <span>Total Amount</span>{" "}
+                                            <strong class="ml-3">
+                                              Rs 10,000
+                                            </strong>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="shippingAdd">
+                                        <h5>Shipping Address</h5>
+                                        <div class="addWrap">
+                                          <div>
+                                            <h6>Aanchal Kalra</h6>
+                                            <address>
+                                              D1/1 A Rana Pratap Bagh, <br />
+                                              New Delhi - 110007 <br />
+                                              aanchalkalra99@gmail.com <br />
+                                              +91 9560811484
+                                            </address>
+                                          </div>
+                                          <div>
+                                            <label>OFFICE</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="orderStatus">
+                                        <h5>Order Status</h5>
+                                        <div class="statusWrap">
+                                          <div class="statusHead">
+                                            <div>
+                                              <p class="shipItem">
+                                                Shipment 1 of 2
+                                              </p>
+                                              <p>
+                                                Package Delivery by May 25, 2020
+                                              </p>
+                                            </div>
+                                            <div>
+                                              <p class="ml-md-3 pl-md-1">
+                                                <span>Payment Mode</span>{" "}
+                                                <span class="ml-1 ml-md-3">
+                                                  COD
+                                                </span>
+                                              </p>
+                                              <p>
+                                                <span>Amount to be Paid</span>{" "}
+                                                <strong class="ml-1 ml-md-3">
+                                                  Rs 5,000
+                                                </strong>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div class="statusBody">
+                                            <div class="statusItem">
+                                              <div class="d-flex">
+                                                <div class="imgWrap">
+                                                  <img
+                                                    class="img-fluid"
+                                                    src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                                    alt=""
+                                                  />
+                                                </div>
+                                                <div class="itemContent">
+                                                  <h5>
+                                                    Artisan Square Necklace 18ct
+                                                    Gold Plate
+                                                  </h5>
+                                                  <p>By Aashna Dalmia</p>
+                                                  <p>Qty: 1</p>
+                                                  <p>SKU: AD 001</p>
+                                                </div>
+                                              </div>
+                                              <h6>Rs 3,000</h6>
+                                            </div>
+                                          </div>
+                                          <div class="statusBody">
+                                            <div class="statusItem">
+                                              <div class="d-flex">
+                                                <div class="imgWrap">
+                                                  <img
+                                                    class="img-fluid"
+                                                    src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                                    alt=""
+                                                  />
+                                                </div>
+                                                <div class="itemContent">
+                                                  <h5>
+                                                    Artisan Square Necklace 18ct
+                                                    Gold Plate
+                                                  </h5>
+                                                  <p>By Aashna Dalmia</p>
+                                                  <p>Qty: 1</p>
+                                                  <p>SKU: AD 001</p>
+                                                </div>
+                                              </div>
+                                              <h6>Rs 3,000</h6>
+                                            </div>
+                                          </div>
+                                          <div class="bottomLink">
+                                            <a href="#">
+                                              <span>DOWNLOAD INVOICE</span>
+                                              <svg
+                                                width="18"
+                                                height="17"
+                                                viewBox="0 0 18 17"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                                  fill="#398DAF"
+                                                />
+                                              </svg>
+                                            </a>
+                                            <a href="#">
+                                              <span>TRACK</span>
+                                              <svg
+                                                width="18"
+                                                height="17"
+                                                viewBox="0 0 18 17"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                                  fill="#398DAF"
+                                                />
+                                              </svg>
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="statusWrap">
+                                          <div class="statusHead">
+                                            <div>
+                                              <p class="shipItem">
+                                                Shipment 2 of 2
+                                              </p>
+                                              <p>
+                                                Package Delivery by May 28, 2020
+                                              </p>
+                                            </div>
+                                            <div>
+                                              <p class="ml-md-3 pl-md-1">
+                                                <span>Payment Mode</span>{" "}
+                                                <span class="ml-1 ml-md-3">
+                                                  COD
+                                                </span>
+                                              </p>
+                                              <p>
+                                                <span>Amount to be Paid</span>{" "}
+                                                <strong class="ml-1 ml-md-3">
+                                                  Rs 5,000
+                                                </strong>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div class="statusBody">
+                                            <div class="statusItem">
+                                              <div class="d-flex">
+                                                <div class="imgWrap">
+                                                  <img
+                                                    class="img-fluid"
+                                                    src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                                    alt=""
+                                                  />
+                                                </div>
+                                                <div class="itemContent">
+                                                  <h5>
+                                                    Artisan Square Necklace 18ct
+                                                    Gold Plate
+                                                  </h5>
+                                                  <p>By Aashna Dalmia</p>
+                                                  <p>Qty: 1</p>
+                                                  <p>SKU: AD 001</p>
+                                                </div>
+                                              </div>
+                                              <h6>Rs 3,000</h6>
+                                            </div>
+                                          </div>
+                                          <div class="bottomLink">
+                                            <a href="#">
+                                              <span>DOWNLOAD INVOICE</span>
+                                              <svg
+                                                width="18"
+                                                height="17"
+                                                viewBox="0 0 18 17"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                                  fill="#398DAF"
+                                                />
+                                              </svg>
+                                            </a>
+                                            <a href="#">
+                                              <span>TRACK</span>
+                                              <svg
+                                                width="18"
+                                                height="17"
+                                                viewBox="0 0 18 17"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                                  fill="#398DAF"
+                                                />
+                                              </svg>
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>{" "}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>{" "}
-                  <li className="nav-item dropdown">
+                  <li className="nav-item dropdown d-lg-none">
                     <a
                       className="nav-link dropdown-toggle"
                       href="#"
@@ -633,11 +977,195 @@ class Header extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      onClick={this.handleAddress}
                     >
                       My Address
                     </a>
+                    <div
+                      className={
+                        this.state.address
+                          ? "dropdown-menu megaMenu d-block "
+                          : "dropdown-menu megaMenu d-none"
+                      }
+                      aria-labelledby="navbarDropdownMenuLink"
+                    >
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-12 d-lg-none">
+                            <div className="menuClose">
+                              <span onClick={this.handleAddress}>Back</span>
+                              <a
+                                href="#"
+                                className="closeBtn"
+                                id="btnClose"
+                                onClick={() => this.handleFilter()}
+                              >
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 18 18"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
+                                    fill="#616161"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                            <div className="subMenu">My Address</div>
+                          </div>
+
+                          <div
+                            className="account"
+                            style={{ padding: "20px", marginTop: "-40px" }}
+                          >
+                            <div className="row">
+                              <div className="col-md-9 col-lg-7 mr-auto">
+                                <div
+                                  className="tab-content"
+                                  id="v-pills-tabContent"
+                                >
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="v-pills-profile"
+                                    role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab"
+                                  >
+                                    <div class="savedAdd">
+                                      <div class="addressBtn px-1">
+                                        <h5>Saved Addresses</h5>
+                                        <button
+                                          type="button"
+                                          class="btn btnAdd"
+                                          data-toggle="modal"
+                                          data-target="#addModal"
+                                        >
+                                          + ADD NEW ADDRESS
+                                        </button>
+                                      </div>
+                                      <div class="addressContent">
+                                        <label>Default Address</label>
+                                        <div class="row">
+                                          <div class="col-lg-6">
+                                            <label class="radioContainer">
+                                              <input
+                                                type="radio"
+                                                checked="checked"
+                                                name="defaultAddress"
+                                              />
+                                              <span class="radioCheckmark"></span>
+
+                                              <div class="addressCard">
+                                                <div class="body">
+                                                  <div class="addWrap">
+                                                    <h6>Aanchal</h6>
+                                                    <p>
+                                                      D1/1 A Rana Pratap Bagh,
+                                                      <br />
+                                                      New Delhi- 110007 <br />
+                                                      <br />
+                                                      aanchalkalra99@gmail.com
+                                                      <br />
+                                                      +91 9560811484
+                                                      <br />
+                                                    </p>
+                                                  </div>
+                                                  <div class="labelWrap">
+                                                    <label>HOME</label>
+                                                  </div>
+                                                </div>
+                                                <div class="foot">
+                                                  <a href="#" class="btn">
+                                                    EDIT
+                                                  </a>
+                                                  <a href="#" class="btn">
+                                                    REMOVE
+                                                  </a>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="addressContent">
+                                        <label>Other Addresses</label>
+                                        <div class="row">
+                                          <div class="col-lg-6">
+                                            <label class="radioContainer">
+                                              <input
+                                                type="radio"
+                                                name="defaultAddress"
+                                              />
+                                              <span class="radioCheckmark"></span>
+
+                                              <div class="addressCard">
+                                                <div class="body">
+                                                  <div class="addWrap">
+                                                    <h6>Aanchal</h6>
+                                                    <p>
+                                                      D1/1 A Rana Pratap Bagh,
+                                                      <br />
+                                                      New Delhi- 110007 <br />
+                                                      <br />
+                                                      aanchalkalra99@gmail.com
+                                                      <br />
+                                                      +91 9560811484
+                                                      <br />
+                                                    </p>
+                                                  </div>
+                                                  <div class="labelWrap">
+                                                    <label>OFFICE</label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                          <div class="col-lg-6">
+                                            <label class="radioContainer">
+                                              <input
+                                                type="radio"
+                                                name="defaultAddress"
+                                              />
+                                              <span class="radioCheckmark"></span>
+
+                                              <div class="addressCard">
+                                                <div class="body">
+                                                  <div class="addWrap">
+                                                    <h6>Aanchal</h6>
+                                                    <p>
+                                                      D1/1 A Rana Pratap Bagh,
+                                                      <br />
+                                                      New Delhi- 110007 <br />
+                                                      <br />
+                                                      aanchalkalra99@gmail.com
+                                                      <br />
+                                                      +91 9560811484
+                                                      <br />
+                                                    </p>
+                                                  </div>
+                                                  <div class="labelWrap">
+                                                    <label>OFFICE</label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>{" "}
-                  <li className="nav-item dropdown">
+                  <li className="nav-item dropdown d-lg-none">
                     <a
                       className="nav-link dropdown-toggle"
                       href="#"
@@ -646,10 +1174,243 @@ class Header extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      onClick={this.handleWishlist}
                     >
                       My Wishlist
                     </a>
-                  </li> */}
+                    <div
+                      className={
+                        this.state.wishlist
+                          ? "dropdown-menu megaMenu d-block "
+                          : "dropdown-menu megaMenu d-none"
+                      }
+                      aria-labelledby="navbarDropdownMenuLink"
+                    >
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-12 d-lg-none">
+                            <div className="menuClose">
+                              <span onClick={this.handleWishlist}>Back</span>
+                              <a
+                                href="#"
+                                className="closeBtn"
+                                id="btnClose"
+                                onClick={() => this.handleFilter()}
+                              >
+                                <svg
+                                  width="18"
+                                  height="18"
+                                  viewBox="0 0 18 18"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
+                                    fill="#616161"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                            <div className="subMenu">My Wishlist</div>
+                          </div>
+
+                          <div
+                            className="account"
+                            style={{ padding: "20px", marginTop: "-40px" }}
+                          >
+                            <div className="row">
+                              <div className="col-md-9 col-lg-7 mr-auto">
+                                <div
+                                  className="tab-content"
+                                  id="v-pills-tabContent"
+                                >
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="v-pills-profile"
+                                    role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab"
+                                  >
+                                    <div className="wishItem">
+                                      <div className="row align-items-end">
+                                        <div className="col-md-6">
+                                          <div className="row">
+                                            <div className="col-4">
+                                              <div className="imgWrap">
+                                                <img
+                                                  className="img-fluid"
+                                                  src="../../assets/images/necklace.png"
+                                                  alt=""
+                                                />
+                                              </div>
+                                            </div>
+                                            <div className="col-8">
+                                              <div className="detailWrap">
+                                                <h5 className="mb-3">
+                                                  Artisan Square Necklace 18ct
+                                                  Gold Plate
+                                                </h5>
+                                                <p>Rs. 10,000</p>
+                                                <div className="qtyWrap">
+                                                  <div className="qtyChange">
+                                                    <a
+                                                      href="#"
+                                                      className="minus"
+                                                    >
+                                                      <svg
+                                                        width="4"
+                                                        height="2"
+                                                        viewBox="0 0 4 2"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M3.54 1.516H0.456V0.724H3.54V1.516Z"
+                                                          fill="black"
+                                                        />
+                                                      </svg>
+                                                    </a>
+                                                    <input
+                                                      type="number"
+                                                      className="form-control"
+                                                      placeholder="1"
+                                                    />
+                                                    <a
+                                                      href="#"
+                                                      className="plus"
+                                                    >
+                                                      <svg
+                                                        width="8"
+                                                        height="7"
+                                                        viewBox="0 0 8 7"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M4.356 3.004H7.056V3.724H4.356V6.424H3.636V3.724H0.936V3.004H3.636V0.304H4.356V3.004Z"
+                                                          fill="black"
+                                                        />
+                                                      </svg>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                          <div className="buttonWrap">
+                                            <button
+                                              type="button"
+                                              className="btn btnBag"
+                                              style={{ marginRight: "12px" }}
+                                            >
+                                              ADD TO BAG
+                                            </button>
+                                            <button
+                                              type="button"
+                                              className="btn btnRemove"
+                                            >
+                                              REMOVE
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="wishItem">
+                                      <div className="row align-items-end">
+                                        <div className="col-md-6">
+                                          <div className="row">
+                                            <div className="col-4">
+                                              <div className="imgWrap">
+                                                <img
+                                                  className="img-fluid"
+                                                  src="../../assets/images/necklace.png"
+                                                  alt=""
+                                                />
+                                              </div>
+                                            </div>
+                                            <div className="col-8">
+                                              <div className="detailWrap">
+                                                <h5 className="mb-3">
+                                                  Artisan Square Necklace 18ct
+                                                  Gold Plate
+                                                </h5>
+                                                <p>Rs. 10,000</p>
+                                                <div className="qtyWrap">
+                                                  <div className="qtyChange">
+                                                    <a
+                                                      href="#"
+                                                      className="minus"
+                                                    >
+                                                      <svg
+                                                        width="4"
+                                                        height="2"
+                                                        viewBox="0 0 4 2"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M3.54 1.516H0.456V0.724H3.54V1.516Z"
+                                                          fill="black"
+                                                        />
+                                                      </svg>
+                                                    </a>
+                                                    <input
+                                                      type="number"
+                                                      className="form-control"
+                                                      placeholder="1"
+                                                    />
+                                                    <a
+                                                      href="#"
+                                                      className="plus"
+                                                    >
+                                                      <svg
+                                                        width="8"
+                                                        height="7"
+                                                        viewBox="0 0 8 7"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M4.356 3.004H7.056V3.724H4.356V6.424H3.636V3.724H0.936V3.004H3.636V0.304H4.356V3.004Z"
+                                                          fill="black"
+                                                        />
+                                                      </svg>
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                          <div className="buttonWrap">
+                                            <button
+                                              type="button"
+                                              className="btn btnBag"
+                                              style={{ marginRight: "12px" }}
+                                            >
+                                              ADD TO BAG
+                                            </button>
+                                            <button
+                                              type="button"
+                                              className="btn btnRemove"
+                                            >
+                                              REMOVE
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -1199,11 +1960,11 @@ class Header extends Component {
                       Contact
                     </a>
                   </li>
-                  {/* <li className="nav-item">
+                  <li className="nav-item d-lg-none">
                     <a className="nav-link" href="#">
                       Logout
                     </a>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
             </div>

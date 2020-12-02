@@ -190,8 +190,8 @@ class Account extends React.Component {
                               <label className="radioContainer">
                                 <input
                                   type="radio"
-                                  checked="checked"
-                                  name="defaultAddress"
+                                  // checked="checked"
+                                  name="gender"
                                 />
                                 <span className="radioCheckmark"></span>
                                 <span>MALE</span>
@@ -201,8 +201,8 @@ class Account extends React.Component {
                               <label className="radioContainer">
                                 <input
                                   type="radio"
-                                  checked="checked"
-                                  name="defaultAddress"
+                                  // checked="checked"
+                                  name="gender"
                                 />
                                 <span className="radioCheckmark"></span>
                                 <span>FEMALE</span>
@@ -270,118 +270,217 @@ class Account extends React.Component {
                       aria-labelledby="v-pills-orders-tab"
                     >
                       <h4>MY ORDERS</h4>
-                      <div class="myOrders">
-                        <div class="orderCard">
-                          <div class="d-flex justify-content-between mb-3">
-                            <div>
-                              <p>Order No. 4564768</p>
-                              <p>Order Date 10/12/2020</p>
-                            </div>
-                            <button type="button" class="btn orderDetail">
-                              ORDER DETAILS
-                            </button>
+
+                      <div className="orderDetails">
+                        <div className="orderHead">
+                          <div>
+                            <p>
+                              <span>Order No.</span> <span>4564768</span>
+                            </p>
+                            <p>
+                              <span>Order Date</span> <span>10/12/2020</span>
+                            </p>
                           </div>
-                          <div class="imgContainer mb-2">
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
-                            </div>
+                          <div>
+                            <p className="ml-3 pl-1">
+                              <span>Order qty</span>{" "}
+                              <span className="ml-3">3</span>
+                            </p>
+                            <p>
+                              <span>Total Amount</span>{" "}
+                              <strong className="ml-3">Rs 10,000</strong>
+                            </p>
                           </div>
-                          <a href="#" class="trackOrder">
-                            <span class="mr-2">TRACK</span>
-                            <svg
-                              width="7"
-                              height="7"
-                              viewBox="0 0 7 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                                fill="#616161"
-                              />
-                            </svg>
-                          </a>
                         </div>
-                        <div class="orderCard">
-                          <div class="d-flex justify-content-between mb-3">
+                        <div className="shippingAdd">
+                          <h5>Shipping Address</h5>
+                          <div className="addWrap">
                             <div>
-                              <p>Order No. 4564768</p>
-                              <p>Order Date 10/12/2020</p>
+                              <h6>Aanchal Kalra</h6>
+                              <address>
+                                D1/1 A Rana Pratap Bagh, <br />
+                                New Delhi - 110007 <br />
+                                aanchalkalra99@gmail.com <br />
+                                +91 9560811484
+                              </address>
                             </div>
-                            <button type="button" class="btn orderDetail">
-                              ORDER DETAILS
-                            </button>
-                          </div>
-                          <div class="imgContainer mb-2">
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="imgWrap">
-                              <img
-                                class="img-fluid"
-                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                alt=""
-                              />
+                            <div>
+                              <label>OFFICE</label>
                             </div>
                           </div>
-                          <a href="#" class="trackOrder">
-                            <span class="mr-2">TRACK</span>
-                            <svg
-                              width="7"
-                              height="7"
-                              viewBox="0 0 7 12"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
-                                fill="#616161"
-                              />
-                            </svg>
-                          </a>
+                        </div>
+                        <div className="orderStatus">
+                          <h5>Order Status</h5>
+                          <div className="statusWrap">
+                            <div className="statusHead">
+                              <div>
+                                <p className="shipItem">Shipment 1 of 2</p>
+                                <p>Package Delivery by May 25, 2020</p>
+                              </div>
+                              <div>
+                                <p className="ml-md-3 pl-md-1">
+                                  <span>Payment Mode</span>{" "}
+                                  <span className="ml-1 ml-md-3">COD</span>
+                                </p>
+                                <p>
+                                  <span>Amount to be Paid</span>{" "}
+                                  <strong className="ml-1 ml-md-3">
+                                    Rs 5,000
+                                  </strong>
+                                </p>
+                              </div>
+                            </div>
+                            <div className="statusBody">
+                              <div className="statusItem">
+                                <div className="d-flex">
+                                  <div className="imgWrap">
+                                    <img
+                                      className="img-fluid"
+                                      src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <div className="itemContent">
+                                    <h5>
+                                      Artisan Square Necklace 18ct Gold Plate
+                                    </h5>
+                                    <p>By Aashna Dalmia</p>
+                                    <p>Qty: 1</p>
+                                    <p>SKU: AD 001</p>
+                                  </div>
+                                </div>
+                                <h6>Rs 3,000</h6>
+                              </div>
+                            </div>
+                            <div className="statusBody">
+                              <div className="statusItem">
+                                <div className="d-flex">
+                                  <div className="imgWrap">
+                                    <img
+                                      className="img-fluid"
+                                      src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <div className="itemContent">
+                                    <h5>
+                                      Artisan Square Necklace 18ct Gold Plate
+                                    </h5>
+                                    <p>By Aashna Dalmia</p>
+                                    <p>Qty: 1</p>
+                                    <p>SKU: AD 001</p>
+                                  </div>
+                                </div>
+                                <h6>Rs 3,000</h6>
+                              </div>
+                            </div>
+                            <div className="bottomLink">
+                              <a href="#">
+                                <span>DOWNLOAD INVOICE</span>
+                                <svg
+                                  width="18"
+                                  height="17"
+                                  viewBox="0 0 18 17"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                    fill="#398DAF"
+                                  />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <span>TRACK</span>
+                                <svg
+                                  width="18"
+                                  height="17"
+                                  viewBox="0 0 18 17"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                    fill="#398DAF"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                          <div className="statusWrap">
+                            <div className="statusHead">
+                              <div>
+                                <p className="shipItem">Shipment 2 of 2</p>
+                                <p>Package Delivery by May 28, 2020</p>
+                              </div>
+                              <div>
+                                <p className="ml-md-3 pl-md-1">
+                                  <span>Payment Mode</span>{" "}
+                                  <span className="ml-1 ml-md-3">COD</span>
+                                </p>
+                                <p>
+                                  <span>Amount to be Paid</span>{" "}
+                                  <strong className="ml-1 ml-md-3">
+                                    Rs 5,000
+                                  </strong>
+                                </p>
+                              </div>
+                            </div>
+                            <div className="statusBody">
+                              <div className="statusItem">
+                                <div className="d-flex">
+                                  <div className="imgWrap">
+                                    <img
+                                      className="img-fluid"
+                                      src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                      alt=""
+                                    />
+                                  </div>
+                                  <div className="itemContent">
+                                    <h5>
+                                      Artisan Square Necklace 18ct Gold Plate
+                                    </h5>
+                                    <p>By Aashna Dalmia</p>
+                                    <p>Qty: 1</p>
+                                    <p>SKU: AD 001</p>
+                                  </div>
+                                </div>
+                                <h6>Rs 3,000</h6>
+                              </div>
+                            </div>
+                            <div className="bottomLink">
+                              <a href="#">
+                                <span>DOWNLOAD INVOICE</span>
+                                <svg
+                                  width="18"
+                                  height="17"
+                                  viewBox="0 0 18 17"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                    fill="#398DAF"
+                                  />
+                                </svg>
+                              </a>
+                              <a href="#">
+                                <span>TRACK</span>
+                                <svg
+                                  width="18"
+                                  height="17"
+                                  viewBox="0 0 18 17"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
+                                    fill="#398DAF"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -396,33 +495,33 @@ class Account extends React.Component {
                       aria-labelledby="v-pills-addresses-tab"
                     >
                       <h4>ADDRESSES</h4>
-                      <div class="savedAdd">
-                        <div class="addressBtn px-1">
+                      <div className="savedAdd">
+                        <div className="addressBtn px-1">
                           <h5>Saved Addresses</h5>
                           <button
                             type="button"
-                            class="btn btnAdd"
+                            className="btn btnAdd"
                             data-toggle="modal"
                             data-target="#addModal"
                           >
                             + ADD NEW ADDRESS
                           </button>
                         </div>
-                        <div class="addressContent">
+                        <div className="addressContent">
                           <label>Default Address</label>
-                          <div class="row">
-                            <div class="col-lg-6">
-                              <label class="radioContainer">
+                          <div className="row">
+                            <div className="col-lg-6">
+                              <label className="radioContainer">
                                 <input
                                   type="radio"
-                                  checked="checked"
+                                  // checked="checked"
                                   name="defaultAddress"
                                 />
-                                <span class="radioCheckmark"></span>
+                                <span className="radioCheckmark"></span>
 
-                                <div class="addressCard">
-                                  <div class="body">
-                                    <div class="addWrap">
+                                <div className="addressCard">
+                                  <div className="body">
+                                    <div className="addWrap">
                                       <h6>Aanchal</h6>
                                       <p>
                                         D1/1 A Rana Pratap Bagh,
@@ -435,15 +534,15 @@ class Account extends React.Component {
                                         <br />
                                       </p>
                                     </div>
-                                    <div class="labelWrap">
+                                    <div className="labelWrap">
                                       <label>HOME</label>
                                     </div>
                                   </div>
-                                  <div class="foot">
-                                    <a href="#" class="btn">
+                                  <div className="foot">
+                                    <a href="#" className="btn">
                                       EDIT
                                     </a>
-                                    <a href="#" class="btn">
+                                    <a href="#" className="btn">
                                       REMOVE
                                     </a>
                                   </div>
@@ -453,17 +552,17 @@ class Account extends React.Component {
                           </div>
                         </div>
 
-                        <div class="addressContent">
+                        <div className="addressContent">
                           <label>Other Addresses</label>
-                          <div class="row">
-                            <div class="col-lg-6">
-                              <label class="radioContainer">
+                          <div className="row">
+                            <div className="col-lg-6">
+                              <label className="radioContainer">
                                 <input type="radio" name="defaultAddress" />
-                                <span class="radioCheckmark"></span>
+                                <span className="radioCheckmark"></span>
 
-                                <div class="addressCard">
-                                  <div class="body">
-                                    <div class="addWrap">
+                                <div className="addressCard">
+                                  <div className="body">
+                                    <div className="addWrap">
                                       <h6>Aanchal</h6>
                                       <p>
                                         D1/1 A Rana Pratap Bagh,
@@ -476,21 +575,21 @@ class Account extends React.Component {
                                         <br />
                                       </p>
                                     </div>
-                                    <div class="labelWrap">
+                                    <div className="labelWrap">
                                       <label>OFFICE</label>
                                     </div>
                                   </div>
                                 </div>
                               </label>
                             </div>
-                            <div class="col-lg-6">
-                              <label class="radioContainer">
+                            <div className="col-lg-6">
+                              <label className="radioContainer">
                                 <input type="radio" name="defaultAddress" />
-                                <span class="radioCheckmark"></span>
+                                <span className="radioCheckmark"></span>
 
-                                <div class="addressCard">
-                                  <div class="body">
-                                    <div class="addWrap">
+                                <div className="addressCard">
+                                  <div className="body">
+                                    <div className="addWrap">
                                       <h6>Aanchal</h6>
                                       <p>
                                         D1/1 A Rana Pratap Bagh,
@@ -503,7 +602,7 @@ class Account extends React.Component {
                                         <br />
                                       </p>
                                     </div>
-                                    <div class="labelWrap">
+                                    <div className="labelWrap">
                                       <label>OFFICE</label>
                                     </div>
                                   </div>
