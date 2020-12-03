@@ -272,6 +272,120 @@ class Account extends React.Component {
                       aria-labelledby="v-pills-orders-tab"
                     >
                       <h4>MY ORDERS</h4>
+                      <div class="myOrders ">
+                        <div class="orderCard">
+                          <div class="d-flex justify-content-between mb-3">
+                            <div>
+                              <p>Order No. 4564768</p>
+                              <p>Order Date 10/12/2020</p>
+                            </div>
+                            <button type="button" class="btn orderDetail">
+                              ORDER DETAILS
+                            </button>
+                          </div>
+                          <div class="imgContainer mb-2">
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <a href="#" class="trackOrder">
+                            <span class="mr-2">TRACK</span>
+                            <svg
+                              width="7"
+                              height="7"
+                              viewBox="0 0 7 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                fill="#616161"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="orderCard">
+                          <div class="d-flex justify-content-between mb-3">
+                            <div>
+                              <p>Order No. 4564768</p>
+                              <p>Order Date 10/12/2020</p>
+                            </div>
+                            <button type="button" class="btn orderDetail">
+                              ORDER DETAILS
+                            </button>
+                          </div>
+                          <div class="imgContainer mb-2">
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="imgWrap">
+                              <img
+                                class="img-fluid"
+                                src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <a href="#" class="trackOrder">
+                            <span class="mr-2">TRACK</span>
+                            <svg
+                              width="7"
+                              height="7"
+                              viewBox="0 0 7 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 10.58L4.1244 6L0 1.41L1.26974 0L6.67288 6L1.26974 12L0 10.58Z"
+                                fill="#616161"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
 
                       <div className="orderDetails">
                         <div className="orderHead">
