@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Account from "./Components/Account/account";
 import Checkout from "./Components/Checkout/checkout";
+import Designer from "./Components/Designer/designer";
 import Footer from "./Components/Footer/footer";
 import Header from "./Components/Header/header";
 
@@ -27,6 +28,7 @@ class App extends Component {
           <Route path="/checkout" render={() => <Checkout />} />
           <Route path="/thankyou" render={() => <Thankyou />} />
           <Route path="/account" render={() => <Account />} />
+          <Route path="/designer" render={() => <Designer />} />
 
           <Route path="/" component={Footer} />
         </Router>

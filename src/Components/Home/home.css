@@ -5256,3 +5256,357 @@ body {
   letter-spacing: 0.15em;
   color: #262626;
 }
+
+.designerBanner {
+  background: url("https://dummyimage.com/1440x690/d3d3d3/d3d3d3.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 440px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px 15px !important;
+}
+
+@media (min-width: 992px) {
+  .designerBanner {
+    margin-top: 6px;
+    min-height: 520px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.designerBanner h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  color: #fdfdfd;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+@media (min-width: 992px) {
+  .designerBanner h3 {
+    font-size: 21px;
+    line-height: 31px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+
+.designerBanner p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.07em;
+  color: #fdfdfd;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .designerBanner p {
+    font-size: 17px;
+    line-height: 28px;
+    text-align: left;
+    width: 460px;
+  }
+}
+
+.essenceCollect {
+  padding: 30px 0 15px;
+}
+
+@media (min-width: 992px) {
+  .essenceCollect {
+    padding: 50px 0;
+  }
+}
+
+.essenceCollect .titleHeading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  .essenceCollect .titleHeading {
+    font-size: 21px;
+    line-height: 31px;
+  }
+}
+
+.essenceCollect p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.07em;
+  color: rgba(132, 118, 111, 0.73);
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .essenceCollect p {
+    font-size: 17px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+}
+
+.essenceCollect .viewAll {
+  display: block;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin: 30px 0 0;
+}
+
+@media (max-width: 991px) {
+  .inspiration {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .inspiration .designerWrap {
+    padding: 30px 25px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .inspiration .designerWrap .titleHeading {
+    font-size: 15px !important;
+    line-height: 22px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+.inspiration .designerWrap p {
+  font-family: "Avenir";
+}
+
+@media (max-width: 991px) {
+  .inspiration .designerWrap p {
+    font-size: 11px !important;
+    line-height: 18px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .inspiration .designerWrap a {
+    font-size: 12px !important;
+    line-height: 18px !important;
+  }
+}
+
+.inspiration .designerWrap a span {
+  margin-right: 8px !important;
+}
+
+.clientDiaries .carousel .carousel-indicators {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 0px;
+}
+
+.clientDiaries .carousel .carousel-indicators li {
+  width: 100%;
+  height: auto;
+  text-indent: initial;
+}
+
+.clientDiaries .carousel .carousel-indicators li .imgWrap {
+  text-align: center;
+}
+
+.clientDiaries .carousel .carousel-inner .carousel-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 9;
+}
+
+@media (max-width: 991px) {
+  .clientDiaries .carousel .carousel-inner .carousel-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.clientDiaries .carousel .carousel-inner .carousel-item .imgWrap {
+  border-radius: 8px;
+}
+
+.clientDiaries .carousel .carousel-inner .carousel-item .imgWrap img {
+  border-radius: 8px;
+}
+
+.clientDiaries .carousel .carousel-inner .carousel-item .carousel-caption {
+  position: static;
+  margin-left: 50px;
+}
+
+.clientDiaries .carousel .carousel-inner .carousel-item .carousel-caption p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: 0.03em;
+  color: #84766f;
+  text-align: left;
+}
+
+.clientDiaries .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  font-family: "EB Garamond", serif;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: 0.03em;
+  color: #84766f;
+  text-align: left;
+  margin-bottom: 0;
+  background: #fff;
+}
+
+.lookBook {
+  padding: 40px 0;
+}
+
+.discoverBanner {
+  background: url("https://dummyimage.com/1440x500/d3d3d3/d3d3d3.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 450px;
+}
+
+.jewelleryTrend p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: rgba(132, 118, 111, 0.73);
+}
+
+.lookBook .carousel .carousel-indicators {
+  margin-bottom: 0;
+  bottom: -30px;
+}
+
+.lookBook .carousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+}
+
+.lookBook .carousel .carousel-item {
+  border-radius: 15px;
+}
+
+.lookBook .carousel .carousel-item img {
+  border-radius: 15px;
+}
+
+.lookBook .carousel .carousel-item .carousel-caption {
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(29px);
+  backdrop-filter: blur(29px);
+}
+
+.lookBook .carousel .carousel-item .carousel-caption h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 4px;
+}
+
+.lookBook .carousel .carousel-item .carousel-caption a {
+  display: inline-block;
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #616161;
+  position: relative;
+}
+
+.lookBook .carousel .carousel-item .carousel-caption a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  width: 45px;
+  margin: auto;
+  border: 1px solid #616161;
+}
+
+.styleTips p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: rgba(132, 118, 111, 0.73);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .celebSpotted {
+    padding-bottom: 100px;
+  }
+}
