@@ -5610,3 +5610,19 @@ body {
     padding-bottom: 100px;
   }
 }
+
+.carouselArrows {
+  padding-top: 100px;
+}
+.designerCarouselArrows {
+  padding-top: 80px;
+}
+.blogCarouselArrows {
+  padding-top: 140px;
+}
+@media (min-width: 1200px) {
+  .sliderContainer {
+    max-width: 1400px;
+    padding-left: 30px;
+  }
+}

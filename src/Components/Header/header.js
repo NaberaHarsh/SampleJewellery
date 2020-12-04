@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import AddressButton from "../AddressButton/addressButton";
+import { withWidth } from "@material-ui/core";
 
 class Header extends Component {
   constructor(props) {
@@ -149,9 +150,12 @@ class Header extends Component {
     });
   };
   render() {
+    const { width, classes } = this.props;
+
+    let mobileView = ["sm", "xs"].includes(width);
+
     const settings = {
-      nextArrow: false,
-      prevArrow: false,
+      arrows: false,
       infinite: true,
       speed: 300,
       autoplay: true,
@@ -2226,65 +2230,76 @@ class Header extends Component {
             </div>
           </div>
 
-          <div className="barSlider" style={{ textAlign: "center" }}>
-            <div className="container" style={{ textAlign: "center" }}>
-              <Slider {...settings}>
-                <div style={{ textAlign: "center" }} className="checkoutSlider">
-                  {" "}
-                  <svg
-                    width="22"
-                    height="17"
-                    viewBox="0 0 22 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{ marginRight: "6px" }}
+          {mobileView && (
+            <div className="barSlider" style={{ textAlign: "center" }}>
+              <div className="container" style={{ textAlign: "center" }}>
+                <Slider {...settings}>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="checkoutSlider"
                   >
-                    <path
-                      d="M21.0699 8.4107C20.8599 7.4108 20.0299 6.81086 19.2299 7.08583L13.9199 8.86065L6.99986 0.823975L5.08986 1.46141L9.22987 10.423L4.25985 12.0853L2.28985 10.1605L0.839844 10.648L2.65985 14.5976L3.42985 16.2599L5.02986 15.7349L10.3399 13.9476L14.6899 12.4978L19.9999 10.7355C20.8099 10.4355 21.2799 9.41059 21.0699 8.4107Z"
-                      fill="black"
-                      fill-opacity="0.47"
-                    />
-                  </svg>
-                  <span>FREE SHIPPING ON ALL PREPAID ORDERS</span>
-                </div>
-                <div style={{ textAlign: "center" }} className="checkoutSlider">
-                  {" "}
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{ marginRight: "6px" }}
+                    {" "}
+                    <svg
+                      width="22"
+                      height="17"
+                      viewBox="0 0 22 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{ marginRight: "6px" }}
+                    >
+                      <path
+                        d="M21.0699 8.4107C20.8599 7.4108 20.0299 6.81086 19.2299 7.08583L13.9199 8.86065L6.99986 0.823975L5.08986 1.46141L9.22987 10.423L4.25985 12.0853L2.28985 10.1605L0.839844 10.648L2.65985 14.5976L3.42985 16.2599L5.02986 15.7349L10.3399 13.9476L14.6899 12.4978L19.9999 10.7355C20.8099 10.4355 21.2799 9.41059 21.0699 8.4107Z"
+                        fill="black"
+                        fill-opacity="0.47"
+                      />
+                    </svg>
+                    <span>FREE SHIPPING ON ALL PREPAID ORDERS</span>
+                  </div>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="checkoutSlider"
                   >
-                    <path
-                      d="M11 11.9167C9.78442 11.9167 8.61864 11.4339 7.75909 10.5743C6.89955 9.71478 6.41667 8.54899 6.41667 7.33341H8.25C8.25 8.06276 8.53973 8.76223 9.05546 9.27796C9.57118 9.79368 10.2707 10.0834 11 10.0834C11.7293 10.0834 12.4288 9.79368 12.9445 9.27796C13.4603 8.76223 13.75 8.06276 13.75 7.33341H15.5833C15.5833 8.54899 15.1004 9.71478 14.2409 10.5743C13.3814 11.4339 12.2156 11.9167 11 11.9167ZM11 2.75008C11.7293 2.75008 12.4288 3.03981 12.9445 3.55554C13.4603 4.07126 13.75 4.77074 13.75 5.50008H8.25C8.25 4.77074 8.53973 4.07126 9.05546 3.55554C9.57118 3.03981 10.2707 2.75008 11 2.75008ZM17.4167 5.50008H15.5833C15.5833 4.89819 15.4648 4.30219 15.2344 3.74611C15.0041 3.19004 14.6665 2.68478 14.2409 2.25918C13.8153 1.83357 13.31 1.49597 12.754 1.26563C12.1979 1.0353 11.6019 0.916748 11 0.916748C9.78442 0.916748 8.61864 1.39963 7.75909 2.25918C6.89955 3.11872 6.41667 4.28451 6.41667 5.50008H4.58333C3.56583 5.50008 2.75 6.31591 2.75 7.33341V18.3334C2.75 18.8196 2.94315 19.286 3.28697 19.6298C3.63079 19.9736 4.0971 20.1667 4.58333 20.1667H17.4167C17.9029 20.1667 18.3692 19.9736 18.713 19.6298C19.0568 19.286 19.25 18.8196 19.25 18.3334V7.33341C19.25 6.31591 18.425 5.50008 17.4167 5.50008Z"
-                      fill="#81807F"
-                    />
-                  </svg>
-                  <span>COD AVAILABLE</span>
-                </div>
-                <div style={{ textAlign: "center" }} className="checkoutSlider">
-                  {" "}
-                  <svg
-                    width="21"
-                    height="16"
-                    viewBox="0 0 21 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{ marginRight: "6px" }}
+                    {" "}
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{ marginRight: "6px" }}
+                    >
+                      <path
+                        d="M11 11.9167C9.78442 11.9167 8.61864 11.4339 7.75909 10.5743C6.89955 9.71478 6.41667 8.54899 6.41667 7.33341H8.25C8.25 8.06276 8.53973 8.76223 9.05546 9.27796C9.57118 9.79368 10.2707 10.0834 11 10.0834C11.7293 10.0834 12.4288 9.79368 12.9445 9.27796C13.4603 8.76223 13.75 8.06276 13.75 7.33341H15.5833C15.5833 8.54899 15.1004 9.71478 14.2409 10.5743C13.3814 11.4339 12.2156 11.9167 11 11.9167ZM11 2.75008C11.7293 2.75008 12.4288 3.03981 12.9445 3.55554C13.4603 4.07126 13.75 4.77074 13.75 5.50008H8.25C8.25 4.77074 8.53973 4.07126 9.05546 3.55554C9.57118 3.03981 10.2707 2.75008 11 2.75008ZM17.4167 5.50008H15.5833C15.5833 4.89819 15.4648 4.30219 15.2344 3.74611C15.0041 3.19004 14.6665 2.68478 14.2409 2.25918C13.8153 1.83357 13.31 1.49597 12.754 1.26563C12.1979 1.0353 11.6019 0.916748 11 0.916748C9.78442 0.916748 8.61864 1.39963 7.75909 2.25918C6.89955 3.11872 6.41667 4.28451 6.41667 5.50008H4.58333C3.56583 5.50008 2.75 6.31591 2.75 7.33341V18.3334C2.75 18.8196 2.94315 19.286 3.28697 19.6298C3.63079 19.9736 4.0971 20.1667 4.58333 20.1667H17.4167C17.9029 20.1667 18.3692 19.9736 18.713 19.6298C19.0568 19.286 19.25 18.8196 19.25 18.3334V7.33341C19.25 6.31591 18.425 5.50008 17.4167 5.50008Z"
+                        fill="#81807F"
+                      />
+                    </svg>
+                    <span>COD AVAILABLE</span>
+                  </div>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="checkoutSlider"
                   >
-                    <path
-                      d="M18.9 4H2.1V2H18.9V4ZM18.9 14H2.1V8H18.9V14ZM18.9 0H2.1C0.9345 0 0 0.89 0 2V14C0 14.5304 0.221249 15.0391 0.615076 15.4142C1.0089 15.7893 1.54305 16 2.1 16H18.9C19.457 16 19.9911 15.7893 20.3849 15.4142C20.7787 15.0391 21 14.5304 21 14V2C21 0.89 20.055 0 18.9 0Z"
-                      fill="black"
-                      fill-opacity="0.47"
-                    />
-                  </svg>
-                  <span>EASY EMI</span>
-                </div>
-              </Slider>
+                    {" "}
+                    <svg
+                      width="21"
+                      height="16"
+                      viewBox="0 0 21 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{ marginRight: "6px" }}
+                    >
+                      <path
+                        d="M18.9 4H2.1V2H18.9V4ZM18.9 14H2.1V8H18.9V14ZM18.9 0H2.1C0.9345 0 0 0.89 0 2V14C0 14.5304 0.221249 15.0391 0.615076 15.4142C1.0089 15.7893 1.54305 16 2.1 16H18.9C19.457 16 19.9911 15.7893 20.3849 15.4142C20.7787 15.0391 21 14.5304 21 14V2C21 0.89 20.055 0 18.9 0Z"
+                        fill="black"
+                        fill-opacity="0.47"
+                      />
+                    </svg>
+                    <span>EASY EMI</span>
+                  </div>
+                </Slider>
+              </div>
             </div>
-          </div>
+          )}
 
           <div
             className={this.state.cartOpen ? "cartWrap " : "cartWrap d-none "}
@@ -2422,4 +2437,4 @@ class Header extends Component {
     );
   }
 }
-export default Header;
+export default withWidth()(Header);

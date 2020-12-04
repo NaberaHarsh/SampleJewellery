@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Account from "./Components/Account/account";
 import Checkout from "./Components/Checkout/checkout";
 import Designer from "./Components/Designer/designer";
+import Discover from "./Components/Discover/discover";
 import Footer from "./Components/Footer/footer";
 import Header from "./Components/Header/header";
 
@@ -29,6 +30,7 @@ class App extends Component {
           <Route path="/thankyou" render={() => <Thankyou />} />
           <Route path="/account" render={() => <Account />} />
           <Route path="/designer" render={() => <Designer />} />
+          <Route path="/discover" render={() => <Discover />} />
 
           <Route path="/" component={Footer} />
         </Router>
