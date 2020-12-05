@@ -5617,6 +5617,9 @@ body {
 .designerCarouselArrows {
   padding-top: 80px;
 }
+.circularCarouselArrows {
+  padding-top: 60px;
+}
 .blogCarouselArrows {
   padding-top: 140px;
 }

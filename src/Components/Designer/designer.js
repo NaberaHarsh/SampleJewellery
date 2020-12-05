@@ -47,6 +47,15 @@ class Designer extends React.Component {
       ],
     };
 
+    const clientSlider = {
+      arrows: false,
+      infinite: true,
+      speed: 300,
+      autoplay: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
+
     return (
       <body>
         <main>
@@ -181,60 +190,128 @@ class Designer extends React.Component {
                     data-ride="carousel"
                   >
                     <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <div className="imgWrap">
-                          <img
-                            src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
-                            className="img-fluid"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="carousel-caption">
-                          <p>
-                            <q>
-                              Your loved ones deserve nothing less than perfect,
-                              which is why it has to be jewellery from Amrutam.
-                            </q>
-                          </p>
-                          <h5>-Aanchal Kalra</h5>
-                        </div>
-                      </div>
-                      <div className="carousel-item">
-                        <div className="imgWrap">
-                          <img
-                            src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
-                            className="img-fluid"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="carousel-caption">
-                          <p>
-                            <q>
-                              Your friend deserve nothing less than perfect,
-                              which is why it has to be jewellery from Amrutam.
-                            </q>
-                          </p>
-                          <h5>-Rahul Panwar</h5>
-                        </div>
-                      </div>
-                      <div className="carousel-item">
-                        <div className="imgWrap">
-                          <img
-                            src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
-                            className="img-fluid"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="carousel-caption">
-                          <p>
-                            <q>
-                              Your family deserve nothing less than perfect,
-                              which is why it has to be jewellery from Amrutam.
-                            </q>
-                          </p>
-                          <h5>-Aanchal Kalra</h5>
-                        </div>
-                      </div>
+                      {mobileView && (
+                        <Slider {...clientSlider}>
+                          <div className="carousel-item active">
+                            <div className="imgWrap">
+                              <img
+                                src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
+                                className="img-fluid"
+                                alt="..."
+                              />
+                            </div>
+                            <div className="carousel-caption">
+                              <p>
+                                <q>
+                                  Your loved ones deserve nothing less than
+                                  perfect, which is why it has to be jewellery
+                                  from Amrutam.
+                                </q>
+                              </p>
+                              <h5>-Aanchal Kalra</h5>
+                            </div>
+                          </div>
+                          <div className="carousel-item">
+                            <div className="imgWrap">
+                              <img
+                                src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
+                                className="img-fluid"
+                                alt="..."
+                              />
+                            </div>
+                            <div className="carousel-caption">
+                              <p>
+                                <q>
+                                  Your friend deserve nothing less than perfect,
+                                  which is why it has to be jewellery from
+                                  Amrutam.
+                                </q>
+                              </p>
+                              <h5>-Rahul Panwar</h5>
+                            </div>
+                          </div>
+                          <div className="carousel-item">
+                            <div className="imgWrap">
+                              <img
+                                src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
+                                className="img-fluid"
+                                alt="..."
+                              />
+                            </div>
+                            <div className="carousel-caption">
+                              <p>
+                                <q>
+                                  Your family deserve nothing less than perfect,
+                                  which is why it has to be jewellery from
+                                  Amrutam.
+                                </q>
+                              </p>
+                              <h5>-Aanchal Kalra</h5>
+                            </div>
+                          </div>
+                        </Slider>
+                      )}
+                      {!mobileView && (
+                        <Slider {...clientSlider}>
+                          <div className="carousel-item ">
+                            <div className="imgWrap ">
+                              <img
+                                src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
+                                className="img-fluid"
+                                alt="..."
+                              />
+                            </div>
+                            <div className="carousel-caption">
+                              <p>
+                                <q>
+                                  Your loved ones deserve nothing less than
+                                  perfect, which is why it has to be jewellery
+                                  from Amrutam.
+                                </q>
+                              </p>
+                              <h5>-Aanchal Kalra</h5>
+                            </div>
+                          </div>
+                          <div className="carousel-item ">
+                            <div className="imgWrap ">
+                              <img
+                                src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
+                                className="img-fluid"
+                                alt="..."
+                              />
+                            </div>
+                            <div className="carousel-caption">
+                              <p>
+                                <q>
+                                  Your loved ones deserve nothing less than
+                                  perfect, which is why it has to be jewellery
+                                  from Amrutam.
+                                </q>
+                              </p>
+                              <h5>-Aanchal Kalra</h5>
+                            </div>
+                          </div>{" "}
+                          <div className="carousel-item ">
+                            <div className="imgWrap ">
+                              <img
+                                src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
+                                className="img-fluid"
+                                alt="..."
+                              />
+                            </div>
+                            <div className="carousel-caption">
+                              <p>
+                                <q>
+                                  Your loved ones deserve nothing less than
+                                  perfect, which is why it has to be jewellery
+                                  from Amrutam.
+                                </q>
+                              </p>
+                              <h5>-Aanchal Kalra</h5>
+                            </div>
+                          </div>
+                        </Slider>
+                      )}
                     </div>
                   </div>
                 </div>

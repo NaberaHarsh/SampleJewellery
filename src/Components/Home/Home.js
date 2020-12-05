@@ -1,4 +1,7 @@
 import React, { Component, Fragment } from "react";
+import BlogSlider from "../Slider/blogSlider";
+import CircularSlider from "../Slider/circularSlider";
+import DesignerSlider from "../Slider/designerSlider";
 import "./home.css";
 
 class Home extends Component {
@@ -98,166 +101,13 @@ class Home extends Component {
           </section>
 
           <section className="cateSlider pt-3">
-            <div className="container">
+            <div className="sliderContainer">
               <div className="row">
                 <div className="col text-center">
                   <h3 className="titleHeading mb-3">CATEGORIES</h3>
                 </div>
               </div>
-              <div className="row sliderCat">
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>EARRING</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>NECKPIECE</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>RING</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>
-                      BANGLE <br /> & BRACELET
-                    </p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>
-                      HEAD <br /> ACCESSORIES
-                    </p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>COSMIC OPEN RING</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>COSMIC OPEN RING</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>EARRING</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>NECKPIECE</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>RING</p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>
-                      BANGLE <br /> & BRACELET
-                    </p>
-                  </div>
-                </div>
-                <div className="col-2">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="priceCaption">
-                    <p>
-                      HEAD <br /> ACCESSORIES
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <CircularSlider />
             </div>
           </section>
 
@@ -380,200 +230,13 @@ class Home extends Component {
           </section>
 
           <section className="designersMeet">
-            <div className="container">
+            <div className="sliderContainer">
               <div className="row">
                 <div className="col-md-12">
                   <h3 className="titleHeading">MEET THE DESIGNER</h3>
                 </div>
               </div>
-              <div className="row designerSlider">
-                <div className="col-md-6 col-lg-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="designersCard">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="designBy">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="designerTitle">
-                          <em>Cosmic Open Ring</em>
-                          <em>By</em>
-                          <h5>MITALI JAIN</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-lg-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="designersCard">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="designBy">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="designerTitle">
-                          <em>Cosmic Open Ring</em>
-                          <em>By</em>
-                          <h5>MITALI JAIN</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-lg-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="designersCard">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="designBy">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="designerTitle">
-                          <em>Cosmic Open Ring</em>
-                          <em>By</em>
-                          <h5>MITALI JAIN</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-lg-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="designersCard">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="designBy">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="designerTitle">
-                          <em>Cosmic Open Ring</em>
-                          <em>By</em>
-                          <h5>MITALI JAIN</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-lg-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="designersCard">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="designBy">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="designerTitle">
-                          <em>Cosmic Open Ring</em>
-                          <em>By</em>
-                          <h5>MITALI JAIN</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 col-lg-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <div className="designersCard">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="designBy">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="designerTitle">
-                          <em>Cosmic Open Ring</em>
-                          <em>By</em>
-                          <h5>MITALI JAIN</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <DesignerSlider />
             </div>
           </section>
 
@@ -845,104 +508,13 @@ class Home extends Component {
           </section>
 
           <section className="blogPost">
-            <div className="container">
+            <div className="sliderContainer">
               <div className="row">
                 <div className="col-md-12">
                   <h3 className="titleHeading mb-4">ALL BLOG POSTS</h3>
                 </div>
               </div>
-              <div className="row blogSlider">
-                <div className="col-6 col-lg-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <em>Publications</em>
-                    <h5>
-                      OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                    </h5>
-                  </div>
-                </div>
-                <div className="col-6 col-lg-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <em>Publications</em>
-                    <h5>
-                      OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                    </h5>
-                  </div>
-                </div>
-                <div className="col-6 col-lg-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <em>Publications</em>
-                    <h5>
-                      OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                    </h5>
-                  </div>
-                </div>
-                <div className="col-6 col-lg-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <em>Publications</em>
-                    <h5>
-                      OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                    </h5>
-                  </div>
-                </div>
-                <div className="col-6 col-lg-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <em>Publications</em>
-                    <h5>
-                      OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                    </h5>
-                  </div>
-                </div>
-                <div className="col-6 col-lg-4">
-                  <div className="blogCard">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <em>Publications</em>
-                    <h5>
-                      OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                    </h5>
-                  </div>
-                </div>
-              </div>
+              <BlogSlider />
             </div>
           </section>
 
