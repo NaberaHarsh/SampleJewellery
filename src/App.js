@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import About from "./Components/About /about";
 import Account from "./Components/Account/account";
 import Checkout from "./Components/Checkout/checkout";
 import Designer from "./Components/Designer/designer";
@@ -31,6 +32,7 @@ class App extends Component {
           <Route path="/account" render={() => <Account />} />
           <Route path="/designer" render={() => <Designer />} />
           <Route path="/discover" render={() => <Discover />} />
+          <Route path="/about" render={() => <About />} />
 
           <Route path="/" component={Footer} />
         </Router>

@@ -5629,3 +5629,320 @@ body {
     padding-left: 30px;
   }
 }
+
+.aboutBanner {
+  background: url("https://dummyimage.com/1440x500/d3d3d3/d3d3d3.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.aboutBanner h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 36px;
+  line-height: 11px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.gridSec {
+  padding: 30px 0;
+}
+
+@media (min-width: 992px) {
+  .gridSec {
+    padding: 80px 0;
+  }
+}
+
+.gridSec .contentWrap h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 29px;
+  line-height: 40px;
+  letter-spacing: 0.03em;
+  color: #616161;
+  margin-bottom: 20px;
+}
+
+.gridSec .contentWrap p {
+  font-family: "Avenir";
+  font-size: 14px;
+  line-height: 26px;
+  text-align: justify;
+}
+
+.gridSec .imgWrap {
+  border-radius: 12px;
+}
+
+.gridSec .imgWrap img {
+  border-radius: 12px;
+}
+
+@media (min-width: 992px) {
+  .amrExp {
+    padding-bottom: 120px;
+  }
+}
+
+.amrExp .contentWrap h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31px;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 20px;
+}
+
+.amrExp .contentWrap p {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.whatSets .contentWrap h3 {
+  margin-bottom: 15px !important;
+}
+
+.whatSets .contentWrap p {
+  font-size: 12px !important;
+  line-height: 20px !important;
+  margin-bottom: 0 !important;
+  text-align: justify;
+}
+
+.contentWrap .getInTouch,
+.contentWrap .followUs {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.13em;
+  color: #616161;
+}
+
+.uniqueDesign .wrapper .designerWrap {
+  padding: 20px 10px !important;
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .uniqueDesign .wrapper .designerWrap {
+    padding: 20px !important;
+  }
+}
+
+.uniqueDesign .wrapper .designerWrap h3 {
+  font-size: 20px;
+  font-weight: 500 !important;
+  margin-bottom: 20px !important;
+}
+
+@media (min-width: 768px) {
+  .uniqueDesign .wrapper .designerWrap h3 {
+    font-size: 24px;
+  }
+}
+
+.uniqueDesign .wrapper .designerWrap h5 {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .uniqueDesign .wrapper .designerWrap h5 {
+    font-size: 18px;
+  }
+}
+
+.uniqueDesign .wrapper .designerWrap .discover {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.uniqueDesign .wrapper .bgWrap {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .uniqueDesign .wrapper .bgWrap {
+    margin: 15px auto;
+  }
+}
+
+.ourPurpose .contentWrap h3 {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.13em;
+  color: #616161;
+}
+
+@media (min-width: 992px) {
+  .ourPurpose .contentWrap h3 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ourCause {
+    padding-bottom: 120px;
+  }
+}
+
+.ourCause .contentWrap h3 {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.13em;
+  color: #616161;
+}
+
+@media (min-width: 992px) {
+  .ourCause .contentWrap h3 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 40px;
+  }
+}
+
+.iconSec {
+  padding: 60px 0 0;
+}
+
+.iconSec .contentWrap .iconWrap {
+  background: #84766f;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .iconSec .contentWrap .iconWrap {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .iconSec .contentWrap .iconWrap img {
+    width: 50px;
+  }
+}
+
+.iconSec .contentWrap p {
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: #70645e;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .iconSec .contentWrap p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.iconSec .quoteHeading {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #70645e;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .iconSec .quoteHeading {
+    margin-top: 100px;
+    font-size: 29px;
+    line-height: 48px;
+  }
+}
+
+.iconSec .quoteBy {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #70645e;
+}
+
+@media (min-width: 768px) {
+  .iconSec .quoteBy {
+    font-size: 29px;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .getKnow {
+    padding: 120px 0;
+  }
+}
+
+.getKnow .contentWrap h3 {
+  font-size: 24px !important;
+  line-height: 30px !important;
+}
+
+@media (max-width: 767px) {
+  .shareMoment {
+    padding: 40px 15px 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .shareMoment {
+    padding-bottom: 100px;
+  }
+}
