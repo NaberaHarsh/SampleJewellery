@@ -5932,6 +5932,312 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .giftBanner {
+    background: url("https://dummyimage.com/1440x500/d3d3d3/d3d3d3.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.giftBanner .bannerContent {
+  position: relative;
+  text-align: center;
+}
+
+.giftBanner .bannerContent h3 {
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 35px;
+  color: rgba(97, 97, 97, 0.83);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .giftBanner .bannerContent h3 {
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    background: rgba(207, 198, 188, 0.16);
+    -webkit-backdrop-filter: blur(31px);
+    backdrop-filter: blur(31px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0.79;
+  }
+}
+
+@media (min-width: 768px) {
+  .giftGuide {
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .giftGuide {
+    padding-top: 80px;
+  }
+}
+
+.giftGuide .titleGuide p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #84766f;
+}
+
+@media (min-width: 992px) {
+  .giftGuide .titleGuide p {
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+
+.giftGuide .titleGuide h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin: 40px 0 20px;
+}
+
+@media (min-width: 992px) {
+  .giftGuide .titleGuide h3 {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 40px auto;
+  }
+}
+
+.giftGuide .imgWrap p {
+  font-family: "EB Garamond", serif;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .giftGuide .imgWrap p {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+.giftArt .titleHeading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.13em;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .giftArt .titleHeading {
+    font-size: 13px !important;
+    line-height: 19px !important;
+  }
+}
+
+.giftArt .designerWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  background: #d3d3d3;
+  border-radius: 9px;
+}
+
+.giftArt .designerWrap .conWrap {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .giftArt .designerWrap .conWrap {
+    padding: 0 4px !important;
+    margin-top: 0;
+  }
+}
+
+.giftArt .designerWrap .conWrap h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #777777;
+}
+
+@media (min-width: 992px) {
+  .giftArt .designerWrap .conWrap h3 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+.giftArt .designerWrap .conWrap h5 {
+  font-family: "Avenir";
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(97, 97, 97, 0.99);
+  margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  .giftArt .designerWrap .conWrap h5 {
+    font-size: 21px;
+    line-height: 29px;
+  }
+}
+
+.giftArt .designerWrap .conWrap hr {
+  border: 1px solid #70645e66;
+  width: 96%;
+  margin: 0 auto 10px;
+}
+
+.giftArt .designerWrap .conWrap .tagsWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.giftArt .designerWrap .conWrap .tagsWrap span {
+  display: inline-block;
+  background: #d1ccc9;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.11);
+  border-radius: 16px;
+  font-family: "Avenir";
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #616161;
+  padding: 6px 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 15px;
+}
+
+.giftArt .contentWrap h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 0.07em;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+}
+
+@media (min-width: 992px) {
+  .giftArt .contentWrap h3 {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+.giftArt .contentWrap p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: 0.07em;
+  color: #84766f;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .giftArt .contentWrap p {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.giftBook .carousel .carousel-item .carousel-caption h5 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.13em;
+  color: #ffffff;
+}
+
+.giftBook .carousel .carousel-item .carousel-caption a {
+  color: #fff;
+}
+
+.giftBook .carousel .carousel-item .carousel-caption a::after {
+  border-color: #fff;
+}
+
+.giftSlider {
+  padding: 0 14px;
+}
+
 /* .fixHeader {
   position: fixed;
   top: 0;
