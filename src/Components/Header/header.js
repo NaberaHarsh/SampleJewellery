@@ -180,8 +180,8 @@ class Header extends Component {
     };
     return (
       <body>
-        <header className="headerAmrutam">
-          <div className="topHeader row">
+        <header className="headerAmrutam ">
+          <div className="topHeader row ">
             <div className="col-lg-4">
               <div className="securePayment">
                 <svg

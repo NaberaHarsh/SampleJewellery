@@ -7,7 +7,6 @@ import Designer from "./Components/Designer/designer";
 import Discover from "./Components/Discover/discover";
 import Footer from "./Components/Footer/footer";
 import Header from "./Components/Header/header";
-
 import Home from "./Components/Home/Home";
 import ProductPage from "./Components/Product/ProductPage";
 import Shop from "./Components/Shop/shop";

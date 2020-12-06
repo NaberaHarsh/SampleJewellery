@@ -46,14 +46,23 @@ class Designer extends React.Component {
         },
       ],
     };
-
-    const clientSlider = {
+    const clientSliderMobile = {
       arrows: false,
       infinite: true,
       speed: 300,
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+    };
+
+    const clientSlider = {
+      arrows: false,
+      infinite: true,
+      speed: 300,
+      autoplay: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      variableWidth: true,
     };
 
     return (
@@ -189,10 +198,10 @@ class Designer extends React.Component {
                     className="carousel slide"
                     data-ride="carousel"
                   >
-                    <div className="carousel-inner">
+                    <div className="carouselInner">
                       {mobileView && (
-                        <Slider {...clientSlider}>
-                          <div className="carousel-item active">
+                        <Slider {...clientSliderMobile}>
+                          <div className="carouselItem active">
                             <div className="imgWrap">
                               <img
                                 src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
@@ -200,7 +209,7 @@ class Designer extends React.Component {
                                 alt="..."
                               />
                             </div>
-                            <div className="carousel-caption">
+                            <div className="carouselCaption">
                               <p>
                                 <q>
                                   Your loved ones deserve nothing less than
@@ -211,7 +220,7 @@ class Designer extends React.Component {
                               <h5>-Aanchal Kalra</h5>
                             </div>
                           </div>
-                          <div className="carousel-item">
+                          <div className="carouselItem">
                             <div className="imgWrap">
                               <img
                                 src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
@@ -219,7 +228,7 @@ class Designer extends React.Component {
                                 alt="..."
                               />
                             </div>
-                            <div className="carousel-caption">
+                            <div className="carouselCaption">
                               <p>
                                 <q>
                                   Your friend deserve nothing less than perfect,
@@ -230,7 +239,7 @@ class Designer extends React.Component {
                               <h5>-Rahul Panwar</h5>
                             </div>
                           </div>
-                          <div className="carousel-item">
+                          <div className="carouselItem">
                             <div className="imgWrap">
                               <img
                                 src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
@@ -238,7 +247,7 @@ class Designer extends React.Component {
                                 alt="..."
                               />
                             </div>
-                            <div className="carousel-caption">
+                            <div className="carouselCaption">
                               <p>
                                 <q>
                                   Your family deserve nothing less than perfect,
@@ -253,15 +262,17 @@ class Designer extends React.Component {
                       )}
                       {!mobileView && (
                         <Slider {...clientSlider}>
-                          <div className="carousel-item ">
-                            <div className="imgWrap ">
+                          <div className="carouselItem" style={{ width: 160 }}>
+                            <div className="imgWrap">
                               <img
                                 src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
                                 className="img-fluid"
                                 alt="..."
                               />
                             </div>
-                            <div className="carousel-caption">
+                          </div>
+                          <div className="carouselItem" style={{ width: 590 }}>
+                            <div className="carouselCaption">
                               <p>
                                 <q>
                                   Your loved ones deserve nothing less than
@@ -272,15 +283,18 @@ class Designer extends React.Component {
                               <h5>-Aanchal Kalra</h5>
                             </div>
                           </div>
-                          <div className="carousel-item ">
-                            <div className="imgWrap ">
+
+                          <div className="carouselItem" style={{ width: 160 }}>
+                            <div className="imgWrap">
                               <img
                                 src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
                                 className="img-fluid"
                                 alt="..."
                               />
                             </div>
-                            <div className="carousel-caption">
+                          </div>
+                          <div className="carouselItem" style={{ width: 590 }}>
+                            <div className="carouselCaption">
                               <p>
                                 <q>
                                   Your loved ones deserve nothing less than
@@ -290,16 +304,18 @@ class Designer extends React.Component {
                               </p>
                               <h5>-Aanchal Kalra</h5>
                             </div>
-                          </div>{" "}
-                          <div className="carousel-item ">
-                            <div className="imgWrap ">
+                          </div>
+                          <div className="carouselItem" style={{ width: 160 }}>
+                            <div className="imgWrap">
                               <img
                                 src="https://dummyimage.com/200x180/d3d3d3/d3d3d3.jpg"
                                 className="img-fluid"
                                 alt="..."
                               />
                             </div>
-                            <div className="carousel-caption">
+                          </div>
+                          <div className="carouselItem" style={{ width: 590 }}>
+                            <div className="carouselCaption">
                               <p>
                                 <q>
                                   Your loved ones deserve nothing less than
