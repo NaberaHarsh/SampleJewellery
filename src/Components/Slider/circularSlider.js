@@ -23,7 +23,7 @@ class CircularSlider extends React.Component {
       infinite: true,
       speed: 300,
       slidesToShow: 5,
-      slidesToScroll: 2,
+      slidesToScroll: 1,
       initialSlide: 0,
       responsive: [
         {
@@ -86,7 +86,7 @@ class CircularSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/categoryearring.png"
                       alt=""
                     />
                   </div>
@@ -98,7 +98,7 @@ class CircularSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/categoryneckpiece.png"
                       alt=""
                     />
                   </div>
@@ -110,7 +110,7 @@ class CircularSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/categoryring.png"
                       alt=""
                     />
                   </div>
@@ -122,7 +122,7 @@ class CircularSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/categorybangle_bracelet.png"
                       alt=""
                     />
                   </div>
@@ -136,7 +136,7 @@ class CircularSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/categoryhairjewelry.png"
                       alt=""
                     />
                   </div>
@@ -150,12 +150,12 @@ class CircularSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/categorymaangtika.png"
                       alt=""
                     />
                   </div>
                   <div className="priceCaption">
-                    <p>COSMIC OPEN RING</p>
+                    <p>MAANG TIKA</p>
                   </div>
                 </div>
               </Slider>
@@ -189,7 +189,7 @@ class CircularSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/categoryearring.png"
                     alt=""
                   />
                 </div>
@@ -201,7 +201,7 @@ class CircularSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/categoryneckpiece.png"
                     alt=""
                   />
                 </div>
@@ -213,7 +213,7 @@ class CircularSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/categoryring.png"
                     alt=""
                   />
                 </div>
@@ -225,7 +225,7 @@ class CircularSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/categorybangle_bracelet.png"
                     alt=""
                   />
                 </div>
@@ -239,7 +239,7 @@ class CircularSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/categoryhairjewelry.png"
                     alt=""
                   />
                 </div>
@@ -253,88 +253,12 @@ class CircularSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/categorymaangtika.png"
                     alt=""
                   />
                 </div>
                 <div className="priceCaption">
-                  <p>COSMIC OPEN RING</p>
-                </div>
-              </div>
-              <div className="">
-                <div className="imgWrap">
-                  <img
-                    className="img-fluid"
-                    src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="priceCaption">
-                  <p>COSMIC OPEN RING</p>
-                </div>
-              </div>
-              <div className="">
-                <div className="imgWrap">
-                  <img
-                    className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="priceCaption">
-                  <p>EARRING</p>
-                </div>
-              </div>
-              <div className="">
-                <div className="imgWrap">
-                  <img
-                    className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="priceCaption">
-                  <p>NECKPIECE</p>
-                </div>
-              </div>
-              <div className="">
-                <div className="imgWrap">
-                  <img
-                    className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="priceCaption">
-                  <p>RING</p>
-                </div>
-              </div>
-              <div className="">
-                <div className="imgWrap">
-                  <img
-                    className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="priceCaption">
-                  <p>
-                    BANGLE <br /> & BRACELET
-                  </p>
-                </div>
-              </div>
-              <div className="">
-                <div className="imgWrap">
-                  <img
-                    className="img-fluid"
-                    src="https://dummyimage.com/130x130/d3d3d3/fff.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="priceCaption">
-                  <p>
-                    HEAD <br /> ACCESSORIES
-                  </p>
+                  <p>MAANG TIKA</p>
                 </div>
               </div>
             </Slider>

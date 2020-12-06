@@ -3,6 +3,10 @@ import BlogSlider from "../Slider/blogSlider";
 import CircularSlider from "../Slider/circularSlider";
 import DesignerSlider from "../Slider/designerSlider";
 import "./home.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { withWidth } from "@material-ui/core";
 
 class Home extends Component {
   constructor(props) {
@@ -11,6 +15,55 @@ class Home extends Component {
   }
 
   render() {
+    const { width, classes } = this.props;
+
+    let mobileView = ["sm", "xs"].includes(width);
+
+    var settings = {
+      dots: true,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 500,
+      infinite: true,
+    };
+
+    var jewels = {
+      arrows: false,
+      centerMode: true,
+      centerPadding: "60px",
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 340,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 1,
+          },
+        },
+      ],
+    };
+
     return (
       <body>
         <main>
@@ -22,58 +75,33 @@ class Home extends Component {
                   className="carousel slide"
                   data-ride="carousel"
                 >
-                  <ol className="carousel-indicators">
-                    <li
-                      data-target="#carouselExampleIndicators"
-                      data-slide-to="0"
-                      className="active"
-                    ></li>
-                    <li
-                      data-target="#carouselExampleIndicators"
-                      data-slide-to="1"
-                    ></li>
-                    <li
-                      data-target="#carouselExampleIndicators"
-                      data-slide-to="2"
-                    ></li>
-                  </ol>
                   <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img
-                        src="https://dummyimage.com/1290x470/d3d3d3/fff.jpg"
-                        className="d-none d-lg-block w-100"
-                        alt="..."
-                      />
-                      <img
-                        src="https://dummyimage.com/340x470/d3d3d3/fff.jpg"
-                        className="d-lg-none w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://dummyimage.com/1290x470/d3d3d3/fff.jpg"
-                        className="d-none d-lg-block w-100"
-                        alt="..."
-                      />
-                      <img
-                        src="https://dummyimage.com/340x470/d3d3d3/fff.jpg"
-                        className="d-lg-none w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://dummyimage.com/1290x470/d3d3d3/fff.jpg"
-                        className="d-none d-lg-block w-100"
-                        alt="..."
-                      />
-                      <img
-                        src="https://dummyimage.com/340x470/d3d3d3/fff.jpg"
-                        className="d-lg-none w-100"
-                        alt="..."
-                      />
-                    </div>
+                    <Slider {...settings}>
+                      <div className="carousel-item active">
+                        <img
+                          src="../../assets/images/Home/static/banner1web.png"
+                          className="d-none d-lg-block w-100"
+                          alt="..."
+                        />
+                        <img
+                          src="../../assets/images/Home/static/banner1mobile.png"
+                          className="d-lg-none w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src="../../assets/images/Home/static/banner2web.png"
+                          className="d-none d-lg-block w-100"
+                          alt="..."
+                        />
+                        <img
+                          src="../../assets/images/Home/static/banner2mobile.png"
+                          className="d-lg-none w-100"
+                          alt="..."
+                        />
+                      </div>
+                    </Slider>
                   </div>
                   {/* <!-- <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                             data-slide="prev">
@@ -124,7 +152,7 @@ class Home extends Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/occassion-holiday.png"
                       />
                     </div>
                     <h5 className="disCaption">HOLIDAY</h5>
@@ -135,7 +163,7 @@ class Home extends Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/ocassion-festive.png"
                       />
                     </div>
                     <h5 className="disCaption">FESTIVE</h5>
@@ -146,7 +174,7 @@ class Home extends Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/occassion-cocktail.png"
                       />
                     </div>
                     <h5 className="disCaption">COCKTAIL</h5>
@@ -157,7 +185,7 @@ class Home extends Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/occassion-casual.png"
                       />
                     </div>
                     <h5 className="disCaption">CASUAL</h5>
@@ -168,7 +196,7 @@ class Home extends Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/occassion-wedding.png"
                       />
                     </div>
                     <h5 className="disCaption">WEDDING</h5>
@@ -179,7 +207,7 @@ class Home extends Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/310x310/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/occassion-workwear.png"
                       />
                     </div>
                     <h5 className="disCaption">WORK-WEAR</h5>
@@ -194,11 +222,22 @@ class Home extends Component {
               <div className="row">
                 <div className="col-lg-8 order-lg-1">
                   <div className="bgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/874x425/d3d3d3/fff.jpg"
-                      alt=""
-                    />
+                    {!mobileView && (
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/Home/static/image.png"
+                        alt=""
+                        style={{ width: "-webkit-fill-available" }}
+                      />
+                    )}
+
+                    {mobileView && (
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/Home/static/image.png"
+                        alt=""
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-4">
@@ -244,8 +283,8 @@ class Home extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-4">
-                  <h3 className="titleHeading">SHOP THE LOOK</h3>
-                  <em className="titleCaption">What are you celebrating?</em>
+                  <h3 className="titleHeading">SHOP HOLIDAY LOOKS</h3>
+                  <em className="titleCaption">be the show-stopper</em>
                   <div className="imgWrapLg">
                     {/* <!-- <img className="img-fluid d-md-none" src="https://dummyimage.com/450x650/d3d3d3/fff.jpg"
                                 alt="" /> --> */}
@@ -254,43 +293,30 @@ class Home extends Component {
                       className="carousel slide"
                       data-ride="carousel"
                     >
-                      <ol className="carousel-indicators">
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="0"
-                          className="active"
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="1"
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="2"
-                        ></li>
-                      </ol>
                       <div className="carousel-inner">
-                        <div className="carousel-item active">
-                          <img
-                            src="https://dummyimage.com/450x650/d3d3d3/fff.jpg"
-                            className="d-block w-100"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="carousel-item">
-                          <img
-                            src="https://dummyimage.com/450x650/d3d3d3/fff.jpg"
-                            className="d-block w-100"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="carousel-item">
-                          <img
-                            src="https://dummyimage.com/450x650/d3d3d3/fff.jpg"
-                            className="d-block w-100"
-                            alt="..."
-                          />
-                        </div>
+                        <Slider {...settings}>
+                          <div className="carousel-item active">
+                            <img
+                              src="../../assets/images/Home/static/shopthelook1.png"
+                              className="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                          <div className="carousel-item">
+                            <img
+                              src="../../assets/images/Home/static/shopthelook2.png"
+                              className="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                          <div className="carousel-item">
+                            <img
+                              src="../../assets/images/Home/static/shopthelook4.png"
+                              className="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                        </Slider>
                       </div>
                     </div>
                   </div>
@@ -298,7 +324,7 @@ class Home extends Component {
                 <div className="col-md-8 mt-3 mt-md-0">
                   <div className="sliderContent mb-4 mb-md-0">
                     <h3 className="titleHeading">GOLD JEWELLERY</h3>
-                    <em className="titleCaption">What are you celebrating?</em>
+                    <em className="titleCaption">Find your unique piece</em>
                     <a href="#" className="viewAll">
                       <span>View all</span>
                       <svg
@@ -315,75 +341,77 @@ class Home extends Component {
                       </svg>
                     </a>
                     <div className="row jewellerySlider pb-5">
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                      <Slider {...jewels}>
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
+                      </Slider>
                     </div>
                   </div>
 
                   <div className="sliderContent">
                     <h3 className="titleHeading">SLIVER JEWELLERY</h3>
-                    <em className="titleCaption">What are you celebrating?</em>
+                    <em className="titleCaption">Design thar speaks for you</em>
                     <a href="#" className="viewAll">
                       <span>View all</span>
                       <svg
@@ -400,69 +428,71 @@ class Home extends Component {
                       </svg>
                     </a>
                     <div className="row jewellerySlider pb-5">
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                      <Slider {...jewels}>
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-lg-2 mx-auto">
-                        <div className="imgWrap">
-                          <img
-                            className="img-fluid"
-                            src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
-                            alt=""
-                          />
+                        <div className="mx-auto">
+                          <div className="imgWrap">
+                            <img
+                              className="img-fluid"
+                              src="https://dummyimage.com/200x200/d3d3d3/fff.jpg"
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
+                      </Slider>
                     </div>
                   </div>
                 </div>
@@ -523,7 +553,11 @@ class Home extends Component {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="bgWrap">
-                    {/* <!-- <img className="img-fluid d-lg-none" src="https://dummyimage.com/340x300/d3d3d3/fff.jpg" alt="" /> --> */}
+                    <img
+                      className="img-fluid "
+                      src="../../assets/images/Home/static/gift1.png"
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div className="col-lg-4">
@@ -543,7 +577,13 @@ class Home extends Component {
                   </div>
                 </div>
                 <div className="col-lg-4">
-                  <div className="bgWrap d-none d-lg-block"></div>
+                  <div className="bgWrap  d-lg-block">
+                    <img
+                      className="img-fluid"
+                      src="../../assets/images/Home/static/gift2.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -554,4 +594,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withWidth()(Home);

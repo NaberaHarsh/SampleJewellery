@@ -85,7 +85,7 @@ class DesignerSlider extends React.Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/designer1.png"
                         alt=""
                       />
                     </div>
@@ -95,14 +95,14 @@ class DesignerSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/designer1product.png"
                       alt=""
                     />
                   </div>
                   <div className="designerTitle">
-                    <em>Cosmic Open Ring</em>
+                    <em>Pearl Triple Haven Danglers</em>
                     <em>By</em>
-                    <h5>MITALI JAIN</h5>
+                    <h5>SONAXHI TIBREWAL</h5>
                   </div>
                 </div>
                 <div style={{ padding: "30px" }}>
@@ -113,7 +113,7 @@ class DesignerSlider extends React.Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/designer2.png"
                         alt=""
                       />
                     </div>
@@ -123,14 +123,14 @@ class DesignerSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/designer2product.png"
                       alt=""
                     />
                   </div>
                   <div className="designerTitle">
-                    <em>Cosmic Open Ring</em>
+                    <em>Real Jadtar Stones Maangtika</em>
                     <em>By</em>
-                    <h5>MITALI JAIN</h5>
+                    <h5>SHIKHA JINDAL</h5>
                   </div>
                 </div>{" "}
                 <div style={{ padding: "30px" }}>
@@ -141,7 +141,7 @@ class DesignerSlider extends React.Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/designer3.png"
                         alt=""
                       />
                     </div>
@@ -151,14 +151,14 @@ class DesignerSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/designer3product.png"
                       alt=""
                     />
                   </div>
                   <div className="designerTitle">
                     <em>Cosmic Open Ring</em>
                     <em>By</em>
-                    <h5>MITALI JAIN</h5>
+                    <h5>ARADHNA</h5>
                   </div>
                 </div>{" "}
                 <div style={{ padding: "30px" }}>
@@ -169,7 +169,7 @@ class DesignerSlider extends React.Component {
                     <div className="imgWrap">
                       <img
                         className="img-fluid"
-                        src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                        src="../../assets/images/Home/static/designer4.png"
                         alt=""
                       />
                     </div>
@@ -179,14 +179,154 @@ class DesignerSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/designer4product.png"
                       alt=""
                     />
                   </div>
                   <div className="designerTitle">
-                    <em>Cosmic Open Ring</em>
+                    <em>Silver Earrings</em>
                     <em>By</em>
-                    <h5>MITALI JAIN</h5>
+                    <h5>SNAGITA BOOCHRA</h5>
+                  </div>
+                </div>
+                <div style={{ padding: "30px" }}>
+                  <div
+                    className="designersCard"
+                    style={{ padding: "100px !important" }}
+                  >
+                    <div className="imgWrap">
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/Home/static/designer5.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="designBy">
+                  <div className="imgWrap">
+                    <img
+                      className="img-fluid"
+                      src="../../assets/images/Home/static/designer5product.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="designerTitle">
+                    <em>Knightbridge Hoops</em>
+                    <em>By</em>
+                    <h5>ASMITA KULSHRESHTHA</h5>
+                  </div>
+                </div>
+                <div style={{ padding: "30px" }}>
+                  <div
+                    className="designersCard"
+                    style={{ padding: "100px !important" }}
+                  >
+                    <div className="imgWrap">
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/Home/static/designer6.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="designBy">
+                  <div className="imgWrap">
+                    <img
+                      className="img-fluid"
+                      src="../../assets/images/Home/static/designer6product.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="designerTitle">
+                    <em>Silver Dangler Earrings</em>
+                    <em>By</em>
+                    <h5>PRAGYA BOTHRA</h5>
+                  </div>
+                </div>
+                <div style={{ padding: "30px" }}>
+                  <div
+                    className="designersCard"
+                    style={{ padding: "100px !important" }}
+                  >
+                    <div className="imgWrap">
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/Home/static/designer7.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="designBy">
+                  <div className="imgWrap">
+                    <img
+                      className="img-fluid"
+                      src="../../assets/images/Home/static/designer7product.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="designerTitle">
+                    <em>Shackle Necklace</em>
+                    <em>By</em>
+                    <h5>ARPAN PATEL & AYUSHI</h5>
+                  </div>
+                </div>
+                <div style={{ padding: "30px" }}>
+                  <div
+                    className="designersCard"
+                    style={{ padding: "100px !important" }}
+                  >
+                    <div className="imgWrap">
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/Home/static/designer8.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="designBy">
+                  <div className="imgWrap">
+                    <img
+                      className="img-fluid"
+                      src="../../assets/images/Home/static/designer8product.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="designerTitle">
+                    <em>Mohini Gold And Pink Ring</em>
+                    <em>By</em>
+                    <h5>ANVITA AGRAWAL</h5>
+                  </div>
+                </div>
+                <div style={{ padding: "30px" }}>
+                  <div
+                    className="designersCard"
+                    style={{ padding: "100px !important" }}
+                  >
+                    <div className="imgWrap">
+                      <img
+                        className="img-fluid"
+                        src="../../assets/images/Home/static/designer9.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="designBy">
+                  <div className="imgWrap">
+                    <img
+                      className="img-fluid"
+                      src="../../assets/images/Home/static/designer9product.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="designerTitle">
+                    <em>Necklace Set</em>
+                    <em>By</em>
+                    <h5>PINKAL BAFNA</h5>
                   </div>
                 </div>
               </Slider>
@@ -223,7 +363,7 @@ class DesignerSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/designer1.png"
                     alt=""
                   />
                 </div>
@@ -233,14 +373,14 @@ class DesignerSlider extends React.Component {
               <div className="imgWrap">
                 <img
                   className="img-fluid"
-                  src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                  src="../../assets/images/Home/static/designer1product.png"
                   alt=""
                 />
               </div>
               <div className="designerTitle">
-                <em>Cosmic Open Ring</em>
+                <em>Pearl Triple Haven Danglers</em>
                 <em>By</em>
-                <h5>MITALI JAIN</h5>
+                <h5>SONAXHI TIBREWAL</h5>
               </div>
             </div>
             <div style={{ padding: "30px" }}>
@@ -251,7 +391,7 @@ class DesignerSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/designer2.png"
                     alt=""
                   />
                 </div>
@@ -261,14 +401,14 @@ class DesignerSlider extends React.Component {
               <div className="imgWrap">
                 <img
                   className="img-fluid"
-                  src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                  src="../../assets/images/Home/static/designer2product.png"
                   alt=""
                 />
               </div>
               <div className="designerTitle">
-                <em>Cosmic Open Ring</em>
+                <em>Real Jadtar Stones Maangtika</em>
                 <em>By</em>
-                <h5>MITALI JAIN</h5>
+                <h5>SHIKHA JINDAL</h5>
               </div>
             </div>{" "}
             <div style={{ padding: "30px" }}>
@@ -279,7 +419,7 @@ class DesignerSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/designer3.png"
                     alt=""
                   />
                 </div>
@@ -289,14 +429,14 @@ class DesignerSlider extends React.Component {
               <div className="imgWrap">
                 <img
                   className="img-fluid"
-                  src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                  src="../../assets/images/Home/static/designer3product.png"
                   alt=""
                 />
               </div>
               <div className="designerTitle">
                 <em>Cosmic Open Ring</em>
                 <em>By</em>
-                <h5>MITALI JAIN</h5>
+                <h5>ARADHNA</h5>
               </div>
             </div>{" "}
             <div style={{ padding: "30px" }}>
@@ -307,7 +447,7 @@ class DesignerSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/170x220/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/designer4.png"
                     alt=""
                   />
                 </div>
@@ -317,14 +457,154 @@ class DesignerSlider extends React.Component {
               <div className="imgWrap">
                 <img
                   className="img-fluid"
-                  src="https://dummyimage.com/150x150/d3d3d3/fff.jpg"
+                  src="../../assets/images/Home/static/designer4product.png"
                   alt=""
                 />
               </div>
               <div className="designerTitle">
-                <em>Cosmic Open Ring</em>
+                <em>Silver Earrings</em>
                 <em>By</em>
-                <h5>MITALI JAIN</h5>
+                <h5>SNAGITA BOOCHRA</h5>
+              </div>
+            </div>
+            <div style={{ padding: "30px" }}>
+              <div
+                className="designersCard"
+                style={{ padding: "100px !important" }}
+              >
+                <div className="imgWrap">
+                  <img
+                    className="img-fluid"
+                    src="../../assets/images/Home/static/designer5.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="designBy">
+              <div className="imgWrap">
+                <img
+                  className="img-fluid"
+                  src="../../assets/images/Home/static/designer5product.png"
+                  alt=""
+                />
+              </div>
+              <div className="designerTitle">
+                <em>Knightbridge Hoops</em>
+                <em>By</em>
+                <h5>ASMITA KULSHRESHTHA</h5>
+              </div>
+            </div>
+            <div style={{ padding: "30px" }}>
+              <div
+                className="designersCard"
+                style={{ padding: "100px !important" }}
+              >
+                <div className="imgWrap">
+                  <img
+                    className="img-fluid"
+                    src="../../assets/images/Home/static/designer6.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="designBy">
+              <div className="imgWrap">
+                <img
+                  className="img-fluid"
+                  src="../../assets/images/Home/static/designer6product.png"
+                  alt=""
+                />
+              </div>
+              <div className="designerTitle">
+                <em>Silver Dangler Earrings</em>
+                <em>By</em>
+                <h5>PRAGYA BOTHRA</h5>
+              </div>
+            </div>
+            <div style={{ padding: "30px" }}>
+              <div
+                className="designersCard"
+                style={{ padding: "100px !important" }}
+              >
+                <div className="imgWrap">
+                  <img
+                    className="img-fluid"
+                    src="../../assets/images/Home/static/designer7.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="designBy">
+              <div className="imgWrap">
+                <img
+                  className="img-fluid"
+                  src="../../assets/images/Home/static/designer7product.png"
+                  alt=""
+                />
+              </div>
+              <div className="designerTitle">
+                <em>Shackle Necklace</em>
+                <em>By</em>
+                <h5>ARPAN PATEL & AYUSHI</h5>
+              </div>
+            </div>
+            <div style={{ padding: "30px" }}>
+              <div
+                className="designersCard"
+                style={{ padding: "100px !important" }}
+              >
+                <div className="imgWrap">
+                  <img
+                    className="img-fluid"
+                    src="../../assets/images/Home/static/designer8.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="designBy">
+              <div className="imgWrap">
+                <img
+                  className="img-fluid"
+                  src="../../assets/images/Home/static/designer8product.png"
+                  alt=""
+                />
+              </div>
+              <div className="designerTitle">
+                <em>Mohini Gold And Pink Ring</em>
+                <em>By</em>
+                <h5>ANVITA AGRAWAL</h5>
+              </div>
+            </div>
+            <div style={{ padding: "30px" }}>
+              <div
+                className="designersCard"
+                style={{ padding: "100px !important" }}
+              >
+                <div className="imgWrap">
+                  <img
+                    className="img-fluid"
+                    src="../../assets/images/Home/static/designer9.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="designBy">
+              <div className="imgWrap">
+                <img
+                  className="img-fluid"
+                  src="../../assets/images/Home/static/designer9product.png"
+                  alt=""
+                />
+              </div>
+              <div className="designerTitle">
+                <em>Necklace Set</em>
+                <em>By</em>
+                <h5>PINKAL BAFNA</h5>
               </div>
             </div>
           </Slider>

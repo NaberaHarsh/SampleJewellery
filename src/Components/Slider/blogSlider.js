@@ -84,7 +84,7 @@ class BlogSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/blog1.png"
                       alt=""
                     />
                   </div>
@@ -97,7 +97,7 @@ class BlogSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/blog2.png"
                       alt=""
                     />
                   </div>
@@ -110,7 +110,7 @@ class BlogSlider extends React.Component {
                   <div className="imgWrap">
                     <img
                       className="img-fluid"
-                      src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
+                      src="../../assets/images/Home/static/blog3.png"
                       alt=""
                     />
                   </div>
@@ -119,32 +119,6 @@ class BlogSlider extends React.Component {
                     OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
                   </h5>
                 </div>{" "}
-                <div className="blogCard">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <em style={{ paddingLeft: "40px" }}>Publications</em>
-                  <h5 style={{ paddingLeft: "40px" }}>
-                    OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                  </h5>
-                </div>{" "}
-                <div className="blogCard">
-                  <div className="imgWrap">
-                    <img
-                      className="img-fluid"
-                      src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <em style={{ paddingLeft: "40px" }}>Publications</em>
-                  <h5 style={{ paddingLeft: "40px" }}>
-                    OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                  </h5>
-                </div>
               </Slider>
             </div>
             <div
@@ -177,7 +151,7 @@ class BlogSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/blog1.png"
                     alt=""
                   />
                 </div>
@@ -192,7 +166,7 @@ class BlogSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/blog2.png"
                     alt=""
                   />
                 </div>
@@ -207,22 +181,7 @@ class BlogSlider extends React.Component {
                 <div className="imgWrap">
                   <img
                     className="img-fluid"
-                    src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
-                    alt=""
-                  />
-                </div>
-                <em>Publications</em>
-                <h5>
-                  OUR FAVOURITE BRACELETS <br /> UNDER &euro; 10,000
-                </h5>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="blogCard">
-                <div className="imgWrap">
-                  <img
-                    className="img-fluid"
-                    src="https://dummyimage.com/300x275/d3d3d3/fff.jpg"
+                    src="../../assets/images/Home/static/blog3.png"
                     alt=""
                   />
                 </div>
