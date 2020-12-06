@@ -19,9 +19,6 @@ class Header extends Component {
       occassion: false,
       openMenu: false,
       wishlist: false,
-      address: false,
-      orders: false,
-      profile: false,
     };
   }
 
@@ -38,9 +35,6 @@ class Header extends Component {
         designer: false,
         occassion: false,
         wishlist: false,
-        address: false,
-        orders: false,
-        profile: false,
       },
       () => console.log(this.state.showFilter)
     );
@@ -54,9 +48,6 @@ class Header extends Component {
         designer: false,
         occassion: false,
         wishlist: false,
-        address: false,
-        orders: false,
-        profile: false,
       },
       () => console.log(this.state.cartOpen)
     );
@@ -70,9 +61,6 @@ class Header extends Component {
         designer: false,
         occassion: false,
         wishlist: false,
-        address: false,
-        orders: false,
-        profile: false,
       },
       () => console.log(this.state.shop)
     );
@@ -84,9 +72,6 @@ class Header extends Component {
       shop: false,
       occassion: false,
       wishlist: false,
-      address: false,
-      orders: false,
-      profile: false,
     });
   };
   handleOccassion = () => {
@@ -96,9 +81,6 @@ class Header extends Component {
       shop: false,
       designer: false,
       wishlist: false,
-      address: false,
-      orders: false,
-      profile: false,
     });
   };
   handleWishlist = () => {
@@ -108,47 +90,9 @@ class Header extends Component {
       shop: false,
       occassion: false,
       wishlist: !this.state.wishlist,
-      address: false,
-      orders: false,
-      profile: false,
     });
   };
-  handleAddress = () => {
-    this.setState({
-      designer: false,
-      cartOpen: false,
-      shop: false,
-      occassion: false,
-      wishlist: false,
-      address: !this.state.address,
-      orders: false,
-      profile: false,
-    });
-  };
-  handleOrders = () => {
-    this.setState({
-      designer: false,
-      cartOpen: false,
-      shop: false,
-      occassion: false,
-      wishlist: false,
-      address: false,
-      profile: false,
-      orders: !this.state.orders,
-    });
-  };
-  handleProfile = () => {
-    this.setState({
-      designer: false,
-      cartOpen: false,
-      shop: false,
-      occassion: false,
-      wishlist: false,
-      address: false,
-      profile: !this.state.profile,
-      orders: false,
-    });
-  };
+
   render() {
     const { width, classes } = this.props;
 
@@ -697,711 +641,9 @@ class Header extends Component {
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
-                      onClick={this.handleProfile}
-                    >
-                      My Profile
-                    </a>
-                    <div
-                      className={
-                        this.state.profile
-                          ? "dropdown-menu megaMenu d-block "
-                          : "dropdown-menu megaMenu d-none"
-                      }
-                      aria-labelledby="navbarDropdownMenuLink"
-                    >
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-12 d-lg-none">
-                            <div className="menuClose">
-                              <span onClick={this.handleProfile}>Back</span>
-                              <a
-                                href="#"
-                                className="closeBtn"
-                                id="btnClose"
-                                onClick={() => this.handleFilter()}
-                              >
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
-                                    fill="#616161"
-                                  />
-                                </svg>
-                              </a>
-                            </div>
-                            <div className="subMenu">My Profile</div>
-                          </div>
-
-                          <div
-                            className="account"
-                            style={{ padding: "20px", marginTop: "-40px" }}
-                          >
-                            <div className="row">
-                              <div className="col-md-9 col-lg-7 mr-auto">
-                                <div
-                                  className="tab-content"
-                                  id="v-pills-tabContent"
-                                >
-                                  <div
-                                    className="tab-pane fade show active"
-                                    id="v-pills-profile"
-                                    role="tabpanel"
-                                    aria-labelledby="v-pills-profile-tab"
-                                  >
-                                    <div className="myProfile">
-                                      <h5>Edit Details</h5>
-                                      <form>
-                                        <div className="form-group">
-                                          <div className="customPhone">
-                                            <label for="phoneNum">
-                                              PHONE NUMBER *
-                                            </label>
-                                            <input
-                                              type="text"
-                                              className="form-control"
-                                              id="phoneNum"
-                                              placeholder="9560811484"
-                                            />
-                                            <a href="#" className="btnChange">
-                                              CHANGE
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div className="form-group">
-                                          <label for="profileEmail">
-                                            E-MAIL *
-                                          </label>
-                                          <input
-                                            type="email"
-                                            className="form-control"
-                                            id="profileEmail"
-                                            placeholder="aanchalkalra99@gmail.com"
-                                          />
-                                        </div>
-                                        <div className="form-row">
-                                          <div className="form-group col-md-6">
-                                            <label for="firstName">
-                                              FIRST NAME *
-                                            </label>
-                                            <input
-                                              type="text"
-                                              className="form-control"
-                                              id="firstName"
-                                              placeholder="Aanchal"
-                                            />
-                                          </div>
-                                          <div className="form-group col-md-6">
-                                            <label for="lastName">
-                                              LAST NAME *
-                                            </label>
-                                            <input
-                                              type="text"
-                                              className="form-control"
-                                              id="lastName"
-                                              placeholder="Kalra"
-                                            />
-                                          </div>
-                                        </div>
-                                        <div className="form-row my-3">
-                                          <div className="form-group col-4 col-md-2">
-                                            <label className="radioContainer">
-                                              <input
-                                                type="radio"
-                                                // checked="checked"
-                                                name="gender"
-                                              />
-                                              <span className="radioCheckmark"></span>
-                                              <span>MALE</span>
-                                            </label>
-                                          </div>
-                                          <div className="form-group col-4 col-md-2">
-                                            <label className="radioContainer">
-                                              <input
-                                                type="radio"
-                                                // checked="checked"
-                                                name="gender"
-                                              />
-                                              <span className="radioCheckmark"></span>
-                                              <span>FEMALE</span>
-                                            </label>
-                                          </div>
-                                        </div>
-
-                                        <div className="form-group">
-                                          <input
-                                            type="date"
-                                            className="form-control"
-                                            id="birthDate"
-                                          />
-                                        </div>
-                                        <div className="form-group">
-                                          <input
-                                            type="text"
-                                            className="form-control"
-                                            id="profileLocation"
-                                            placeholder="Location"
-                                          />
-                                        </div>
-                                        <div className="form-row">
-                                          <div className="col-12">
-                                            <label for="altMobile">
-                                              ALERNATE MOBILE NUMBER
-                                            </label>
-                                          </div>
-                                          <div className="form-group col-3 col-md-2">
-                                            <input
-                                              type="text"
-                                              className="form-control"
-                                              id="inputCity"
-                                              placeholder="+91"
-                                            />
-                                          </div>
-                                          <div className="form-group col-9 col-md-10">
-                                            <input
-                                              type="text"
-                                              className="form-control"
-                                              id="altMobile"
-                                              placeholder="Enter a valid 10 digit mobile number"
-                                            />
-                                          </div>
-                                        </div>
-                                        <div className="buttonWrap mt-4">
-                                          <button
-                                            type="button"
-                                            className="btn saveChange"
-                                          >
-                                            SAVE CHANGES
-                                          </button>
-                                          <button
-                                            type="button"
-                                            className="btn changePass"
-                                          >
-                                            CHANGE PASSWORD
-                                          </button>
-                                        </div>
-                                      </form>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>{" "}
-                  <li className="nav-item dropdown d-lg-none">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      id="navbarDropdownMenuLink"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      onClick={this.handleOrders}
-                    >
-                      My Orders
-                    </a>
-                    <div
-                      className={
-                        this.state.orders
-                          ? "dropdown-menu megaMenu d-block "
-                          : "dropdown-menu megaMenu d-none"
-                      }
-                      aria-labelledby="navbarDropdownMenuLink"
-                    >
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-12 d-lg-none">
-                            <div className="menuClose">
-                              <span onClick={this.handleOrders}>Back</span>
-                              <a
-                                href="#"
-                                className="closeBtn"
-                                id="btnClose"
-                                onClick={() => this.handleFilter()}
-                              >
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
-                                    fill="#616161"
-                                  />
-                                </svg>
-                              </a>
-                            </div>
-                            <div className="subMenu">My Orders</div>
-                          </div>
-
-                          <div
-                            className="account"
-                            style={{ padding: "20px", marginTop: "-40px" }}
-                          >
-                            <div className="row">
-                              <div className="col-md-9 col-lg-7 mr-auto">
-                                <div
-                                  className="tab-content"
-                                  id="v-pills-tabContent"
-                                >
-                                  <div
-                                    className="tab-pane fade show active"
-                                    id="v-pills-profile"
-                                    role="tabpanel"
-                                    aria-labelledby="v-pills-profile-tab"
-                                  >
-                                    <div class="orderDetails">
-                                      <div class="orderHead">
-                                        <div>
-                                          <p>
-                                            <span>Order No.</span>{" "}
-                                            <span>4564768</span>
-                                          </p>
-                                          <p>
-                                            <span>Order Date</span>{" "}
-                                            <span>10/12/2020</span>
-                                          </p>
-                                        </div>
-                                        <div>
-                                          <p class="ml-3 pl-1">
-                                            <span>Order qty</span>{" "}
-                                            <span class="ml-3">3</span>
-                                          </p>
-                                          <p>
-                                            <span>Total Amount</span>{" "}
-                                            <strong class="ml-3">
-                                              Rs 10,000
-                                            </strong>
-                                          </p>
-                                        </div>
-                                      </div>
-                                      <div class="shippingAdd">
-                                        <h5>Shipping Address</h5>
-                                        <div class="addWrap">
-                                          <div>
-                                            <h6>Aanchal Kalra</h6>
-                                            <address>
-                                              D1/1 A Rana Pratap Bagh, <br />
-                                              New Delhi - 110007 <br />
-                                              aanchalkalra99@gmail.com <br />
-                                              +91 9560811484
-                                            </address>
-                                          </div>
-                                          <div>
-                                            <label>OFFICE</label>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="orderStatus">
-                                        <h5>Order Status</h5>
-                                        <div class="statusWrap">
-                                          <div class="statusHead">
-                                            <div>
-                                              <p class="shipItem">
-                                                Shipment 1 of 2
-                                              </p>
-                                              <p>
-                                                Package Delivery by May 25, 2020
-                                              </p>
-                                            </div>
-                                            <div>
-                                              <p class="ml-md-3 pl-md-1">
-                                                <span>Payment Mode</span>{" "}
-                                                <span class="ml-1 ml-md-3">
-                                                  COD
-                                                </span>
-                                              </p>
-                                              <p>
-                                                <span>Amount to be Paid</span>{" "}
-                                                <strong class="ml-1 ml-md-3">
-                                                  Rs 5,000
-                                                </strong>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div class="statusBody">
-                                            <div class="statusItem">
-                                              <div class="d-flex">
-                                                <div class="imgWrap">
-                                                  <img
-                                                    class="img-fluid"
-                                                    src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                                    alt=""
-                                                  />
-                                                </div>
-                                                <div class="itemContent">
-                                                  <h5>
-                                                    Artisan Square Necklace 18ct
-                                                    Gold Plate
-                                                  </h5>
-                                                  <p>By Aashna Dalmia</p>
-                                                  <p>Qty: 1</p>
-                                                  <p>SKU: AD 001</p>
-                                                </div>
-                                              </div>
-                                              <h6>Rs 3,000</h6>
-                                            </div>
-                                          </div>
-                                          <div class="statusBody">
-                                            <div class="statusItem">
-                                              <div class="d-flex">
-                                                <div class="imgWrap">
-                                                  <img
-                                                    class="img-fluid"
-                                                    src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                                    alt=""
-                                                  />
-                                                </div>
-                                                <div class="itemContent">
-                                                  <h5>
-                                                    Artisan Square Necklace 18ct
-                                                    Gold Plate
-                                                  </h5>
-                                                  <p>By Aashna Dalmia</p>
-                                                  <p>Qty: 1</p>
-                                                  <p>SKU: AD 001</p>
-                                                </div>
-                                              </div>
-                                              <h6>Rs 3,000</h6>
-                                            </div>
-                                          </div>
-                                          <div class="bottomLink">
-                                            <a href="#">
-                                              <span>DOWNLOAD INVOICE</span>
-                                              <svg
-                                                width="18"
-                                                height="17"
-                                                viewBox="0 0 18 17"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
-                                                  fill="#398DAF"
-                                                />
-                                              </svg>
-                                            </a>
-                                            <a href="#">
-                                              <span>TRACK</span>
-                                              <svg
-                                                width="18"
-                                                height="17"
-                                                viewBox="0 0 18 17"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
-                                                  fill="#398DAF"
-                                                />
-                                              </svg>
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div class="statusWrap">
-                                          <div class="statusHead">
-                                            <div>
-                                              <p class="shipItem">
-                                                Shipment 2 of 2
-                                              </p>
-                                              <p>
-                                                Package Delivery by May 28, 2020
-                                              </p>
-                                            </div>
-                                            <div>
-                                              <p class="ml-md-3 pl-md-1">
-                                                <span>Payment Mode</span>{" "}
-                                                <span class="ml-1 ml-md-3">
-                                                  COD
-                                                </span>
-                                              </p>
-                                              <p>
-                                                <span>Amount to be Paid</span>{" "}
-                                                <strong class="ml-1 ml-md-3">
-                                                  Rs 5,000
-                                                </strong>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div class="statusBody">
-                                            <div class="statusItem">
-                                              <div class="d-flex">
-                                                <div class="imgWrap">
-                                                  <img
-                                                    class="img-fluid"
-                                                    src="https://dummyimage.com/64x64/d3d3d3/fff.jpg"
-                                                    alt=""
-                                                  />
-                                                </div>
-                                                <div class="itemContent">
-                                                  <h5>
-                                                    Artisan Square Necklace 18ct
-                                                    Gold Plate
-                                                  </h5>
-                                                  <p>By Aashna Dalmia</p>
-                                                  <p>Qty: 1</p>
-                                                  <p>SKU: AD 001</p>
-                                                </div>
-                                              </div>
-                                              <h6>Rs 3,000</h6>
-                                            </div>
-                                          </div>
-                                          <div class="bottomLink">
-                                            <a href="#">
-                                              <span>DOWNLOAD INVOICE</span>
-                                              <svg
-                                                width="18"
-                                                height="17"
-                                                viewBox="0 0 18 17"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
-                                                  fill="#398DAF"
-                                                />
-                                              </svg>
-                                            </a>
-                                            <a href="#">
-                                              <span>TRACK</span>
-                                              <svg
-                                                width="18"
-                                                height="17"
-                                                viewBox="0 0 18 17"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  d="M6.56445 11.6942L9.83588 8.69542L6.56445 5.69006L7.5716 4.76685L11.8573 8.69542L7.5716 12.624L6.56445 11.6942Z"
-                                                  fill="#398DAF"
-                                                />
-                                              </svg>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>{" "}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>{" "}
-                  <li className="nav-item dropdown d-lg-none">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      id="navbarDropdownMenuLink"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      onClick={this.handleAddress}
-                    >
-                      My Address
-                    </a>
-                    <div
-                      className={
-                        this.state.address
-                          ? "dropdown-menu megaMenu d-block "
-                          : "dropdown-menu megaMenu d-none"
-                      }
-                      aria-labelledby="navbarDropdownMenuLink"
-                    >
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-12 d-lg-none">
-                            <div className="menuClose">
-                              <span onClick={this.handleAddress}>Back</span>
-                              <a
-                                href="#"
-                                className="closeBtn"
-                                id="btnClose"
-                                onClick={() => this.handleFilter()}
-                              >
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z"
-                                    fill="#616161"
-                                  />
-                                </svg>
-                              </a>
-                            </div>
-                            <div className="subMenu">My Address</div>
-                          </div>
-
-                          <div
-                            className="account"
-                            style={{ padding: "20px", marginTop: "-40px" }}
-                          >
-                            <div className="row">
-                              <div className="col-md-9 col-lg-7 mr-auto">
-                                <div
-                                  className="tab-content"
-                                  id="v-pills-tabContent"
-                                >
-                                  <div
-                                    className="tab-pane fade show active"
-                                    id="v-pills-profile"
-                                    role="tabpanel"
-                                    aria-labelledby="v-pills-profile-tab"
-                                  >
-                                    <div class="savedAdd">
-                                      <div class="addressBtn px-1">
-                                        <h5>Saved Addresses</h5>
-                                        <AddressButton />
-                                      </div>
-                                      <div class="addressContent">
-                                        <label>Default Address</label>
-                                        <div class="row">
-                                          <div class="col-lg-6">
-                                            <label class="radioContainer">
-                                              <input
-                                                type="radio"
-                                                checked="checked"
-                                                name="defaultAddress"
-                                              />
-                                              <span class="radioCheckmark"></span>
-
-                                              <div class="addressCard">
-                                                <div class="body">
-                                                  <div class="addWrap">
-                                                    <h6>Aanchal</h6>
-                                                    <p>
-                                                      D1/1 A Rana Pratap Bagh,
-                                                      <br />
-                                                      New Delhi- 110007 <br />
-                                                      <br />
-                                                      aanchalkalra99@gmail.com
-                                                      <br />
-                                                      +91 9560811484
-                                                      <br />
-                                                    </p>
-                                                  </div>
-                                                  <div class="labelWrap">
-                                                    <label>HOME</label>
-                                                  </div>
-                                                </div>
-                                                <div class="foot">
-                                                  <a href="#" class="btn">
-                                                    EDIT
-                                                  </a>
-                                                  <a href="#" class="btn">
-                                                    REMOVE
-                                                  </a>
-                                                </div>
-                                              </div>
-                                            </label>
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                      <div class="addressContent">
-                                        <label>Other Addresses</label>
-                                        <div class="row">
-                                          <div class="col-lg-6">
-                                            <label class="radioContainer">
-                                              <input
-                                                type="radio"
-                                                name="defaultAddress"
-                                              />
-                                              <span class="radioCheckmark"></span>
-
-                                              <div class="addressCard">
-                                                <div class="body">
-                                                  <div class="addWrap">
-                                                    <h6>Aanchal</h6>
-                                                    <p>
-                                                      D1/1 A Rana Pratap Bagh,
-                                                      <br />
-                                                      New Delhi- 110007 <br />
-                                                      <br />
-                                                      aanchalkalra99@gmail.com
-                                                      <br />
-                                                      +91 9560811484
-                                                      <br />
-                                                    </p>
-                                                  </div>
-                                                  <div class="labelWrap">
-                                                    <label>OFFICE</label>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </label>
-                                          </div>
-                                          <div class="col-lg-6">
-                                            <label class="radioContainer">
-                                              <input
-                                                type="radio"
-                                                name="defaultAddress"
-                                              />
-                                              <span class="radioCheckmark"></span>
-
-                                              <div class="addressCard">
-                                                <div class="body">
-                                                  <div class="addWrap">
-                                                    <h6>Aanchal</h6>
-                                                    <p>
-                                                      D1/1 A Rana Pratap Bagh,
-                                                      <br />
-                                                      New Delhi- 110007 <br />
-                                                      <br />
-                                                      aanchalkalra99@gmail.com
-                                                      <br />
-                                                      +91 9560811484
-                                                      <br />
-                                                    </p>
-                                                  </div>
-                                                  <div class="labelWrap">
-                                                    <label>OFFICE</label>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </label>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>{" "}
-                  <li className="nav-item dropdown d-lg-none">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      id="navbarDropdownMenuLink"
-                      role="button"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
                       onClick={this.handleWishlist}
                     >
-                      My Wishlist
+                      My Account
                     </a>
                     <div
                       className={
@@ -1436,193 +678,79 @@ class Header extends Component {
                                 </svg>
                               </a>
                             </div>
-                            <div className="subMenu">My Wishlist</div>
-                          </div>
-
-                          <div
-                            className="account"
-                            style={{ padding: "20px", marginTop: "-40px" }}
-                          >
-                            <div className="row">
-                              <div className="col-md-9 col-lg-7 mr-auto">
+                            <div className="col-lg-5">
+                              <div className="row">
+                                <div className="col-12">
+                                  <h4>My Account</h4>
+                                </div>
                                 <div
-                                  className="tab-content"
-                                  id="v-pills-tabContent"
+                                  className="account"
+                                  style={{
+                                    padding: "20px",
+                                    marginTop: "-40px",
+                                  }}
                                 >
-                                  <div
-                                    className="tab-pane fade show active"
-                                    id="v-pills-profile"
-                                    role="tabpanel"
-                                    aria-labelledby="v-pills-profile-tab"
-                                  >
-                                    <div className="wishItem">
-                                      <div className="row align-items-end">
-                                        <div className="col-md-6">
-                                          <div className="row">
-                                            <div className="col-4">
-                                              <div className="imgWrap">
-                                                <img
-                                                  className="img-fluid"
-                                                  src="../../assets/images/necklace.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                            </div>
-                                            <div className="col-8">
-                                              <div className="detailWrap">
-                                                <h5 className="mb-3">
-                                                  Artisan Square Necklace 18ct
-                                                  Gold Plate
-                                                </h5>
-                                                <p>Rs. 10,000</p>
-                                                <div className="qtyWrap">
-                                                  <div className="qtyChange">
+                                  <div className="row">
+                                    <div className="col-md-9 col-lg-7 mr-auto">
+                                      <div
+                                        className="tab-content"
+                                        id="v-pills-tabContent"
+                                      >
+                                        <div
+                                          className="tab-pane fade show active"
+                                          id="v-pills-profile"
+                                          role="tabpanel"
+                                          aria-labelledby="v-pills-profile-tab"
+                                        >
+                                          <div className="col-sm-12">
+                                            <div className="row">
+                                              <div className="col-12">
+                                                <ul className="list-unstyled">
+                                                  <li>
                                                     <a
                                                       href="#"
-                                                      className="minus"
+                                                      style={{
+                                                        textTransform: "none",
+                                                      }}
                                                     >
-                                                      <svg
-                                                        width="4"
-                                                        height="2"
-                                                        viewBox="0 0 4 2"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                      >
-                                                        <path
-                                                          d="M3.54 1.516H0.456V0.724H3.54V1.516Z"
-                                                          fill="black"
-                                                        />
-                                                      </svg>
+                                                      My Profile
                                                     </a>
-                                                    <input
-                                                      type="number"
-                                                      className="form-control"
-                                                      placeholder="1"
-                                                    />
+                                                  </li>
+                                                  <li>
                                                     <a
                                                       href="#"
-                                                      className="plus"
+                                                      style={{
+                                                        textTransform: "none",
+                                                      }}
                                                     >
-                                                      <svg
-                                                        width="8"
-                                                        height="7"
-                                                        viewBox="0 0 8 7"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                      >
-                                                        <path
-                                                          d="M4.356 3.004H7.056V3.724H4.356V6.424H3.636V3.724H0.936V3.004H3.636V0.304H4.356V3.004Z"
-                                                          fill="black"
-                                                        />
-                                                      </svg>
+                                                      My Orders
                                                     </a>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                          <div className="buttonWrap">
-                                            <button
-                                              type="button"
-                                              className="btn btnBag"
-                                              style={{ marginRight: "12px" }}
-                                            >
-                                              ADD TO BAG
-                                            </button>
-                                            <button
-                                              type="button"
-                                              className="btn btnRemove"
-                                            >
-                                              REMOVE
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="wishItem">
-                                      <div className="row align-items-end">
-                                        <div className="col-md-6">
-                                          <div className="row">
-                                            <div className="col-4">
-                                              <div className="imgWrap">
-                                                <img
-                                                  className="img-fluid"
-                                                  src="../../assets/images/necklace.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                            </div>
-                                            <div className="col-8">
-                                              <div className="detailWrap">
-                                                <h5 className="mb-3">
-                                                  Artisan Square Necklace 18ct
-                                                  Gold Plate
-                                                </h5>
-                                                <p>Rs. 10,000</p>
-                                                <div className="qtyWrap">
-                                                  <div className="qtyChange">
+                                                  </li>
+                                                  <li>
                                                     <a
                                                       href="#"
-                                                      className="minus"
+                                                      style={{
+                                                        textTransform: "none",
+                                                      }}
                                                     >
-                                                      <svg
-                                                        width="4"
-                                                        height="2"
-                                                        viewBox="0 0 4 2"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                      >
-                                                        <path
-                                                          d="M3.54 1.516H0.456V0.724H3.54V1.516Z"
-                                                          fill="black"
-                                                        />
-                                                      </svg>
+                                                      My Addresses
                                                     </a>
-                                                    <input
-                                                      type="number"
-                                                      className="form-control"
-                                                      placeholder="1"
-                                                    />
+                                                  </li>
+                                                  <li>
                                                     <a
                                                       href="#"
-                                                      className="plus"
+                                                      style={{
+                                                        textTransform: "none",
+                                                      }}
                                                     >
-                                                      <svg
-                                                        width="8"
-                                                        height="7"
-                                                        viewBox="0 0 8 7"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                      >
-                                                        <path
-                                                          d="M4.356 3.004H7.056V3.724H4.356V6.424H3.636V3.724H0.936V3.004H3.636V0.304H4.356V3.004Z"
-                                                          fill="black"
-                                                        />
-                                                      </svg>
+                                                      My Wishlist
                                                     </a>
-                                                  </div>
-                                                </div>
+                                                  </li>
+                                                  <li></li>
+                                                </ul>
                                               </div>
+                                              <div className="col-6"></div>
                                             </div>
-                                          </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                          <div className="buttonWrap">
-                                            <button
-                                              type="button"
-                                              className="btn btnBag"
-                                              style={{ marginRight: "12px" }}
-                                            >
-                                              ADD TO BAG
-                                            </button>
-                                            <button
-                                              type="button"
-                                              className="btn btnRemove"
-                                            >
-                                              REMOVE
-                                            </button>
                                           </div>
                                         </div>
                                       </div>
@@ -2175,11 +1303,7 @@ class Header extends Component {
                       Sale
                     </a>
                   </li>
-                  <li className="nav-item d-lg-none">
-                    <a className="nav-link" href="#">
-                      Account
-                    </a>
-                  </li>
+
                   <li className="nav-item d-lg-none">
                     <a className="nav-link" href="#">
                       Contact
