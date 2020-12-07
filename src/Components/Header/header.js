@@ -714,8 +714,9 @@ class Header extends Component {
                                 <div
                                   className="account"
                                   style={{
-                                    padding: "20px",
+                                    // padding: "20px",
                                     marginTop: "-40px",
+                                    fontSize: 26,
                                   }}
                                 >
                                   <div className="row">
@@ -746,7 +747,28 @@ class Header extends Component {
                                                         textDecoration: "none",
                                                       }}
                                                     >
-                                                      My Profile
+                                                      <svg
+                                                        width="15"
+                                                        height="15"
+                                                        viewBox="0 0 15 15"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M7.5 0C8.49456 0 9.44839 0.395088 10.1517 1.09835C10.8549 1.80161 11.25 2.75544 11.25 3.75C11.25 4.74456 10.8549 5.69839 10.1517 6.40165C9.44839 7.10491 8.49456 7.5 7.5 7.5C6.50544 7.5 5.55161 7.10491 4.84835 6.40165C4.14509 5.69839 3.75 4.74456 3.75 3.75C3.75 2.75544 4.14509 1.80161 4.84835 1.09835C5.55161 0.395088 6.50544 0 7.5 0ZM7.5 9.375C11.6438 9.375 15 11.0531 15 13.125V15H0V13.125C0 11.0531 3.35625 9.375 7.5 9.375Z"
+                                                          fill="#84766F"
+                                                        />
+                                                      </svg>
+                                                      <span
+                                                        style={{
+                                                          paddingLeft: 10,
+                                                          verticalAlign:
+                                                            "middle",
+                                                        }}
+                                                      >
+                                                        {" "}
+                                                        My Profile
+                                                      </span>
                                                     </Link>
                                                   </li>
                                                   <li
@@ -761,7 +783,45 @@ class Header extends Component {
                                                         textDecoration: "none",
                                                       }}
                                                     >
-                                                      My Orders
+                                                      <svg
+                                                        width="15"
+                                                        height="17"
+                                                        viewBox="0 0 15 17"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M3.16667 1L1 3.91788V14.1304C1 14.5174 1.15218 14.8885 1.42307 15.1621C1.69395 15.4357 2.06135 15.5894 2.44444 15.5894H12.5556C12.9386 15.5894 13.306 15.4357 13.5769 15.1621C13.8478 14.8885 14 14.5174 14 14.1304V3.91788L11.8333 1H3.16667Z"
+                                                          stroke="#84766F"
+                                                          stroke-width="2"
+                                                          stroke-linecap="round"
+                                                          stroke-linejoin="round"
+                                                        />
+                                                        <path
+                                                          d="M1 3.91797H14"
+                                                          stroke="#84766F"
+                                                          stroke-width="2"
+                                                          stroke-linecap="round"
+                                                          stroke-linejoin="round"
+                                                        />
+                                                        <path
+                                                          d="M10.3891 6.83569C10.3891 7.60956 10.0847 8.35173 9.54297 8.89894C9.0012 9.44615 8.2664 9.75357 7.50022 9.75357C6.73404 9.75357 5.99924 9.44615 5.45746 8.89894C4.91569 8.35173 4.61133 7.60956 4.61133 6.83569"
+                                                          stroke="#84766F"
+                                                          stroke-width="2"
+                                                          stroke-linecap="round"
+                                                          stroke-linejoin="round"
+                                                        />
+                                                      </svg>
+                                                      <span
+                                                        style={{
+                                                          paddingLeft: 10,
+                                                          verticalAlign:
+                                                            "middle",
+                                                        }}
+                                                      >
+                                                        {" "}
+                                                        My Orders
+                                                      </span>
                                                     </Link>
                                                   </li>
                                                   <li
@@ -776,7 +836,30 @@ class Header extends Component {
                                                         textDecoration: "none",
                                                       }}
                                                     >
-                                                      My Addresses
+                                                      <svg
+                                                        style={{
+                                                          marginLeft: "-4px",
+                                                        }}
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M12 11.5C11.337 11.5 10.7011 11.2366 10.2322 10.7678C9.76339 10.2989 9.5 9.66304 9.5 9C9.5 8.33696 9.76339 7.70107 10.2322 7.23223C10.7011 6.76339 11.337 6.5 12 6.5C12.663 6.5 13.2989 6.76339 13.7678 7.23223C14.2366 7.70107 14.5 8.33696 14.5 9C14.5 9.3283 14.4353 9.65339 14.3097 9.95671C14.1841 10.26 13.9999 10.5356 13.7678 10.7678C13.5356 10.9999 13.26 11.1841 12.9567 11.3097C12.6534 11.4353 12.3283 11.5 12 11.5ZM12 2C10.1435 2 8.36301 2.7375 7.05025 4.05025C5.7375 5.36301 5 7.14348 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 7.14348 18.2625 5.36301 16.9497 4.05025C15.637 2.7375 13.8565 2 12 2Z"
+                                                          fill="#84766F"
+                                                        />
+                                                      </svg>
+                                                      <span
+                                                        style={{
+                                                          paddingLeft: 10,
+                                                          verticalAlign:
+                                                            "middle",
+                                                        }}
+                                                      >
+                                                        My Addresses
+                                                      </span>
                                                     </Link>
                                                   </li>
                                                   <li
@@ -791,7 +874,33 @@ class Header extends Component {
                                                         textDecoration: "none",
                                                       }}
                                                     >
-                                                      My Wishlist
+                                                      <svg
+                                                        width="16"
+                                                        height="15"
+                                                        viewBox="0 0 16 15"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <rect
+                                                          width="16"
+                                                          height="15"
+                                                          fill="white"
+                                                        />
+                                                        <path
+                                                          d="M11.6 0C10.208 0 8.872 0.662125 8 1.70027C7.128 0.662125 5.792 0 4.4 0C1.936 0 0 1.97003 0 4.49591C0 7.57766 2.72 10.1035 6.84 13.921L8 15L9.16 13.921C13.28 10.1035 16 7.57766 16 4.49591C16 1.97003 14.064 0 11.6 0Z"
+                                                          fill="#84766F"
+                                                        />
+                                                      </svg>
+                                                      <span
+                                                        style={{
+                                                          paddingLeft: 10,
+                                                          verticalAlign:
+                                                            "middle",
+                                                        }}
+                                                      >
+                                                        {" "}
+                                                        My Wishlist
+                                                      </span>
                                                     </Link>
                                                   </li>
                                                   <li></li>
@@ -1027,7 +1136,7 @@ class Header extends Component {
                             <div className="subMenu">SHOP</div>
                           </div>
                           <div className="col-lg-9">
-                            <Link to="/shop">
+                            <Link to="/designer">
                               <div
                                 className="row"
                                 onClick={() => this.handleCloseDropdown()}
