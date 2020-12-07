@@ -1,30 +1,32 @@
 import React from "react";
 import "../Home/home.css";
+import { Link } from "react-router-dom";
+
 class Thankyou extends React.Component {
   render() {
     return (
       <div>
         <main>
-          <section class="thankYou">
-            <div class="row no-gutters">
-              <div class="col-md-6 order-md-1">
-                <div class="imgWrap">
+          <section className="thankYou">
+            <div className="row no-gutters">
+              <div className="col-md-6 order-md-1">
+                <div className="imgWrap">
                   <img
-                    class="img-fluid d-md-none"
+                    className="img-fluid d-md-none"
                     src="https://dummyimage.com/767x220/d3d3d3/fff.jpg"
                     alt=""
                   />
                   <img
-                    class="img-fluid d-none d-md-block"
+                    className="img-fluid d-none d-md-block"
                     src="https://dummyimage.com/720x690/d3d3d3/fff.jpg"
                     alt=""
                   />
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="container h-100">
-                  <div class="thankWrap">
-                    <div class="thankContent">
+              <div className="col-md-6">
+                <div className="container h-100">
+                  <div className="thankWrap">
+                    <div className="thankContent">
                       <h3>Thank You for your Purchase!</h3>
                       <p>
                         ORDER NO. <strong>51968031690</strong>
@@ -32,15 +34,15 @@ class Thankyou extends React.Component {
                       <p>
                         We have sent you an order confirmation email <br /> if
                         you wish to manage your order,
-                        <a href="#" class="">
+                        <a href="#" className="">
                           click here.
                         </a>
                       </p>
 
                       <h4>Love from Amrutam</h4>
-                      <a href="#" class="btn btnContinue">
+                      <Link to="/home" className="btn btnContinue">
                         CONTINUE SHOPPING
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

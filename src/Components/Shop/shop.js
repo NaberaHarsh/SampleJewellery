@@ -439,10 +439,58 @@ class Shop extends Component {
                             data-parent="#accordionCategory"
                           >
                             <div className="card-body">
-                              <a href="#">bracelets</a>
-                              <a href="#">brooches</a>
-                              <a href="#">rings</a>
-                              <a href="#">earrings</a>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="bracelets"
+                                >
+                                  bracelets{" "}
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="brooches"
+                                >
+                                  brooches
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="rings"
+                                >
+                                  rings
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="earrings"
+                                >
+                                  earrings
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </ExpansionPanelDetails>
@@ -471,14 +519,84 @@ class Shop extends Component {
                             data-parent="#accordionCategory"
                           >
                             <div className="card-body">
-                              <a href="#">bracelets</a>
-                              <a href="#">brooches</a>
-                              <a href="#">rings</a>
-                              <a href="#">earrings</a>
-                              <a href="#">necklaces</a>
-                              <a href="#">what's new</a>
-                              <a href="#">tiny treasures</a>
-                              <a href="#">spring summer trends</a>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="bracelets"
+                                >
+                                  bracelets{" "}
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="brooches"
+                                >
+                                  brooches
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="rings"
+                                >
+                                  rings
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="earrings"
+                                >
+                                  earrings
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="exclusives"
+                                >
+                                  auverture exclusives
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="singlEarrings"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="singlEarrings"
+                                >
+                                  single earrings
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </ExpansionPanelDetails>
@@ -507,12 +625,84 @@ class Shop extends Component {
                             data-parent="#accordionCategory"
                           >
                             <div className="card-body">
-                              <a href="#">bracelets</a>
-                              <a href="#">brooches</a>
-                              <a href="#">anklets</a>
-                              <a href="#">auverture exclusives</a>
-                              <a href="#">single earrings</a>
-                              <a href="#">auverture united</a>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="bracelets"
+                                >
+                                  bracelets{" "}
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="brooches"
+                                >
+                                  brooches
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="rings"
+                                >
+                                  rings
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="earrings"
+                                >
+                                  earrings
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="exclusives"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="exclusives"
+                                >
+                                  auverture exclusives
+                                </label>
+                              </div>
+                              <div className="custom-control custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  className="custom-control-input"
+                                  id="singlEarrings"
+                                />
+                                <label
+                                  className="custom-control-label"
+                                  for="singlEarrings"
+                                >
+                                  single earrings
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </ExpansionPanelDetails>

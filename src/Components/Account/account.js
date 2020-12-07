@@ -2,6 +2,7 @@ import React from "react";
 import "../Home/home.css";
 import { Dialog, DialogContent } from "@material-ui/core";
 import AddressButton from "../AddressButton/addressButton";
+import { Link } from "react-router-dom";
 
 class Account extends React.Component {
   constructor(props) {
@@ -890,9 +891,9 @@ class Account extends React.Component {
                   </div>
 
                   <div className="tabOuter">
-                    <a href="#" className="btn btnContinue">
+                    <Link to="/home" className="btn btnContinue">
                       CONTINUE SHOPPING
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

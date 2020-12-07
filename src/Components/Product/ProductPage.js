@@ -6,6 +6,7 @@ import {
   ExpansionPanelDetails,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import SquareSlider from "../Slider/squareSlider";
 
 class ProductPage extends Component {
   constructor(props) {
@@ -1007,118 +1008,13 @@ class ProductPage extends Component {
             </section>
 
             <section className="pairWith sliderWrap">
-              <div className="container">
+              <div className="sliderContainer">
                 <div className="row">
                   <div className="col text-center">
                     <h3 className="titleHeading">PAIR IT WITH</h3>
                   </div>
                 </div>
-                <div className="row slickSlider">
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p className="fw-500">Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p className="fw-500">Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                </div>
+                <SquareSlider />{" "}
               </div>
             </section>
 
@@ -1169,234 +1065,24 @@ class ProductPage extends Component {
             </section>
 
             <section className="youLike sliderWrap">
-              <div className="container">
+              <div className="sliderContainer">
                 <div className="row">
                   <div className="col text-center">
                     <h3 className="titleHeading">YOU MAY ALSO LIKE</h3>
                   </div>
                 </div>
-                <div className="row slickSlider">
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p className="fw-500">Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p className="fw-500">Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                </div>
+                <SquareSlider />{" "}
               </div>
             </section>
 
             <section className="discoverCollection sliderWrap">
-              <div className="container">
+              <div className="sliderContainer">
                 <div className="row">
                   <div className="col text-center">
                     <h3 className="titleHeading">DISCOVER MORE DESIGNS</h3>
                   </div>
                 </div>
-                <div className="row slickSlider">
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p className="fw-500">Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p className="fw-500">Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <div className="imgWrap">
-                      <img
-                        className="img-fluid"
-                        src="https://dummyimage.com/230x230/d3d3d3/fff.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="priceCaption">
-                      <p>COSMIC OPEN RING</p>
-                      <p>Rs. 6,850</p>
-                    </div>
-                  </div>
-                </div>
+                <SquareSlider />{" "}
               </div>
             </section>
 
