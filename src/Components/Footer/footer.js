@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Home/home.css";
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   constructor(props) {
@@ -57,22 +58,22 @@ class Footer extends Component {
                     <h5 class="pl-3">Amrutam</h5>
                     <ul class="list-unstyled pl-3">
                       <li>
-                        <a href="#">About Us</a>
+                        <Link to="/about">About Us</Link>
                       </li>
                       <li>
-                        <a href="#">Contact Us</a>
+                        <Link to="/contact">Contact Us</Link>
                       </li>
                       <li>
-                        <a href="#">Discover Designers</a>
+                        <Link to="/designer">Discover Designers</Link>
                       </li>
                       <li>
                         <a href="#">Journal</a>
                       </li>
                       <li>
-                        <a href="#">Refer a friend</a>
+                        <Link to="/refer">Refer a friend</Link>
                       </li>
                       <li>
-                        <a href="#">Gift</a>
+                        <Link to="/gift">Gift</Link>
                       </li>
                       <li>
                         <a href="#">Career</a>
