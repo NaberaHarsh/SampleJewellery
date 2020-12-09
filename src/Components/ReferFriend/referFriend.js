@@ -28,13 +28,13 @@ const ReferFriend = () => {
                     <h4>Love from Amrutam</h4>
                     <h3>Give Rs. 250, Get Rs. 250</h3>
                     <p>
-                      Give your friends Rs. 250 off their first order of <br />
-                      Rs. 2000 and get Rs.250 off on you next order for <br />
-                      each successful referral. T&C apply.
+                      Give your friends Rs. 250 off their first order of Rs.
+                      2000 and get Rs.250 off on you next order for each
+                      successful referral. T&C apply.
                     </p>
 
                     <div class="form-group">
-                      <label>Enter your E-mail address</label>
+                      <label>Enter your friend's E-mail address</label>
                       <input type="email" class="form-control" />
                     </div>
 
